@@ -1,0 +1,44 @@
+{
+  "colors": {
+    "brand": {
+      "plum": "#663366",
+      "plumDeep": "#431c43",
+      "plumHover": "#7b3e7b",
+      "plumSoft": "#f7eef7",
+      "goldAccent": "#c1a78c",
+      "goldWarm": "#d4af37",
+      "goldLight": "#ffd875"
+    },
+    "background": {
+      "base": "#f6f9fc",
+      "surface": "#ffffff",
+      "blueTint": "#edf4fa",
+      "iceMist": "#e2edf8",
+      "mistHero": "#e8f1fb"
+    },
+    "text": {
+      "main": "#1e293b",
+      "muted": "#56677d",
+      "light": "#7c8ba1",
+      "heading": "#27282c"
+    },
+    "border": {
+      "subtle": "#d8e3ed",
+      "plum": "rgba(102, 51, 102, 0.2)",
+      "ice": "#e2eaf2"
+    }
+  },
+  "fonts": {
+    "heading": "Elsie, Cinzel, serif",
+    "elsie": "Elsie, display, serif",
+    "cinzel": "Cinzel, serif",
+    "serifElegant": "Cormorant Garamond, Georgia, serif",
+    "sans": "Plus Jakarta Sans, sans-serif"
+  },
+  "components": {
+    "buttonPrimary": "bg-[#663366] hover:bg-[#7b3e7b] text-white font-bold text-xs uppercase tracking-[0.18em] rounded-full shadow-xl shadow-[#663366]/20 transition-all",
+    "buttonSecondary": "bg-white/95 hover:bg-[#f1f6fb] text-[#27282c] border border-[#d8e3ed] text-xs uppercase tracking-[0.18em] font-semibold rounded-full transition-all shadow-sm",
+    "cardSurface": "bg-white rounded-2xl border border-[#e2eaf2] shadow-sm hover:shadow-md transition-shadow",
+    "cardSoftBlue": "bg-gradient-to-b from-[#ffffff] to-[#f4f8fc] rounded-2xl border border-[#d6e3f0]"
+  }
+}

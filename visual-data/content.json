@@ -1,0 +1,179 @@
+{
+  "site": {
+    "title": "Moksham Healings | Himalayan Sound Sanctuary Dharamshala",
+    "description": "Experience master Tibetan singing bowls, sacred vibrational therapy, chakra balancing, and certified teacher training in Dharamshala, Himachal Pradesh.",
+    "location": "Bhagsunag & Forsyth Ganj, Dharamshala, Himachal Pradesh, India",
+    "founder": "Sibani Panigrahi",
+    "whatsappPhone": "+91 7208936359",
+    "phoneDisplay": "+91 72089 36359",
+    "email": "contact@mokshamhealings.com"
+  },
+  "hero": {
+    "badge": "Sound Healing & Spiritual Wellness Center • Dharamshala",
+    "headline": "Restore Your Energy Through Sound",
+    "founderSignature": "~ Sibani Panigrahi",
+    "subheadline": "Experience deep relaxation. Harmonize your mind, body, and spirit through therapeutic sound frequencies that promote balance in Forsyth Ganj & Bhagsunag.",
+    "ctaPrimary": "Book Sanctuary Session",
+    "ctaSecondary": "Strike 528Hz Miracle Bowl",
+    "pillars": [
+      {
+        "label": "Location",
+        "value": "Bhagsunag, HP",
+        "sub": "Near Bhagsu Taxi Stand"
+      },
+      {
+        "label": "Founder",
+        "value": "Sibani Panigrahi",
+        "sub": "Master Sound Healer"
+      },
+      {
+        "label": "Acoustics",
+        "value": "7-Metal Singing Bowls",
+        "sub": "Full Moon Consecrated"
+      },
+      {
+        "label": "Offerings",
+        "value": "Certification Courses",
+        "sub": "International Accreditation"
+      }
+    ]
+  },
+  "whatIsSoundHealing": {
+    "badge": "Ancient Vedic & Tibetan Acoustic Science",
+    "headline": "Sound as Medicine in the Himalayas",
+    "subheadline": "Sound healing at Moksham Healings is a transformative practice designed to restore balance and inner peace through the therapeutic power of sound vibrations. Using instruments such as Tibetan singing bowls, gongs, and chimes, this modality works to realign your body's energy frequencies and induce deep mental clarity.",
+    "quote": "In the quietude of the Dhauladhar mountains, every harmonic wave reconnects you to the pulse of creation.",
+    "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1000&auto=format&fit=crop"
+  },
+  "sanctuaryAltar": {
+    "badge": "Interactive 3D Sound Altar",
+    "headline": "Experience The Singing Bowl In Real-Time",
+    "description": "Interact with our procedurally crafted Tibetan bronze vessel. Strike the bowl, adjust the Solfeggio frequency to match any of the seven chakras, and feel the visual and acoustic resonance ripple outwards."
+  },
+  "offersShowcase": {
+    "badge": "Signature Holistic Sanctuary",
+    "headline": "Moksham Healings Offers You",
+    "subheadline": "Step into a sanctuary where age-old healing traditions meet present-moment serenity. Explore our four foundational offerings crafted in the sacred valleys of Himachal Pradesh.",
+    "offers": [
+      {
+        "id": "teacher-training",
+        "num": "01",
+        "title": "Sound Healing Teacher Training Course",
+        "desc": "Discover a path of inner transformation and self-awakening. Our sound healing course at Moksham Healing is crafted to help you explore the profound power of sound therapy. Learn how vibrations and frequencies can restore balance, enhance clarity, and deepen emotional well-being.",
+        "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop",
+        "category": "Practitioner Certification"
+      },
+      {
+        "id": "mantra-chanting",
+        "num": "02",
+        "title": "Mantra Chanting with Singing Bowls",
+        "desc": "Singing bowls are widely used in different types of spiritual and religious rituals with different mantras. So, mantra chanting with a singing bowl has a very good effect on body, mind, emotions, and it can be used for healing purposes. With sacred vowel acoustics, we activate deep cellular resonance.",
+        "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1000&auto=format&fit=crop",
+        "category": "Spiritual Sound Practice"
+      },
+      {
+        "id": "pendulum-dowsing",
+        "num": "03",
+        "title": "Pendulum Dowsing",
+        "desc": "Pendulum healing employs the motion of a pendulum to sensitively assess and balance the body's subtle energy fields. This highly effective, gentle technique is instrumental in clearing energetic blockages, restoring internal harmony, and providing robust support for emotional well-being.",
+        "image": "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=1000&auto=format&fit=crop",
+        "category": "Biofield Diagnosis"
+      },
+      {
+        "id": "energy-scanning",
+        "num": "04",
+        "title": "Energy Body Scanning",
+        "desc": "Energy healing at Moksham Healings is a gentle practice designed to restore harmony by clearing blockages and balancing the body's natural energy flow. This process works to restore your natural rhythm and awaken your body's ability to heal. It aligns your energy to dissolve blockages and revitalize mind, body, and soul.",
+        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop",
+        "category": "Holistic Restoration"
+      }
+    ]
+  },
+  "teacherTraining": {
+    "badge": "Accredited Himalayan Certification",
+    "headline": "Sound Healing Teacher Training in Dharamshala",
+    "subheadline": "Step into the sacred foothills of the Dhauladhar mountains. Train under master sound practitioners to facilitate profound individual therapies and transcendental group sound baths with authentic Tibetan singing bowls.",
+    "modules": [
+      {
+        "num": "01",
+        "title": "Acoustic Science & The Seven Sacred Metals",
+        "desc": "The metallurgy and harmonics of antique Himalayan singing bowls, binaural frequency math, and brainwave entrainment (Beta, Alpha, Theta, Delta)."
+      },
+      {
+        "num": "02",
+        "title": "1-on-1 Clinical Sound Therapy Protocols",
+        "desc": "Hands-on training for direct placement on the physical body, spinal alignment, releasing myofascial stress, and on-body massage techniques."
+      },
+      {
+        "num": "03",
+        "title": "Aura Scanning & Crystal Pendulum Dowsing",
+        "desc": "Subtle biofield diagnosis, identifying energetic blockages, auric tear repair, and boundary protection for healers."
+      },
+      {
+        "num": "04",
+        "title": "Gong Baths & Group Sound Immersion Mastery",
+        "desc": "Playing techniques for large Chau, Wind, and Symphonic gongs, Koshi chimes, tingshas, and designing transformational group sound journeys."
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "name": "Elena Rostova",
+      "location": "Barcelona, Spain",
+      "session": "Individual Sound Healing (60 mins)",
+      "rating": 5,
+      "date": "October 2026",
+      "comment": "I came to Dharamshala carrying months of severe burnout and insomnia from corporate work. When the master placed the large bronze singing bowl on my chest and struck it, I felt tears flowing uncontrollably as all the frozen grief dissolved. That night I slept 9 uninterrupted hours for the first time in two years.",
+      "verified": true
+    },
+    {
+      "name": "Julian & Sarah Vance",
+      "location": "Vancouver, Canada",
+      "session": "Couple Harmonic Sound Therapy",
+      "rating": 5,
+      "date": "September 2026",
+      "comment": "A profoundly sacred experience for our 10th anniversary. The dual singing bowls tuned to the heart chakra (639Hz) created an acoustic embrace that felt out of this realm. The quiet tea ceremony in the Bhagsunag sanctuary afterward cemented an unforgettable memory.",
+      "verified": true
+    },
+    {
+      "name": "Dr. Aarav Mehta",
+      "location": "Mumbai, India",
+      "session": "Seven Chakra Alignment & Sound Therapy",
+      "rating": 5,
+      "date": "August 2026",
+      "comment": "As a neuroscientist and longtime meditator, I was astonished by the precision with which the frequencies triggered deep theta brainwave states. You can genuinely feel the physical waves reorganizing tension in your spine and nervous system. Outstanding authenticity.",
+      "verified": true
+    },
+    {
+      "name": "Chiara Moretti",
+      "location": "Milan, Italy",
+      "session": "Sound Healing Teacher Training Certification",
+      "rating": 5,
+      "date": "July 2026",
+      "comment": "Completing the 5-day Nada Yoga teacher training at Moksham Healings in Dharamshala was life-altering. The master teachers do not merely teach you how to hit bowls; they teach you how to listen with your subtle field, how to hold space for others, and how to heal. I now lead sound baths back home in Italy with absolute confidence.",
+      "verified": true
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is sound healing ?",
+      "answer": "Sound healing is a therapeutic practice that uses sound vibrations to promote relaxation, reduce stress, and support physical and emotional well-being. It's based on the idea that sound frequencies can influence the body's energy, brainwave states, and nervous system. By realigning cellular frequencies with pure harmonic overtones, the body returns to its natural homeostasis."
+    },
+    {
+      "question": "How does sound healing work, and what instruments are used?",
+      "answer": "Sound healing works by using vibration, frequency, and acoustic resonance to influence your parasympathetic nervous system, shifting brainwave states from active Beta down into restorative Alpha and Theta. In our Dharamshala sanctuary, we utilize authentic 7-metal Tibetan singing bowls forged under full moons, hand-hammered chau & wind gongs, crystal quartz pendulums, Koshi earth/water chimes, and Tibetan tingshas."
+    },
+    {
+      "question": "How long is a typical session?",
+      "answer": "1 hour to 2 hours, also depends on the therapy you choose. Most individual and couple vibrational sound healing sessions last 60 minutes. Deep on-body sound massages and combined aura cleansing protocols range between 75 to 90 minutes."
+    },
+    {
+      "question": "Do I need prior experience to try Sound healing?",
+      "answer": "No prior experience is necessary to try sound healing. It is a highly beginner-friendly and gently guided practice, requiring you only to lie back comfortably, close your eyes, and be receptive. There are no postures to hold or complex meditation techniques to master."
+    },
+    {
+      "question": "What can I expect from this session?",
+      "answer": "By inducing deep relaxation and a profound meditative theta state, sound healing offers potential benefits including emotional release, a luminous sense of mental lightness, relief from chronic insomnia, release of somatic muscle tightness, and a restored feeling of centered grounding."
+    }
+  ]
+}
