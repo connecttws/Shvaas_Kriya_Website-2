@@ -5,15 +5,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  turbopack: {
-    root: path.resolve(__dirname),
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
 };
 
 export default nextConfig;
