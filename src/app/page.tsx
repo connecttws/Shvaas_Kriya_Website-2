@@ -25,8 +25,8 @@ const ThreeSingingBowl = dynamic(
     loading: () => (
       <div className="w-full h-[560px] rounded-3xl bg-[#f1f6fb] flex items-center justify-center border border-[#e2eaf2]">
         <div className="text-center space-y-3">
-          <div className="w-12 h-12 rounded-full border-2 border-[#663366] border-t-transparent animate-spin mx-auto" />
-          <p className="text-xs uppercase tracking-widest text-[#663366] font-bold">
+          <div className="w-12 h-12 rounded-full border-2 border-[#1718DF] border-t-transparent animate-spin mx-auto" />
+          <p className="text-xs uppercase tracking-widest text-[#1718DF] font-bold">
             Awakening 3D Tibetan Singing Bowl...
           </p>
         </div>
@@ -60,8 +60,8 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f6f9fc] text-[#1e293b] flex flex-col selection:bg-[#663366]/20 selection:text-[#4a1e4a]">
-      {/* Top Fixed Header with Signature Plum #663366 Branding */}
+    <div className="min-h-screen bg-[#f6f9fc] text-[#1e293b] flex flex-col selection:bg-[#1718DF]/20 selection:text-[#0E1338]">
+      {/* Top Fixed Header with Signature Shvaas Blue #1718DF Branding */}
       <Navbar onOpenBooking={handleOpenBooking} />
 
       {/* Main Content */}
@@ -86,33 +86,33 @@ export default function Home() {
             {/* Hero Main Content with Reveal Animation */}
             <RevealOnScroll duration={0.9} yOffset={24}>
               {/* Top Sacred Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#d6e3f0] text-[#663366] text-xs uppercase tracking-[0.25em] mb-8 shadow-sm animate-ethereal font-bold">
-                <Sparkles className="w-3.5 h-3.5 text-[#663366]" />
-                <span>Sound Healing & Spiritual Wellness Center • Dharamshala</span>
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#d6e3f0] text-[#1718DF] text-xs uppercase tracking-[0.25em] mb-8 shadow-sm animate-ethereal font-bold">
+                <Sparkles className="w-3.5 h-3.5 text-[#1718DF]" />
+                <span>Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect</span>
               </div>
 
-              {/* Exact Reference Headline from https://www.mokshamhealings.com */}
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-elsie font-normal text-[#27282c] tracking-tight leading-[1.1] mb-3 max-w-4xl mx-auto">
-                Restore Your Energy Through Sound
+              {/* Verified Headline from Shvaas Kriya Retreat Client Brief */}
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-normal text-[#27282c] tracking-tight leading-[1.1] mb-3 max-w-4xl mx-auto">
+                Welcome to Shvaas Kriya Retreat
               </h1>
 
-              {/* Founder Signature (Exact from reference site) */}
-              <div className="text-xl sm:text-2xl font-elsie text-[#663366] mb-6 font-semibold">
-                ~ Sibani Panigrahi
+              {/* Sub-headline */}
+              <div className="text-xl sm:text-2xl md:text-3xl font-serif italic text-[#1718DF] mb-6 font-normal">
+                A Space to Reconnect Through Breath, Sound & Stillness
               </div>
 
-              {/* Sub-headline from Reference Site */}
+              {/* Sub-copy from Client Brief */}
               <p className="text-base sm:text-lg md:text-xl text-[#52637a] font-serif-elegant italic max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-                Experience deep relaxation. Harmonize your mind, body, and spirit through therapeutic sound frequencies that promote balance in Forsyth Ganj & Bhagsunag.
+                Step away from the noise of everyday life and make room for yourself. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in breath, sound, and presence.
               </p>
 
               {/* Dual Hero CTAs */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                 <button
                   onClick={() => handleOpenBooking()}
-                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#663366] hover:bg-[#7b3e7b] text-white font-bold text-xs uppercase tracking-[0.18em] active:scale-95 transition-all shadow-xl shadow-[#663366]/20 flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-[0.18em] active:scale-95 transition-all shadow-xl shadow-[#1718DF]/20 flex items-center justify-center gap-2"
                 >
-                  <span>Book Sanctuary Session</span>
+                  <span>Explore Our Experiences</span>
                   <ArrowRight className="w-4 h-4 text-[#ffd875]" />
                 </button>
 
@@ -121,7 +121,7 @@ export default function Home() {
                   className="w-full sm:w-auto px-7 py-4 rounded-full bg-white/95 hover:bg-[#f1f6fb] text-[#27282c] border border-[#d8e3ed] text-xs uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 shadow-sm group"
                   title="Play 528Hz Tibetan Singing Bowl Strike"
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#f7edf7] border border-[#edd7ed] flex items-center justify-center text-[#663366] group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] flex items-center justify-center text-[#1718DF] group-hover:scale-110 transition-transform">
                     <Play className="w-3 h-3 fill-current ml-0.5" />
                   </div>
                   <span>Strike 528Hz Miracle Bowl</span>
@@ -133,24 +133,24 @@ export default function Home() {
             <RevealOnScroll delay={0.2} duration={0.8} yOffset={20}>
               <div className="pt-8 border-t border-[#d8e3ed] grid grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-4xl mx-auto">
                 <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#663366] font-bold">Location</div>
-                  <div className="text-sm font-heading font-bold text-[#27282c]">Bhagsunag, HP</div>
-                  <div className="text-[11px] text-[#64748b] font-light">Near Bhagsu Taxi Stand</div>
+                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Location</div>
+                  <div className="text-sm font-heading font-bold text-[#27282c]">Rishikesh, UK</div>
+                  <div className="text-[11px] text-[#64748b] font-light">By Sacred Ganga River</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#663366] font-bold">Founder</div>
-                  <div className="text-sm font-heading font-bold text-[#27282c]">Sibani Panigrahi</div>
-                  <div className="text-[11px] text-[#64748b] font-light">Master Sound Healer</div>
+                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Offerings</div>
+                  <div className="text-sm font-heading font-bold text-[#27282c]">5 Signature Paths</div>
+                  <div className="text-[11px] text-[#64748b] font-light">Sessions, TTC & Retreats</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#663366] font-bold">Acoustics</div>
-                  <div className="text-sm font-heading font-bold text-[#27282c]">7-Metal Singing Bowls</div>
-                  <div className="text-[11px] text-[#64748b] font-light">Full Moon Consecrated</div>
+                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Acoustics</div>
+                  <div className="text-sm font-heading font-bold text-[#27282c]">Sound & Aqua Sound</div>
+                  <div className="text-[11px] text-[#64748b] font-light">7-Metal Singing Bowls</div>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#663366] font-bold">Offerings</div>
-                  <div className="text-sm font-heading font-bold text-[#27282c]">Certification Courses</div>
-                  <div className="text-[11px] text-[#64748b] font-light">International Accreditation</div>
+                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Core Ethos</div>
+                  <div className="text-sm font-heading font-bold text-[#27282c]">Breathe · Listen</div>
+                  <div className="text-[11px] text-[#64748b] font-light">Reconnect Inward</div>
                 </div>
               </div>
             </RevealOnScroll>
@@ -167,7 +167,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
               <div className="text-center max-w-2xl mx-auto mb-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f7edf7] border border-[#d8b8d8] text-[#663366] text-xs uppercase tracking-widest mb-3 font-bold shadow-sm">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-widest mb-3 font-bold shadow-sm">
                   <Sparkles className="w-3.5 h-3.5" />
                   Interactive 3D Sound Altar
                 </div>
@@ -188,7 +188,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===================== MOKSHAM HEALINGS OFFERS YOU (Interactive 4-Part Showcase) ===================== */}
+        {/* ===================== SHVAAS KRIYA EXPERIENCES (Interactive 5-Part Showcase) ===================== */}
         <RevealOnScroll>
           <OffersShowcase
             onSelectOffer={(id) => {
@@ -250,17 +250,17 @@ export default function Home() {
           <section className="py-20 relative bg-gradient-to-b from-[#f1f6fb] to-white border-t border-[#e2eaf2]">
             <div className="max-w-4xl mx-auto px-4 text-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] mb-4">
-                Begin Your Journey to Inner Resonance
+                Come to Rishikesh. Leave a Little More Connected.
               </h2>
               <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic max-w-xl mx-auto mb-8 leading-relaxed">
-                Whether you are passing through Himachal Pradesh or seeking profound personal healing, our sanctuary doors in Bhagsunag are open to receive you.
+                Step away from your routine and spend time with mindful movement, soothing sound, nourishing food, and the natural beauty of Rishikesh.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button
                   onClick={() => handleOpenBooking()}
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#663366] hover:bg-[#7b3e7b] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition"
                 >
-                  Schedule A Private Session
+                  Book A Session / Retreat
                 </button>
                 <a
                   href="https://wa.me/917208936359"

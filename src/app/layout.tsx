@@ -3,13 +3,13 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Moksham Healings | Himalayan Sound Sanctuary Dharamshala",
+  title: "Shvaas Kriya Retreat | Rishikesh & Online Sanctuary",
   description:
-    "Experience master Tibetan singing bowls, sacred vibrational therapy, chakra balancing, and certified teacher training in Dharamshala, Himachal Pradesh.",
+    "A space to reconnect through breath, sound & stillness. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in presence.",
   openGraph: {
-    title: "Moksham Healings | Himalayan Sound Therapy Dharamshala",
+    title: "Shvaas Kriya Retreat | Breathe · Listen · Reconnect",
     description:
-      "Master Tibetan singing bowls, sacred vibrational therapy, and certified practitioner courses nestled in Dharamshala, India.",
+      "A space to reconnect through breath, sound & stillness. Mindful sessions, soulful retreats in Rishikesh, and learning journeys.",
     type: "website",
   },
   twitter: {
@@ -33,7 +33,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-[#f6f9fc] text-[#1e293b] antialiased selection:bg-[#663366]/20 selection:text-[#4a1e4a] overflow-x-hidden">
+      <body className="bg-[#f6f9fc] text-[#1e293b] antialiased selection:bg-[#1718DF]/20 selection:text-[#0E1338] overflow-x-hidden">
         {children}
         {/* CRM Lead Tracker Script */}
         <Script

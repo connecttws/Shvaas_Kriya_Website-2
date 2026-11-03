@@ -51,8 +51,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
       style={{ transform: 'translateZ(0)' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,padding,box-shadow] duration-300 ${
         isScrolled
-          ? 'bg-[#522352] shadow-xl py-3 border-b border-[#703370]'
-          : 'bg-[#663366] py-3.5 shadow-md'
+          ? 'bg-[#0E1338] shadow-xl py-3 border-b border-[#1718DF]/30'
+          : 'bg-[#1718DF] py-3.5 shadow-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -67,10 +67,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
           <div className="flex flex-col">
             <span className="font-heading text-lg sm:text-xl font-bold tracking-wider text-white group-hover:text-[#ffd875] transition-colors">
-              Moksham Healings
+              Shvaas Kriya Retreat
             </span>
-            <span className="text-[9px] tracking-[0.2em] text-[#e0c2e0] uppercase -mt-0.5 font-sans">
-              Dharamshala, India
+            <span className="text-[9px] tracking-[0.2em] text-[#DFE6FC] uppercase -mt-0.5 font-sans">
+              Rishikesh & Online
             </span>
           </div>
         </a>
@@ -95,27 +95,34 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               <ChevronDown className="w-3.5 h-3.5" />
             </button>
             {servicesDropdownOpen && (
-              <div className="absolute top-full left-0 w-48 bg-[#4b224b] rounded-xl shadow-2xl py-2 border border-[#7e3f7e] animate-in fade-in duration-200">
+              <div className="absolute top-full left-0 w-52 bg-[#0E1338] rounded-xl shadow-2xl py-2 border border-[#1718DF]/30 animate-in fade-in duration-200">
+                <a
+                  href="#offers"
+                  onClick={(e) => handleNavClick(e, '#offers')}
+                  className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
+                >
+                  Shvaas Kriya Sessions
+                </a>
                 <a
                   href="#therapies"
                   onClick={(e) => handleNavClick(e, '#therapies')}
-                  className="block px-4 py-2 hover:bg-[#663366] hover:text-[#ffd875] text-xs font-medium normal-case"
+                  className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
                 >
-                  Sound Healing
-                </a>
-                <a
-                  href="#frequency-tool"
-                  onClick={(e) => handleNavClick(e, '#frequency-tool')}
-                  className="block px-4 py-2 hover:bg-[#663366] hover:text-[#ffd875] text-xs font-medium normal-case"
-                >
-                  Pendulum Dowsing
+                  Sound & Aqua Sound
                 </a>
                 <a
                   href="#training"
                   onClick={(e) => handleNavClick(e, '#training')}
-                  className="block px-4 py-2 hover:bg-[#663366] hover:text-[#ffd875] text-xs font-medium normal-case"
+                  className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
                 >
-                  Teacher Training
+                  Teacher Training (TTC)
+                </a>
+                <a
+                  href="#frequency-tool"
+                  onClick={(e) => handleNavClick(e, '#frequency-tool')}
+                  className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
+                >
+                  Frequency Diagnostic
                 </a>
               </div>
             )}
@@ -140,8 +147,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           {/* Direct Phone Dial Pill */}
           <a
             href="tel:+917208936359"
-            className="w-9 h-9 rounded-full bg-white text-[#663366] hover:bg-[#ffd875] transition flex items-center justify-center shadow-md"
-            title="Call Dharamshala Sanctuary: +91 72089 36359"
+            className="w-9 h-9 rounded-full bg-white text-[#1718DF] hover:bg-[#ffd875] transition flex items-center justify-center shadow-md"
+            title="Contact Shvaas Kriya Retreat: +91 72089 36359"
           >
             <Phone className="w-4 h-4 fill-current" />
           </a>
@@ -172,7 +179,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           {/* Book Now Button */}
           <button
             onClick={() => onOpenBooking()}
-            className="px-5 py-2 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#3b1c3b] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5"
+            className="px-5 py-2 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5"
           >
             <Calendar className="w-3.5 h-3.5" />
             <span>Book Now</span>
@@ -183,7 +190,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href="tel:+917208936359"
-            className="w-8 h-8 rounded-full bg-white text-[#663366] flex items-center justify-center text-xs"
+            className="w-8 h-8 rounded-full bg-white text-[#1718DF] flex items-center justify-center text-xs"
           >
             <Phone className="w-3.5 h-3.5 fill-current" />
           </a>
@@ -205,7 +212,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#4e224e] border-t border-[#7e3f7e] px-6 py-6 animate-in slide-in-from-top-3 duration-300">
+        <div className="lg:hidden bg-[#0E1338] border-t border-[#1718DF]/30 px-6 py-6 animate-in slide-in-from-top-3 duration-300">
           <nav className="flex flex-col gap-3 text-sm font-semibold uppercase tracking-wider text-white">
             <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); setMobileMenuOpen(false); }} className="py-2 border-b border-white/10 hover:text-[#ffd875]">
               Home
@@ -238,7 +245,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                   setMobileMenuOpen(false);
                   onOpenBooking();
                 }}
-                className="w-full py-3 rounded-xl bg-[#ffd875] text-[#3b1c3b] font-bold text-xs uppercase tracking-wider shadow-lg"
+                className="w-full py-3 rounded-xl bg-[#ffd875] text-[#0E1338] font-bold text-xs uppercase tracking-wider shadow-lg"
               >
                 Book Session Now
               </button>

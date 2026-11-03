@@ -1,15 +1,14 @@
-# Shvaas Kriya / Moksham Healings Website
+# Shvaas Kriya Retreat Website
 
-A responsive, immersive Next.js web application for **Moksham Healings & Shvaas Kriya (Himalayan Sound Sanctuary Dharamshala)** featuring sound therapy, breathwork, Tibetan singing bowl acoustics, session booking, and teacher training courses.
+A responsive, immersive Next.js web application for **Shvaas Kriya Retreat (Rishikesh & Online Sanctuary)** featuring breathwork, sound therapy, Tibetan singing bowl acoustics, session booking, and teacher training courses.
 
 ## 🚀 Features
 
 - **Immersive Audio & Visual Experience**: Next.js 16 (App Router), React 19, Tailwind CSS v4, Framer Motion, and Three.js visual elements.
 - **Key Sections & Features**:
   - Hero with Interactive Sound Bowl Experience
-  - Offering Highlights (Sound Baths, Breathwork, Singing Bowl Workshops)
-  - Himalayan Sanctuary Details (Bhagsunag & Forsyth Ganj, Dharamshala)
-  - Founder Bio & Practice Philosophy (Sibani Panigrahi)
+  - Offering Highlights (Shvaas Kriya Sessions, TTC, Sound Healing, Aqua Sound Healing)
+  - Rishikesh Sanctuary Details & Himalayan Lineage
   - Retreat Schedules & Course Curriculum
   - Interactive Consultation & Booking Modal
   - Responsive Mobile Navigation & Sticky Contact Actions

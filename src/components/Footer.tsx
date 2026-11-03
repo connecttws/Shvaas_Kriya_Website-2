@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock, Send, ChevronRight } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#663366] border-t border-[#7e3f7e] text-white pt-16 pb-12 relative overflow-hidden">
+    <footer id="contact" className="bg-[#0E1338] border-t border-[#1718DF]/30 text-white pt-16 pb-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand Info with Sacred Lotus Logo */}
@@ -15,20 +15,20 @@ export const Footer: React.FC = () => {
                 </svg>
               </div>
               <span className="font-heading text-xl font-bold tracking-wider text-white">
-                Moksham Healings
+                Shvaas Kriya Retreat
               </span>
             </div>
 
-            <p className="text-xs text-[#f1dcf1] leading-relaxed font-light">
-              At Moksham Healings, we blend Himalayan wisdom with modern techniques to support self-discovery and inner balance.
+            <p className="text-xs text-[#DFE6FC] leading-relaxed font-light">
+              A space to reconnect through breath, sound & stillness. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in presence.
             </p>
 
             <div className="pt-2">
               <span className="text-[11px] uppercase tracking-widest text-[#ffd875] font-semibold block mb-1">
-                Founder & Master Healer
+                Sanctuary Ethos
               </span>
-              <span className="text-sm font-elsie text-white">
-                ~ Sibani Panigrahi
+              <span className="text-sm font-elsie text-white italic">
+                Breathe · Listen · Reconnect
               </span>
             </div>
           </div>
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-heading text-base font-bold text-[#ffd875] mb-2">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-xs text-[#eedcee]">
+            <ul className="space-y-2 text-xs text-[#DFE6FC]">
               <li>
                 <a href="#what-is-sound-healing" className="hover:text-white transition flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-[#ffd875]" />
@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-heading text-base font-bold text-[#ffd875] mb-2">
               Services
             </h4>
-            <ul className="space-y-2 text-xs text-[#eedcee]">
+            <ul className="space-y-2 text-xs text-[#DFE6FC]">
               <li>
                 <a href="#therapies" className="hover:text-white transition flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-[#ffd875]" />
@@ -111,24 +111,24 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Contact Us (Exact from reference site) */}
+          {/* Contact Us */}
           <div className="space-y-3">
             <h4 className="font-heading text-base font-bold text-[#ffd875] mb-2">
               Contact Us
             </h4>
-            <div className="flex items-start gap-2.5 text-xs text-[#eedcee]">
+            <div className="flex items-start gap-2.5 text-xs text-[#DFE6FC]">
               <MapPin className="w-4 h-4 text-[#ffd875] shrink-0 mt-0.5" />
               <span>
-                Bhagsunag, White House, near Bhagsu Taxi Stand, Mcleodganj, Dharamshala, Himachal Pradesh, 176216
+                Tapovan Riverside & Partner Retreat Sanctuaries, Rishikesh, Uttarakhand, 249192
               </span>
             </div>
-            <div className="flex items-center gap-2.5 text-xs text-[#eedcee]">
+            <div className="flex items-center gap-2.5 text-xs text-[#DFE6FC]">
               <Mail className="w-4 h-4 text-[#ffd875] shrink-0" />
-              <a href="mailto:mokshamhealings@gmail.com" className="hover:text-white transition">
-                mokshamhealings@gmail.com
+              <a href="mailto:connect@shvaaskriyaretreat.com" className="hover:text-white transition">
+                connect@shvaaskriyaretreat.com
               </a>
             </div>
-            <div className="flex items-center gap-2.5 text-xs text-[#eedcee]">
+            <div className="flex items-center gap-2.5 text-xs text-[#DFE6FC]">
               <Phone className="w-4 h-4 text-[#ffd875] shrink-0" />
               <a href="tel:+917208936359" className="hover:text-white transition">
                 +91 72089 36359
@@ -150,20 +150,12 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#f0daf0] gap-4">
+        <div className="pt-8 border-t border-white/15 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#DFE6FC] gap-4">
           <div>
-            Copyright © {new Date().getFullYear()} Moksham Healings | Sacred Sound Sanctuary Dharamshala
+            Copyright © {new Date().getFullYear()} Shvaas Kriya Retreat | All Rights Reserved
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://www.instagram.com/mokshamhealing/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-              Instagram
-            </a>
-            <a href="https://www.youtube.com/@mokshamhealings" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-              YouTube
-            </a>
-            <a href="https://maps.app.goo.gl/QUfzZphou6hbgFG17" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
-              Google Maps
-            </a>
+            <span className="text-[#DFE6FC]/80">Rishikesh & Online Sanctuary</span>
           </div>
         </div>
       </div>

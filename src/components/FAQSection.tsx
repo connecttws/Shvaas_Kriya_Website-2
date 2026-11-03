@@ -10,24 +10,28 @@ interface FAQItem {
 
 const FAQS: FAQItem[] = [
   {
-    question: 'What is sound healing ?',
-    answer: "Sound healing is a therapeutic practice that uses sound vibrations to promote relaxation, reduce stress, and support physical and emotional well-being. It's based on the idea that sound frequencies can influence the body's energy, brainwave states, and nervous system. By realigning cellular frequencies with pure harmonic overtones, the body returns to its natural homeostasis."
+    question: 'Where do Shvaas Kriya retreats take place?',
+    answer: 'Retreats are curated with selected hospitality partners and spaces in and around Rishikesh. The venue is shared for each retreat.'
   },
   {
-    question: 'How does sound healing work, and what instruments are used?',
-    answer: "Sound healing works by using vibration, frequency, and acoustic resonance to influence your parasympathetic nervous system, shifting brainwave states from active Beta down into restorative Alpha and Theta. In our Dharamshala sanctuary, we utilize authentic 7-metal Tibetan singing bowls forged under full moons, hand-hammered chau & wind gongs, crystal quartz pendulums, Koshi earth/water chimes, and Tibetan tingshas."
+    question: 'Are Shvaas Kriya sessions available online and offline?',
+    answer: 'Yes. Both online and in-person options are offered, subject to the current schedule.'
   },
   {
-    question: 'How long is a typical session?',
-    answer: '1 hour to 2 hours, also depends on the therapy you choose. Most individual and couple vibrational sound healing sessions last 60 minutes. Deep on-body sound massages and combined aura cleansing protocols range between 75 to 90 minutes.'
+    question: 'What is the difference between Shvaas Kriya TTC and Sound Healing TTC?',
+    answer: 'They are separate training offerings. Course details, curriculum, duration, and outcomes are provided on their respective training overviews.'
   },
   {
-    question: 'Do I need prior experience to try Sound healing?',
-    answer: 'No prior experience is necessary to try sound healing. It is a highly beginner-friendly and gently guided practice, requiring you only to lie back comfortably, close your eyes, and be receptive. There are no postures to hold or complex meditation techniques to master.'
+    question: 'What is Aqua Sound Healing?',
+    answer: 'It is a unique water-based sound experience where water and resonant sound come together to create an immersive moment of calm. Review specific session details for format, venue, and safety.'
   },
   {
-    question: 'What can I expect from this session?',
-    answer: 'By inducing deep relaxation and a profound meditative theta state, sound healing offers potential benefits including emotional release, a luminous sense of mental lightness, relief from chronic insomnia, release of somatic muscle tightness, and a restored feeling of centered grounding.'
+    question: 'What is included in a retreat?',
+    answer: 'Inclusions vary by package. Each retreat schedule lists confirmed accommodation, sattvic meals, guided breathwork, sound healing sessions, local Ganga excursions, and transfers.'
+  },
+  {
+    question: 'How do I book or enquire?',
+    answer: 'Use the booking form on this site, reach out directly on WhatsApp, or send an enquiry to our Rishikesh team for current schedules, availability, and next steps.'
   }
 ];
 
@@ -42,7 +46,7 @@ export const FAQSection: React.FC = () => {
     <section className="py-24 bg-white relative overflow-hidden border-t border-[#e2eaf2]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f7edf7] border border-[#d8b8d8] text-[#663366] text-xs uppercase tracking-widest mb-3 font-bold shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-widest mb-3 font-bold shadow-sm">
             <HelpCircle className="w-3.5 h-3.5" />
             Questions & Answers
           </div>
@@ -54,7 +58,7 @@ export const FAQSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Accordion List (Exact Reference Plum Style #663366) */}
+        {/* Accordion List (Exact Reference Shvaas Blue Style #1718DF) */}
         <div className="space-y-3.5">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
@@ -63,14 +67,14 @@ export const FAQSection: React.FC = () => {
                 key={idx}
                 className={`rounded-2xl transition-all duration-300 overflow-hidden border ${
                   isOpen
-                    ? 'bg-white border-[#663366] shadow-lg shadow-[#663366]/10'
-                    : 'bg-[#663366] hover:bg-[#733b73] border-[#663366] shadow-sm'
+                    ? 'bg-white border-[#1718DF] shadow-lg shadow-[#1718DF]/10'
+                    : 'bg-[#1718DF] hover:bg-[#6882FF] border-[#1718DF] shadow-sm'
                 }`}
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
                   className={`w-full py-4 px-6 text-left flex items-center justify-between gap-4 transition-colors ${
-                    isOpen ? 'text-[#663366]' : 'text-white'
+                    isOpen ? 'text-[#1718DF]' : 'text-white'
                   }`}
                 >
                   <span className="font-heading text-base sm:text-lg font-bold">
@@ -79,7 +83,7 @@ export const FAQSection: React.FC = () => {
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-transform ${
                       isOpen
-                        ? 'bg-[#f7edf7] border-[#d8b8d8] text-[#663366] rotate-180'
+                        ? 'bg-[#EEF0FF] border-[#CCD6F7] text-[#1718DF] rotate-180'
                         : 'bg-white/15 border-white/30 text-white'
                     }`}
                   >
@@ -88,7 +92,7 @@ export const FAQSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#475569] font-light leading-relaxed border-t border-[#f0e3f0] animate-in fade-in duration-300">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#475569] font-light leading-relaxed border-t border-[#DFE6FC] animate-in fade-in duration-300">
                     <p>{faq.answer}</p>
                   </div>
                 )}

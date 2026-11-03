@@ -10,10 +10,15 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-heading: 'Elsie', 'Cinzel', serif;
 
-  --color-plum-brand: #663366;
-  --color-plum-deep: #431c43;
-  --color-plum-hover: #7b3e7b;
-  --color-plum-soft: #f7eef7;
+  --color-shvaas-blue: #1718DF;
+  --color-shvaas-navy: #0E1338;
+  --color-shvaas-hover: #6882FF;
+  --color-shvaas-soft: #EEF0FF;
+
+  --color-plum-brand: #1718DF;
+  --color-plum-deep: #0E1338;
+  --color-plum-hover: #6882FF;
+  --color-plum-soft: #EEF0FF;
   --color-gold-accent: #c1a78c;
   --color-gold-warm: #d4af37;
   --color-gold-light: #ffd875;
@@ -41,11 +46,16 @@
   --color-bg-blue-tint: #edf4fa;
   --color-bg-ice-mist: #e2edf8;
 
-  /* Brand Accents */
-  --color-plum-brand: #663366;
-  --color-plum-deep: #431c43;
-  --color-plum-hover: #7b3e7b;
-  --color-plum-soft: #f7eef7;
+  /* Brand Accents - Shvaas Royal Blue Palette */
+  --color-shvaas-blue: #1718DF;
+  --color-shvaas-navy: #0E1338;
+  --color-shvaas-hover: #6882FF;
+  --color-shvaas-soft: #EEF0FF;
+
+  --color-plum-brand: #1718DF;
+  --color-plum-deep: #0E1338;
+  --color-plum-hover: #6882FF;
+  --color-plum-soft: #EEF0FF;
   --color-gold-accent: #c1a78c;
   --color-gold-warm: #d4af37;
 
@@ -98,21 +108,21 @@ h1, h2, h3, .font-heading {
   background: linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%);
 }
 
-/* Plum Accents from Reference */
+/* Shvaas Blue Accents from Reference */
 .bg-plum-brand {
-  background-color: #663366;
+  background-color: #1718DF;
 }
 
 .text-plum-brand {
-  color: #663366;
+  color: #1718DF;
 }
 
 .text-plum-deep {
-  color: #4a1e4a;
+  color: #0E1338;
 }
 
 .border-plum-subtle {
-  border-color: rgba(102, 51, 102, 0.2);
+  border-color: rgba(23, 24, 223, 0.2);
 }
 
 .border-ice-subtle {
@@ -155,9 +165,9 @@ h1, h2, h3, .font-heading {
   background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #c5a6c5;
+  background: #C4C8E8;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #663366;
+  background: #1718DF;
 }

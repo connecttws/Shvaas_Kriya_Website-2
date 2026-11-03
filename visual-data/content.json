@@ -1,48 +1,48 @@
 {
   "site": {
-    "title": "Moksham Healings | Himalayan Sound Sanctuary Dharamshala",
-    "description": "Experience master Tibetan singing bowls, sacred vibrational therapy, chakra balancing, and certified teacher training in Dharamshala, Himachal Pradesh.",
-    "location": "Bhagsunag & Forsyth Ganj, Dharamshala, Himachal Pradesh, India",
-    "founder": "Sibani Panigrahi",
+    "title": "Shvaas Kriya Retreat | Rishikesh & Online Sanctuary",
+    "description": "A space to reconnect through breath, sound & stillness. Mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in presence.",
+    "location": "Tapovan Riverside & Partner Retreat Sanctuaries, Rishikesh, Uttarakhand, India",
+    "ethos": "Breathe · Listen · Reconnect",
     "whatsappPhone": "+91 7208936359",
     "phoneDisplay": "+91 72089 36359",
-    "email": "contact@mokshamhealings.com"
+    "email": "connect@shvaaskriyaretreat.com"
   },
   "hero": {
-    "badge": "Sound Healing & Spiritual Wellness Center • Dharamshala",
-    "headline": "Restore Your Energy Through Sound",
-    "founderSignature": "~ Sibani Panigrahi",
-    "subheadline": "Experience deep relaxation. Harmonize your mind, body, and spirit through therapeutic sound frequencies that promote balance in Forsyth Ganj & Bhagsunag.",
-    "ctaPrimary": "Book Sanctuary Session",
+    "badge": "Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect",
+    "headline": "Welcome to Shvaas Kriya Retreat",
+    "subheadline": "A Space to Reconnect Through Breath, Sound & Stillness",
+    "body": "Step away from the noise of everyday life and make room for yourself. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in breath, sound, and presence.",
+    "ctaPrimary": "Explore Our Experiences",
     "ctaSecondary": "Strike 528Hz Miracle Bowl",
     "pillars": [
       {
         "label": "Location",
-        "value": "Bhagsunag, HP",
-        "sub": "Near Bhagsu Taxi Stand"
-      },
-      {
-        "label": "Founder",
-        "value": "Sibani Panigrahi",
-        "sub": "Master Sound Healer"
-      },
-      {
-        "label": "Acoustics",
-        "value": "7-Metal Singing Bowls",
-        "sub": "Full Moon Consecrated"
+        "value": "Rishikesh, UK",
+        "sub": "By Sacred Ganga River"
       },
       {
         "label": "Offerings",
-        "value": "Certification Courses",
-        "sub": "International Accreditation"
+        "value": "5 Signature Paths",
+        "sub": "Sessions, TTC & Retreats"
+      },
+      {
+        "label": "Acoustics",
+        "value": "Sound & Aqua Sound",
+        "sub": "7-Metal Singing Bowls"
+      },
+      {
+        "label": "Core Ethos",
+        "value": "Breathe · Listen",
+        "sub": "Reconnect Inward"
       }
     ]
   },
   "whatIsSoundHealing": {
-    "badge": "Ancient Vedic & Tibetan Acoustic Science",
+    "badge": "Ancient Vedic & Himalayan Acoustic Science",
     "headline": "Sound as Medicine in the Himalayas",
-    "subheadline": "Sound healing at Moksham Healings is a transformative practice designed to restore balance and inner peace through the therapeutic power of sound vibrations. Using instruments such as Tibetan singing bowls, gongs, and chimes, this modality works to realign your body's energy frequencies and induce deep mental clarity.",
-    "quote": "In the quietude of the Dhauladhar mountains, every harmonic wave reconnects you to the pulse of creation.",
+    "subheadline": "Sound healing at Shvaas Kriya Retreat is a transformative practice designed to restore balance and inner peace through the therapeutic power of sound vibrations. Using instruments such as Tibetan singing bowls, gongs, and chimes, this modality works to realign your body's energy frequencies and induce deep mental clarity.",
+    "quote": "In the quietude of Rishikesh along the sacred Ganga, every harmonic wave reconnects you to the pulse of creation.",
     "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1000&auto=format&fit=crop"
   },
   "sanctuaryAltar": {
@@ -51,48 +51,56 @@
     "description": "Interact with our procedurally crafted Tibetan bronze vessel. Strike the bowl, adjust the Solfeggio frequency to match any of the seven chakras, and feel the visual and acoustic resonance ripple outwards."
   },
   "offersShowcase": {
-    "badge": "Signature Holistic Sanctuary",
-    "headline": "Moksham Healings Offers You",
-    "subheadline": "Step into a sanctuary where age-old healing traditions meet present-moment serenity. Explore our four foundational offerings crafted in the sacred valleys of Himachal Pradesh.",
+    "badge": "Explore Our Experiences",
+    "headline": "Experiences that meet you where you are.",
+    "subheadline": "Find the session, retreat, or learning journey that feels right for you.",
     "offers": [
       {
-        "id": "teacher-training",
+        "id": "shvaas-sessions",
         "num": "01",
-        "title": "Sound Healing Teacher Training Course",
-        "desc": "Discover a path of inner transformation and self-awakening. Our sound healing course at Moksham Healing is crafted to help you explore the profound power of sound therapy. Learn how vibrations and frequencies can restore balance, enhance clarity, and deepen emotional well-being.",
+        "title": "Shvaas Kriya Sessions — Online & Offline",
+        "desc": "Make time to pause, breathe, and reconnect through guided sessions designed to support a more mindful relationship with yourself. Join from wherever you are, or experience the practice in person in Rishikesh.",
         "image": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000&auto=format&fit=crop",
-        "category": "Practitioner Certification"
+        "category": "Guided Practice"
       },
       {
-        "id": "mantra-chanting",
+        "id": "shvaas-ttc",
         "num": "02",
-        "title": "Mantra Chanting with Singing Bowls",
-        "desc": "Singing bowls are widely used in different types of spiritual and religious rituals with different mantras. So, mantra chanting with a singing bowl has a very good effect on body, mind, emotions, and it can be used for healing purposes. With sacred vowel acoustics, we activate deep cellular resonance.",
+        "title": "Shvaas Kriya TTC",
+        "desc": "Deepen your personal practice and explore the foundations of Shvaas Kriya through a structured teacher training journey. Learn, practise, and grow with intention in Rishikesh.",
         "image": "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1000&auto=format&fit=crop",
-        "category": "Spiritual Sound Practice"
+        "category": "Teacher Training Course"
       },
       {
-        "id": "pendulum-dowsing",
+        "id": "sound-sessions",
         "num": "03",
-        "title": "Pendulum Dowsing",
-        "desc": "Pendulum healing employs the motion of a pendulum to sensitively assess and balance the body's subtle energy fields. This highly effective, gentle technique is instrumental in clearing energetic blockages, restoring internal harmony, and providing robust support for emotional well-being.",
-        "image": "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=1000&auto=format&fit=crop",
-        "category": "Biofield Diagnosis"
+        "title": "Sound Healing Sessions",
+        "desc": "Enter a space of deep listening and relaxation through resonant sounds and mindful stillness. Give yourself permission to slow down and simply be.",
+        "image": "https://images.unsplash.com/photo-1512290900672-1f55b935b460?q=80&w=1000&auto=format&fit=crop",
+        "category": "Group & Private Journeys"
       },
       {
-        "id": "energy-scanning",
+        "id": "aqua-sound",
         "num": "04",
-        "title": "Energy Body Scanning",
-        "desc": "Energy healing at Moksham Healings is a gentle practice designed to restore harmony by clearing blockages and balancing the body's natural energy flow. This process works to restore your natural rhythm and awaken your body's ability to heal. It aligns your energy to dissolve blockages and revitalize mind, body, and soul.",
-        "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=1000&auto=format&fit=crop",
-        "category": "Holistic Restoration"
+        "title": "Aqua Sound Healing Sessions",
+        "desc": "Experience sound in a unique water-based setting, where water and resonant sound come together to create an immersive moment of calm.",
+        "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1000&auto=format&fit=crop",
+        "category": "Signature Aquatic Immersion"
+      },
+      {
+        "id": "sound-ttc",
+        "num": "05",
+        "title": "Sound Healing TTC",
+        "desc": "Explore the art and practice of sound healing, build your understanding of sound instruments, and develop the skills to guide sound experiences for others.",
+        "image": "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=1000&auto=format&fit=crop",
+        "category": "Practitioner Certification"
       }
     ]
   },
   "teacherTraining": {
     "badge": "Accredited Himalayan Certification",
-    "headline": "Sound Healing Teacher Training in Dharamshala",
-    "subheadline": "Step into the sacred foothills of the Dhauladhar mountains. Train under master sound practitioners to facilitate profound individual therapies and transcendental group sound baths with authentic Tibetan singing bowls.",
+    "headline": "Sound Healing & Shvaas Kriya Teacher Training in Rishikesh",
+    "subheadline": "Step into the sacred foothills of Rishikesh by the Ganga. Train under experienced practitioners to facilitate profound individual therapies and transcendental group sound baths with authentic Tibetan singing bowls.",
     "modules": [
       {
         "num": "01",
@@ -123,7 +131,7 @@
       "session": "Individual Sound Healing (60 mins)",
       "rating": 5,
       "date": "October 2026",
-      "comment": "I came to Dharamshala carrying months of severe burnout and insomnia from corporate work. When the master placed the large bronze singing bowl on my chest and struck it, I felt tears flowing uncontrollably as all the frozen grief dissolved. That night I slept 9 uninterrupted hours for the first time in two years.",
+      "comment": "I came to Rishikesh carrying months of severe burnout and insomnia from corporate work. When the master placed the large bronze singing bowl on my chest and struck it, I felt tears flowing uncontrollably as all the frozen grief dissolved. That night I slept 9 uninterrupted hours for the first time in two years.",
       "verified": true
     },
     {
@@ -132,7 +140,7 @@
       "session": "Couple Harmonic Sound Therapy",
       "rating": 5,
       "date": "September 2026",
-      "comment": "A profoundly sacred experience for our 10th anniversary. The dual singing bowls tuned to the heart chakra (639Hz) created an acoustic embrace that felt out of this realm. The quiet tea ceremony in the Bhagsunag sanctuary afterward cemented an unforgettable memory.",
+      "comment": "A profoundly sacred experience for our 10th anniversary. The dual singing bowls tuned to the heart chakra (639Hz) created an acoustic embrace that felt out of this realm. The quiet tea ceremony in the Rishikesh riverside sanctuary afterward cemented an unforgettable memory.",
       "verified": true
     },
     {
@@ -150,30 +158,34 @@
       "session": "Sound Healing Teacher Training Certification",
       "rating": 5,
       "date": "July 2026",
-      "comment": "Completing the 5-day Nada Yoga teacher training at Moksham Healings in Dharamshala was life-altering. The master teachers do not merely teach you how to hit bowls; they teach you how to listen with your subtle field, how to hold space for others, and how to heal. I now lead sound baths back home in Italy with absolute confidence.",
+      "comment": "Completing the teacher training at Shvaas Kriya Retreat in Rishikesh was life-altering. The master teachers do not merely teach you how to hit bowls; they teach you how to listen with your subtle field, how to hold space for others, and how to heal. I now lead sound baths back home in Italy with absolute confidence.",
       "verified": true
     }
   ],
   "faqs": [
     {
-      "question": "What is sound healing ?",
-      "answer": "Sound healing is a therapeutic practice that uses sound vibrations to promote relaxation, reduce stress, and support physical and emotional well-being. It's based on the idea that sound frequencies can influence the body's energy, brainwave states, and nervous system. By realigning cellular frequencies with pure harmonic overtones, the body returns to its natural homeostasis."
+      "question": "Where do Shvaas Kriya retreats take place?",
+      "answer": "Retreats are curated with selected hospitality partners and spaces in and around Rishikesh. The venue is shared for each retreat."
     },
     {
-      "question": "How does sound healing work, and what instruments are used?",
-      "answer": "Sound healing works by using vibration, frequency, and acoustic resonance to influence your parasympathetic nervous system, shifting brainwave states from active Beta down into restorative Alpha and Theta. In our Dharamshala sanctuary, we utilize authentic 7-metal Tibetan singing bowls forged under full moons, hand-hammered chau & wind gongs, crystal quartz pendulums, Koshi earth/water chimes, and Tibetan tingshas."
+      "question": "Are Shvaas Kriya sessions available online and offline?",
+      "answer": "Yes. Both online and in-person options are offered, subject to the current schedule."
     },
     {
-      "question": "How long is a typical session?",
-      "answer": "1 hour to 2 hours, also depends on the therapy you choose. Most individual and couple vibrational sound healing sessions last 60 minutes. Deep on-body sound massages and combined aura cleansing protocols range between 75 to 90 minutes."
+      "question": "What is the difference between Shvaas Kriya TTC and Sound Healing TTC?",
+      "answer": "They are separate training offerings. Course details, curriculum, duration, and outcomes are provided on their respective training overviews."
     },
     {
-      "question": "Do I need prior experience to try Sound healing?",
-      "answer": "No prior experience is necessary to try sound healing. It is a highly beginner-friendly and gently guided practice, requiring you only to lie back comfortably, close your eyes, and be receptive. There are no postures to hold or complex meditation techniques to master."
+      "question": "What is Aqua Sound Healing?",
+      "answer": "It is a unique water-based sound experience where water and resonant sound come together to create an immersive moment of calm. Review specific session details for format, venue, and safety."
     },
     {
-      "question": "What can I expect from this session?",
-      "answer": "By inducing deep relaxation and a profound meditative theta state, sound healing offers potential benefits including emotional release, a luminous sense of mental lightness, relief from chronic insomnia, release of somatic muscle tightness, and a restored feeling of centered grounding."
+      "question": "What is included in a retreat?",
+      "answer": "Inclusions vary by package. Each retreat schedule lists confirmed accommodation, sattvic meals, guided breathwork, sound healing sessions, local Ganga excursions, and transfers."
+    },
+    {
+      "question": "How do I book or enquire?",
+      "answer": "Use the booking form on this site, reach out directly on WhatsApp, or send an enquiry to our Rishikesh team for current schedules, availability, and next steps."
     }
   ]
 }

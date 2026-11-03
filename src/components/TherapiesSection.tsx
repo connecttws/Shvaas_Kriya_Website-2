@@ -45,8 +45,8 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#f7edf7] border border-[#d8b8d8] text-[#663366] text-xs uppercase tracking-[0.25em] mb-4 font-bold shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#663366]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-[0.25em] mb-4 font-bold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#1718DF]" />
             Sacred Modalities & Sound Therapies
           </div>
 
@@ -55,7 +55,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
           </h2>
 
           <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic leading-relaxed">
-            Every session at Moksham Healings is tailored to your unique biofield. Using hand-hammered seven-metal Himalayan bowls and Solfeggio frequencies, we guide your brain and cells into deep restorative stillness.
+            Every session at Shvaas Kriya Retreat is tailored to your unique rhythm. Using hand-hammered seven-metal Himalayan bowls and Solfeggio frequencies, we guide your breath and mind into deep restorative stillness.
           </p>
 
           {/* Category Tabs & Currency Switcher */}
@@ -67,7 +67,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all ${
                     activeCategory === cat.id
-                      ? 'bg-[#663366] text-white shadow-md'
+                      ? 'bg-[#1718DF] text-white shadow-md'
                       : 'text-[#64748b] hover:text-[#1e293b] border border-transparent hover:border-[#d8e3ed]'
                   }`}
                 >
@@ -81,7 +81,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
               <span className="text-[#64748b] font-medium">Display:</span>
               <button
                 onClick={onToggleCurrency}
-                className="font-bold text-[#663366] hover:text-[#431c43] transition"
+                className="font-bold text-[#1718DF] hover:text-[#0E1338] transition"
               >
                 {currency === 'INR' ? '₹ INR (Indian Rupee)' : '$ USD (US Dollar)'}
               </button>
@@ -97,7 +97,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
             return (
               <div
                 key={service.id}
-                className="group relative rounded-3xl bg-white border border-[#e2edf6] hover:border-[#663366]/40 transition-all duration-300 p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1"
+                className="group relative rounded-3xl bg-white border border-[#e2edf6] hover:border-[#1718DF]/40 transition-all duration-300 p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1"
               >
                 <div>
                   {/* Photo Container */}
@@ -109,7 +109,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b]/60 via-transparent to-transparent opacity-60" />
 
                     {service.highlight && (
-                      <span className="absolute top-3 left-3 text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-full bg-white text-[#663366] border border-[#edd7ed] font-bold shadow-sm">
+                      <span className="absolute top-3 left-3 text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded-full bg-white text-[#1718DF] border border-[#CCD6F7] font-bold shadow-sm">
                         {service.highlight}
                       </span>
                     )}
@@ -121,12 +121,12 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   </div>
 
                   {/* Therapy Details */}
-                  <h3 className="text-xl font-heading text-[#27282c] group-hover:text-[#663366] transition-colors mb-1">
+                  <h3 className="text-xl font-heading text-[#27282c] group-hover:text-[#1718DF] transition-colors mb-1">
                     {service.title}
                   </h3>
 
                   {service.sanskritSubtitle && (
-                    <div className="text-xs font-serif-elegant italic text-[#825b82] mb-3">
+                    <div className="text-xs font-serif-elegant italic text-[#1718DF] mb-3">
                       {service.sanskritSubtitle}
                     </div>
                   )}
@@ -142,7 +142,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                     </div>
                     {service.benefits.slice(0, 3).map((benefit, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-[#334155]">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#663366] shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#1718DF] shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </div>
                     ))}
@@ -173,7 +173,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => setModalService(service)}
-                      className="p-2 rounded-xl bg-[#f1f6fb] border border-[#d8e3ed] text-[#64748b] hover:text-[#663366] hover:bg-white transition"
+                      className="p-2 rounded-xl bg-[#f1f6fb] border border-[#d8e3ed] text-[#64748b] hover:text-[#1718DF] hover:bg-white transition"
                       title="View Details"
                     >
                       <ChevronRight className="w-4 h-4" />
@@ -181,7 +181,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
                     <button
                       onClick={() => onSelectTherapy(service.id)}
-                      className="px-4 py-2 rounded-xl bg-[#663366] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#7b3e7b] active:scale-95 transition shadow-md flex items-center gap-1.5"
+                      className="px-4 py-2 rounded-xl bg-[#1718DF] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#6882FF] active:scale-95 transition shadow-md flex items-center gap-1.5"
                     >
                       <span>Reserve</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#ffd875]" />
@@ -212,7 +212,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <span className="text-[10px] uppercase tracking-widest text-[#ffd875] font-bold block mb-1">
-                    Dharamshala Sanctuary Session
+                    Rishikesh Sanctuary Session
                   </span>
                   <h3 className="text-2xl font-heading font-bold text-white">
                     {modalService.title}
@@ -224,7 +224,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                 <p>{modalService.description}</p>
 
                 <div className="p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] space-y-2">
-                  <div className="text-xs uppercase tracking-wider font-bold text-[#663366]">
+                  <div className="text-xs uppercase tracking-wider font-bold text-[#1718DF]">
                     Preparation & Sanctuary Etiquette:
                   </div>
                   <ul className="text-xs space-y-1 text-[#52637a] list-disc list-inside">
@@ -237,7 +237,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                 <div className="flex items-center justify-between pt-4 border-t border-[#edf2f7]">
                   <div>
                     <span className="text-xs text-[#64748b] block">Duration: {formatDuration(modalService.durationMin)}</span>
-                    <span className="text-xl font-heading font-bold text-[#663366]">
+                    <span className="text-xl font-heading font-bold text-[#1718DF]">
                       {currency === 'INR' ? `₹${modalService.priceINR.toLocaleString('en-IN')}` : `$${modalService.priceUSD}`}
                     </span>
                   </div>
@@ -248,7 +248,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                       setModalService(null);
                       onSelectTherapy(id);
                     }}
-                    className="px-6 py-3 rounded-xl bg-[#663366] hover:bg-[#7b3e7b] text-white font-bold text-xs uppercase tracking-wider shadow-md transition flex items-center gap-2"
+                    className="px-6 py-3 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-md transition flex items-center gap-2"
                   >
                     <Calendar className="w-4 h-4 text-[#ffd875]" />
                     <span>Proceed to Book</span>

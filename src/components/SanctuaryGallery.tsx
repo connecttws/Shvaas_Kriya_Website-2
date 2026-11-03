@@ -5,9 +5,9 @@ export const SanctuaryGallery: React.FC = () => {
   const pillars = [
     {
       icon: Mountain,
-      title: 'High-Altitude Himalayan Prana',
-      subtitle: '2,082m Elevation in Dharamshala',
-      desc: 'Nestled amidst cedar pine groves and the sacred shadow of the Triund & Dhauladhar peaks, the acoustic clarity here carries deep grounding electromagnetic resonance.'
+      title: 'Sacred Himalayan Prana',
+      subtitle: 'Riverside Sanctuary in Rishikesh',
+      desc: 'Nestled along the pristine banks of the sacred Ganga in Rishikesh, the natural tranquility and fresh mountain prana carry deep grounding and emotional renewal.'
     },
     {
       icon: Flame,
@@ -35,7 +35,7 @@ export const SanctuaryGallery: React.FC = () => {
             Where Ancient Wisdom Meets Sacred Stillness
           </h2>
           <p className="text-sm sm:text-base text-[#b0a595] font-serif-elegant italic leading-relaxed">
-            Forsyth Ganj & Bhagsunag are historic centers of meditation and spiritual awakening. Moksham Healings was established to preserve authentic Tibetan acoustic therapy in its purest form.
+            Rishikesh is the historic world center of yoga, meditation, and spiritual awakening. Shvaas Kriya Retreat was established to create space for conscious breath, sound, and deep personal reconnection.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const SanctuaryGallery: React.FC = () => {
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
             <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">5.0 ★★★★★</span>
             <span className="text-xs uppercase tracking-wider text-[#a89d89]">Sanctuary Rating</span>
-            <span className="text-[10px] text-[#696150] mt-1 font-serif-elegant italic">Dharamshala Spiritual Community</span>
+            <span className="text-[10px] text-[#696150] mt-1 font-serif-elegant italic">Rishikesh Spiritual Community</span>
           </div>
         </div>
       </div>

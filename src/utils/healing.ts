@@ -1,5 +1,5 @@
 /**
- * Sacred Healing Data, Solfeggio Harmonics, and Session Logic for Moksham Healings Dharamshala
+ * Sacred Healing Data, Solfeggio Harmonics, and Session Logic for Shvaas Kriya Retreat Rishikesh
  */
 
 export interface ChakraInfo {
@@ -172,7 +172,7 @@ export const THERAPY_SERVICES: TherapyService[] = [
     priceUSD: 60,
     highlight: 'Intimate Shared Frequency Healing',
     description: 'Designed for partners, friends, or companions seeking to deepen heart coherence, harmonize energetic boundaries, and release collective stress in an intimate candlelit sanctuary.',
-    benefits: ['Synchronized heart rate variability (HRV)', 'Dissolves unspoken tension & fosters compassion', 'Shared serene sensory experience in Dharamshala', 'Sacred tea ritual afterward'],
+    benefits: ['Synchronized heart rate variability (HRV)', 'Dissolves unspoken tension & fosters compassion', 'Shared serene sensory experience in Rishikesh', 'Sacred tea ritual afterward'],
     instruments: ['Twin Full Moon Bowls', 'Heart-Tuned 639Hz Resonators', 'Ocean Harp', 'Subtle Rainsticks'],
     image: 'https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=800&auto=format&fit=crop'
   },
@@ -226,7 +226,7 @@ export const THERAPY_SERVICES: TherapyService[] = [
     durationMin: 1800, // Multi-day course
     priceINR: 28000,
     priceUSD: 350,
-    highlight: 'Accredited 5-Day Intensive in Dharamshala',
+    highlight: 'Accredited Intensive in Rishikesh',
     description: 'Master the ancient art and modern neuroscience of Tibetan Singing Bowls, Gong playing, Aura diagnostics, and therapeutic 1-on-1 protocols from master healers in the foothills of the Himalayas.',
     benefits: ['International Practitioner Certification', 'Hands-on training with antique 7-metal bowls', 'Complete therapy sequence manuals', 'Lifetime guidance and bowl acquisition support'],
     instruments: ['Full Professional Sound Kit Training', 'Master Gongs', 'Antique Himalayan Artifacts'],
