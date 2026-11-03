@@ -31,7 +31,7 @@ export const SanctuaryGallery: React.FC = () => {
             <Mountain className="w-3.5 h-3.5" />
             The Himalayan Sanctuary
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#fff8eb] tracking-tight mb-5">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#fff8eb] tracking-tight mb-5">
             Where Ancient Wisdom Meets Sacred Stillness
           </h2>
           <p className="text-base sm:text-lg text-[#b0a595] font-sans font-normal leading-relaxed">
@@ -46,18 +46,18 @@ export const SanctuaryGallery: React.FC = () => {
             return (
               <div
                 key={i}
-                className="p-8 rounded-2xl bg-gradient-to-b from-[#0f1118] to-[#0a0c10] border border-[#21232e] hover:border-[#4a3e26] transition-all duration-300 relative group"
+                className="p-8 rounded-2xl bg-gradient-to-b from-[#0f1118] to-[#0a0c10] border border-[#21232e] hover:border-[#4a3e26] transition-all duration-300 relative group font-sans"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#1a1710] border border-[#3b301c] flex items-center justify-center text-[#d4af37] mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="w-6 h-6" />
                 </div>
-                <div className="text-[11px] uppercase tracking-wider text-[#d4af37] font-semibold mb-1">
+                <div className="text-xs uppercase tracking-wider text-[#d4af37] font-bold mb-1 font-sans">
                   {p.subtitle}
                 </div>
-                <h3 className="text-xl font-heading text-[#fff5dc] mb-3">
+                <h3 className="text-xl sm:text-2xl font-sans font-bold text-[#fff5dc] mb-3">
                   {p.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#9c9383] font-light leading-relaxed">
+                <p className="text-sm sm:text-base text-[#b0a595] font-normal leading-relaxed font-sans">
                   {p.desc}
                 </p>
               </div>
@@ -66,25 +66,25 @@ export const SanctuaryGallery: React.FC = () => {
         </div>
 
         {/* Atmospheric Visual Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-sans">
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
-            <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">1,400+</span>
-            <span className="text-xs uppercase tracking-wider text-[#a89d89]">Souls Transformed</span>
+            <span className="font-sans text-3xl sm:text-4xl font-extrabold text-[#e6c167] mb-1">1,400+</span>
+            <span className="text-xs uppercase tracking-wider text-[#a89d89] font-bold">Souls Transformed</span>
             <span className="text-xs text-[#a89d89] mt-1 font-sans">From 42+ Countries</span>
           </div>
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
-            <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">7 Metal</span>
-            <span className="text-xs uppercase tracking-wider text-[#a89d89]">Authentic Tibetan Bowls</span>
+            <span className="font-sans text-3xl sm:text-4xl font-extrabold text-[#e6c167] mb-1">7 Metal</span>
+            <span className="text-xs uppercase tracking-wider text-[#a89d89] font-bold">Authentic Tibetan Bowls</span>
             <span className="text-xs text-[#a89d89] mt-1 font-sans">Singing up to 90s sustain</span>
           </div>
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
-            <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">432 & 528 Hz</span>
-            <span className="text-xs uppercase tracking-wider text-[#a89d89]">Solfeggio Frequencies</span>
+            <span className="font-sans text-3xl sm:text-4xl font-extrabold text-[#e6c167] mb-1">432 & 528 Hz</span>
+            <span className="text-xs uppercase tracking-wider text-[#a89d89] font-bold">Solfeggio Frequencies</span>
             <span className="text-xs text-[#a89d89] mt-1 font-sans">Miracle & cellular repair</span>
           </div>
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
-            <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">5.0 ★★★★★</span>
-            <span className="text-xs uppercase tracking-wider text-[#a89d89]">Sanctuary Rating</span>
+            <span className="font-sans text-3xl sm:text-4xl font-extrabold text-[#e6c167] mb-1">5.0 ★★★★★</span>
+            <span className="text-xs uppercase tracking-wider text-[#a89d89] font-bold">Sanctuary Rating</span>
             <span className="text-xs text-[#a89d89] mt-1 font-sans">Rishikesh Spiritual Community</span>
           </div>
         </div>

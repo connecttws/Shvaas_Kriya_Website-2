@@ -58,7 +58,7 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
                 <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
                 Sacred Origins & Lineage
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] leading-tight">
                 What Is Sound Healing?
               </h2>
             </div>

@@ -50,7 +50,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
             Sacred Modalities & Sound Therapies
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] tracking-tight mb-4">
             Ancient Himalayan Resonances, Masterfully Applied
           </h2>
 
@@ -121,12 +121,12 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   </div>
 
                   {/* Therapy Details */}
-                  <h3 className="text-xl font-heading text-[#0E1338] group-hover:text-[#1718DF] transition-colors mb-1">
+                  <h3 className="text-xl sm:text-2xl font-sans font-bold text-[#0E1338] group-hover:text-[#1718DF] transition-colors mb-1.5">
                     {service.title}
                   </h3>
 
                   {service.sanskritSubtitle && (
-                    <div className="text-xs sm:text-sm font-sans font-semibold text-[#1718DF] mb-3 tracking-wide">
+                    <div className="text-sm font-sans font-bold text-[#1718DF] mb-3 tracking-wide">
                       {service.sanskritSubtitle}
                     </div>
                   )}
@@ -137,11 +137,11 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
                   {/* Highlights */}
                   <div className="space-y-2.5 mb-5">
-                    <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold">
+                    <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold font-sans">
                       Therapeutic Benefits
                     </div>
                     {service.benefits.slice(0, 3).map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2 text-sm text-[#1E293B] font-medium">
+                      <div key={i} className="flex items-start gap-2 text-sm text-[#0E1338] font-medium font-sans">
                         <CheckCircle2 className="w-4 h-4 text-[#22C55E] shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </div>
@@ -153,7 +153,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                     {service.instruments.map((inst, i) => (
                       <span
                         key={i}
-                        className="text-[10px] bg-[#f1f6fb] text-[#475569] px-2.5 py-1 rounded-full border border-[#d8e3ed]"
+                        className="text-xs bg-[#f1f6fb] text-[#334155] px-2.5 py-1 rounded-full border border-[#d8e3ed] font-medium font-sans"
                       >
                         {inst}
                       </span>
@@ -162,10 +162,10 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                 </div>
 
                 {/* Card Footer */}
-                <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between">
+                <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between font-sans">
                   <div>
-                    <div className="text-[10px] uppercase tracking-wider text-[#64748b]">Energy Exchange</div>
-                    <div className="text-xl font-bold font-heading text-[#27282c]">
+                    <div className="text-xs uppercase tracking-wider text-[#475569] font-bold font-sans">Energy Exchange</div>
+                    <div className="text-2xl font-bold font-sans text-[#1718DF]">
                       {displayPrice}
                     </div>
                   </div>
@@ -173,7 +173,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => setModalService(service)}
-                      className="p-2 rounded-xl bg-[#f1f6fb] border border-[#d8e3ed] text-[#64748b] hover:text-[#1718DF] hover:bg-white transition"
+                      className="p-2.5 rounded-xl bg-[#f1f6fb] border border-[#d8e3ed] text-[#334155] hover:text-[#1718DF] hover:bg-white transition"
                       title="View Details"
                     >
                       <ChevronRight className="w-4 h-4" />
@@ -181,7 +181,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
                     <button
                       onClick={() => onSelectTherapy(service.id)}
-                      className="px-4 py-2 rounded-xl bg-[#1718DF] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#6882FF] active:scale-95 transition shadow-md flex items-center gap-1.5"
+                      className="px-4 py-2.5 rounded-xl bg-[#1718DF] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#6882FF] active:scale-95 transition shadow-md flex items-center gap-1.5 font-sans"
                     >
                       <span>Reserve</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#ffd875]" />
@@ -214,30 +214,30 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   <span className="text-[10px] uppercase tracking-widest text-[#ffd875] font-bold block mb-1">
                     Rishikesh Sanctuary Session
                   </span>
-                  <h3 className="text-2xl font-heading font-bold text-white">
+                  <h3 className="text-2xl font-sans font-bold text-white">
                     {modalService.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="space-y-4 text-sm text-[#475569] leading-relaxed">
+              <div className="space-y-4 text-base text-[#1E293B] font-sans leading-relaxed">
                 <p>{modalService.description}</p>
 
                 <div className="p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] space-y-2">
-                  <div className="text-xs uppercase tracking-wider font-bold text-[#1718DF]">
+                  <div className="text-xs uppercase tracking-wider font-bold text-[#1718DF] font-sans">
                     Preparation & Sanctuary Etiquette:
                   </div>
-                  <ul className="text-xs space-y-1 text-[#52637a] list-disc list-inside">
+                  <ul className="text-sm space-y-1 text-[#334155] list-disc list-inside font-sans">
                     <li>Wear loose, breathable cotton or natural fiber clothing without metallic buckles.</li>
                     <li>Arrive 10 minutes prior to settle into the energetic stillness of our space.</li>
                     <li>Hydrate well prior to the session; pure cellular hydration enhances acoustic wave propagation.</li>
                   </ul>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-[#edf2f7]">
+                <div className="flex items-center justify-between pt-4 border-t border-[#edf2f7] font-sans">
                   <div>
-                    <span className="text-xs text-[#64748b] block">Duration: {formatDuration(modalService.durationMin)}</span>
-                    <span className="text-xl font-heading font-bold text-[#1718DF]">
+                    <span className="text-xs text-[#475569] font-bold block">Duration: {formatDuration(modalService.durationMin)}</span>
+                    <span className="text-2xl font-sans font-bold text-[#1718DF]">
                       {currency === 'INR' ? `₹${modalService.priceINR.toLocaleString('en-IN')}` : `$${modalService.priceUSD}`}
                     </span>
                   </div>

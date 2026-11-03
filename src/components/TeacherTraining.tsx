@@ -50,7 +50,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               Accredited Himalayan Certification
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] leading-tight">
               Sound Healing & Shvaas Kriya Teacher Training
             </h2>
 
@@ -64,7 +64,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
                   key={m.num}
                   className="p-4 rounded-2xl bg-gradient-to-r from-[#f8fbfe] to-[#f4fcf7] border border-[#e2edf6] hover:border-[#22C55E]/40 transition flex gap-4 items-start shadow-sm"
                 >
-                  <span className="font-heading font-bold text-sm text-[#1718DF] bg-[#EEF0FF] px-2.5 py-1 rounded-xl border border-[#CCD6F7] shrink-0">
+                  <span className="font-sans font-bold text-sm text-[#1718DF] bg-[#EEF0FF] px-2.5 py-1 rounded-xl border border-[#CCD6F7] shrink-0">
                     {m.num}
                   </span>
                   <div>
@@ -80,15 +80,15 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold">
+              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold font-sans">
                 <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Practitioner Certificate</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold">
+              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold font-sans">
                 <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Small Batch (Max 8)</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold">
+              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold font-sans">
                 <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Lifetime Mentorship</span>
               </div>
@@ -97,51 +97,53 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
 
           {/* Right Column: Enrollment Card & Batches */}
           <div className="lg:col-span-5">
-            <div className="rounded-3xl bg-gradient-to-b from-white via-[#f7fcf9] to-[#f4f8fc] border border-[#CCD6F7] p-6 sm:p-8 shadow-2xl relative">
+            <div className="rounded-3xl bg-gradient-to-b from-white via-[#f7fcf9] to-[#f4f8fc] border border-[#CCD6F7] p-6 sm:p-8 shadow-2xl relative font-sans">
               <div className="absolute -top-3 right-6 bg-gradient-to-r from-[#1718DF] to-[#16A34A] text-white font-bold text-[10px] tracking-widest uppercase px-3.5 py-1 rounded-full shadow-md font-sans">
                 Rishikesh Sanctuary
               </div>
 
-              <div className="flex items-center gap-2 text-xs text-[#0E1338] mb-2 font-semibold">
-                <MapPin className="w-3.5 h-3.5 text-[#22C55E]" />
+              <div className="flex items-center gap-2 text-sm text-[#0E1338] mb-2 font-bold font-sans">
+                <MapPin className="w-4 h-4 text-[#22C55E] shrink-0" />
                 <span>Tapovan Riverside Sanctuary, Rishikesh</span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-heading text-[#0E1338] mb-1">
+              <h3 className="text-2xl sm:text-3xl font-sans font-bold text-[#0E1338] mb-2.5 tracking-tight">
                 Intensive Sound & Breath Immersion
               </h3>
               <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal mb-6 leading-relaxed">
                 Complete theoretical and practical clinical immersion with full access to master singing bowls, pranayama anatomy, and personal mentorship.
               </p>
 
-              <div className="p-4 rounded-2xl bg-white border border-[#e2edf6] mb-6 flex items-center justify-between shadow-sm">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#e2edf6] mb-6 flex items-center justify-between shadow-sm">
                 <div>
-                  <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold font-sans">Comprehensive Course Tuition</div>
-                  <div className="text-2xl font-heading font-bold text-[#1718DF]">
+                  <div className="text-xs uppercase tracking-wider text-[#475569] font-bold font-sans mb-1">
+                    Comprehensive Course Tuition
+                  </div>
+                  <div className="text-2xl sm:text-3xl font-sans font-extrabold text-[#1718DF] tracking-tight">
                     {currency === 'INR' ? '₹28,000' : '$350 USD'}
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-xs text-[#16A34A] bg-[#ECFDF5] px-3 py-1 rounded-full border border-[#86EFAC] font-semibold font-sans">
+                  <span className="text-xs text-[#16A34A] bg-[#ECFDF5] px-3.5 py-1.5 rounded-full border border-[#86EFAC] font-bold font-sans shadow-sm">
                     Cert. Included
                   </span>
                 </div>
               </div>
 
-              <div className="space-y-2 mb-6">
-                <div className="text-xs uppercase tracking-wider text-[#64748b] font-bold">
+              <div className="space-y-2.5 mb-6">
+                <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold font-sans">
                   Upcoming 2026/2027 Batches:
                 </div>
                 {upcomingBatches.map((b, i) => (
                   <div
                     key={i}
-                    className="p-3 rounded-xl bg-white border border-[#e2edf6] flex items-center justify-between text-xs shadow-sm"
+                    className="p-3.5 rounded-xl bg-white border border-[#e2edf6] hover:border-[#22C55E]/50 transition flex items-center justify-between text-sm shadow-sm font-sans"
                   >
-                    <div className="flex items-center gap-2 text-[#334155] font-medium">
-                      <Calendar className="w-3.5 h-3.5 text-[#1718DF]" />
+                    <div className="flex items-center gap-2.5 text-[#0E1338] font-bold">
+                      <Calendar className="w-4 h-4 text-[#1718DF] shrink-0" />
                       <span>{b.dates}</span>
                     </div>
-                    <span className="text-[10px] text-[#1718DF] bg-[#EEF0FF] px-2.5 py-0.5 rounded-full border border-[#CCD6F7] font-semibold">
+                    <span className="text-xs text-[#16A34A] bg-[#ECFDF5] px-2.5 py-1 rounded-full border border-[#86EFAC] font-bold font-sans shrink-0">
                       {b.seats}
                     </span>
                   </div>
@@ -150,15 +152,15 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
 
               <button
                 onClick={onEnroll}
-                className="w-full py-3.5 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-sm uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2 font-sans active:scale-95"
               >
                 <span>Inquire & Reserve Batch Seat</span>
                 <ArrowRight className="w-4 h-4 text-[#ffd875]" />
               </button>
 
               <div className="mt-4 text-center">
-                <span className="text-[11px] text-[#64748b]">
-                  Have questions? WhatsApp our mentor directly: <a href="https://wa.me/917208936359" target="_blank" rel="noopener noreferrer" className="text-[#1718DF] font-semibold underline">+91 72089 36359</a>
+                <span className="text-xs text-[#334155] font-sans">
+                  Have questions? WhatsApp our mentor directly: <a href="https://wa.me/917208936359" target="_blank" rel="noopener noreferrer" className="text-[#1718DF] font-bold underline hover:text-[#22C55E] transition-colors">+91 72089 36359</a>
                 </span>
               </div>
             </div>

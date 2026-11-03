@@ -54,7 +54,7 @@ export const GallerySection: React.FC = () => {
             <Camera className="w-3.5 h-3.5 text-[#ffdf85]" />
             Sanctuary Life & Journeys
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-white tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-white tracking-tight mb-4">
             Moments of Presence & Healing in Rishikesh
           </h2>
           <p className="text-base sm:text-lg text-[#DFE6FC] font-sans font-normal leading-relaxed">
@@ -79,7 +79,7 @@ export const GallerySection: React.FC = () => {
                 <span className="text-[10px] uppercase tracking-widest text-[#ffd875] font-semibold block mb-1">
                   Shvaas Kriya Rishikesh
                 </span>
-                <h4 className="text-lg font-heading text-white font-bold mb-1">
+                <h4 className="text-lg font-sans text-white font-bold mb-1">
                   {photo.title}
                 </h4>
                 <p className="text-xs text-[#DFE6FC] font-light line-clamp-2">

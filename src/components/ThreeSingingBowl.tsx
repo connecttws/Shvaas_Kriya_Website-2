@@ -578,8 +578,8 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
             <div className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold">
               {selectedChakra.name} ({selectedChakra.sanskrit})
             </div>
-            <div className="text-sm font-serif-elegant text-[#1e293b] flex items-center gap-2">
-              <span className="font-semibold">{selectedChakra.frequency} Hz Solfeggio [{selectedChakra.solfeggioKey}]</span>
+            <div className="text-sm font-sans text-[#0E1338] flex items-center gap-2">
+              <span className="font-bold">{selectedChakra.frequency} Hz Solfeggio [{selectedChakra.solfeggioKey}]</span>
               <span className="text-[#64748b] text-xs font-sans">• Note {selectedChakra.note}</span>
             </div>
           </div>

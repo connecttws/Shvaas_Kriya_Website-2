@@ -51,7 +51,7 @@ export const FAQSection: React.FC = () => {
             <HelpCircle className="w-3.5 h-3.5 text-[#16A34A]" />
             Questions & Answers
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] tracking-tight mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-2xl mx-auto">
@@ -74,11 +74,11 @@ export const FAQSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
-                  className={`w-full py-4 px-6 text-left flex items-center justify-between gap-4 transition-colors ${
+                  className={`w-full py-4 px-6 text-left flex items-center justify-between gap-4 transition-colors font-sans ${
                     isOpen ? 'text-[#1718DF]' : 'text-white'
                   }`}
                 >
-                  <span className="font-heading text-base sm:text-lg font-bold">
+                  <span className="font-sans text-base sm:text-lg font-bold">
                     {faq.question}
                   </span>
                   <div

@@ -158,7 +158,7 @@ export default function Home() {
                   <Sparkles className="w-3.5 h-3.5" />
                   Interactive 3D Sound Altar
                 </div>
-                <h2 className="text-3xl sm:text-4xl font-heading text-[#27282c] tracking-tight mb-3">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] tracking-tight mb-3">
                   Experience The Singing Bowl In Real-Time
                 </h2>
                 <p className="text-base text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
@@ -244,7 +244,7 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
                 Sanctuary Invitation
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] mb-4">
                 Come to Rishikesh. Leave a Little More Connected.
               </h2>
               <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal max-w-xl mx-auto mb-8 leading-relaxed">

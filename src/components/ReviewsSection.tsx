@@ -62,7 +62,7 @@ export const ReviewsSection: React.FC = () => {
             <Heart className="w-3.5 h-3.5 text-[#16A34A]" />
             Seeker Testimonials
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] tracking-tight mb-4">
             Words from Realigned Souls
           </h2>
           <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-2xl mx-auto">
@@ -97,9 +97,9 @@ export const ReviewsSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between">
+              <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between font-sans">
                 <div>
-                  <div className="text-base font-heading font-bold text-[#0E1338] flex items-center gap-1.5">
+                  <div className="text-lg font-sans font-bold text-[#0E1338] flex items-center gap-1.5">
                     <span>{rev.name}</span>
                     {rev.verified && (
                       <span title="Verified Guest" className="inline-flex">

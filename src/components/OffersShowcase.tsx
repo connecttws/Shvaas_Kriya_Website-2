@@ -73,7 +73,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
             <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
             Explore Our Experiences
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] tracking-tight">
             Experiences that meet you where you are.
           </h2>
           <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed mt-2 max-w-2xl">
@@ -111,7 +111,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
 
                       <div>
                         <h3
-                          className={`text-xl sm:text-2xl font-heading mb-2 transition-colors ${
+                          className={`text-xl sm:text-2xl font-sans font-bold mb-2 transition-colors ${
                             isSelected ? 'text-[#1718DF]' : 'text-[#0E1338]'
                           }`}
                         >
@@ -162,10 +162,10 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
 
                   {/* Arched Window Tag */}
                   <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/95 border border-[#e2edf6] shadow-xl">
-                    <span className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold block mb-1">
+                    <span className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold block mb-1 font-sans">
                       {activeOffer.category}
                     </span>
-                    <div className="text-sm font-heading font-bold text-[#1e293b] mb-2">
+                    <div className="text-base font-sans font-bold text-[#0E1338] mb-2">
                       {activeOffer.title}
                     </div>
                     <button

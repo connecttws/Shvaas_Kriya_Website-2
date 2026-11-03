@@ -108,7 +108,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               />
             </div>
             <div>
-              <h3 className="font-heading text-xl font-bold text-[#0E1338]">
+              <h3 className="font-sans text-xl font-bold text-[#0E1338]">
                 Reserve Your Sacred Space
               </h3>
               <p className="text-xs sm:text-sm text-[#1E293B] font-semibold font-sans">
@@ -125,7 +125,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
         </div>
 
         {/* Modal Body */}
-        <div className="p-6 overflow-y-auto flex-1">
+        <div className="p-6 overflow-y-auto flex-1 font-sans">
           {isSuccess && confirmedBooking ? (
             <div className="text-center py-6 space-y-6 animate-in zoom-in-95 duration-300">
               <div className="w-16 h-16 rounded-full bg-[#e8f8ee] border border-[#27ae60] text-[#27ae60] flex items-center justify-center mx-auto shadow-md">
@@ -133,10 +133,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </div>
 
               <div>
-                <span className="text-xs uppercase tracking-widest text-[#1718DF] font-bold">
+                <span className="text-xs uppercase tracking-widest text-[#1718DF] font-bold font-sans">
                   Reservation Request Received
                 </span>
-                <h4 className="text-2xl font-heading text-[#27282c] mt-1">
+                <h4 className="text-2xl font-sans font-bold text-[#0E1338] mt-1">
                   We Look Forward to Welcoming You
                 </h4>
                 <p className="text-xs sm:text-sm text-[#0E1338] font-medium max-w-md mx-auto mt-2 leading-relaxed">
@@ -144,7 +144,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </p>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] text-left max-w-md mx-auto space-y-3 text-xs shadow-sm">
+              <div className="p-5 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] text-left max-w-md mx-auto space-y-3 text-xs shadow-sm font-sans">
                 <div className="flex justify-between border-b border-[#edf2f7] pb-2">
                   <span className="text-[#0E1338] font-semibold">Therapy Modality:</span>
                   <span className="font-bold text-[#0E1338] text-right">{selectedService.title}</span>
@@ -159,7 +159,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
                 <div className="flex justify-between pt-1 text-sm font-bold">
                   <span className="text-[#0E1338]">Estimated Exchange:</span>
-                  <span className="text-[#1718DF] font-heading">{currency === 'INR' ? `₹${totalPrice.toLocaleString('en-IN')}` : `$${totalPrice} USD`}</span>
+                  <span className="text-[#1718DF] font-sans font-bold">{currency === 'INR' ? `₹${totalPrice.toLocaleString('en-IN')}` : `$${totalPrice} USD`}</span>
                 </div>
               </div>
 
@@ -350,10 +350,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 />
               </div>
 
-              <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between">
+              <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between font-sans">
                 <div>
-                  <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Total Energy Exchange</div>
-                  <div className="text-2xl font-heading font-bold text-[#1718DF]">
+                  <div className="text-xs uppercase tracking-wider text-[#475569] font-bold font-sans">Total Energy Exchange</div>
+                  <div className="text-2xl font-sans font-bold text-[#1718DF]">
                     {currency === 'INR' ? `₹${totalPrice.toLocaleString('en-IN')}` : `$${totalPrice} USD`}
                   </div>
                 </div>

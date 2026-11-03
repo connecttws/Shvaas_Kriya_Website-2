@@ -130,7 +130,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-heading text-sm xs:text-base sm:text-lg xl:text-xl font-bold tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight">
+              <span className="font-sans text-sm xs:text-base sm:text-lg xl:text-xl font-bold tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight">
                 Shvaas Kriya Retreat
               </span>
               <span className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#86EFAC] uppercase -mt-0.5 font-sans font-semibold">
@@ -410,7 +410,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-heading text-base font-bold text-white leading-tight">
+                  <h3 className="font-sans text-base font-bold text-white leading-tight">
                     Shvaas Kriya Retreat
                   </h3>
                   <p className="text-[10px] tracking-widest text-[#ffd875] uppercase font-sans font-medium">

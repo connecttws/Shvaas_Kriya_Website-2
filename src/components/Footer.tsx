@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <div>
-                <span className="font-heading text-xl font-bold tracking-wider text-white block">
+                <span className="font-sans text-xl font-bold tracking-wider text-white block">
                   Shvaas Kriya Retreat
                 </span>
                 <span className="text-[10px] tracking-widest text-[#ffd875] uppercase font-sans font-semibold">
@@ -42,8 +42,8 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links (Exact from reference site) */}
-          <div className="space-y-3">
-            <h4 className="font-heading text-base font-bold text-[#ffd875] mb-2">
+          <div className="space-y-3 font-sans">
+            <h4 className="font-sans text-base font-bold text-[#ffd875] mb-2">
               Quick Links
             </h4>
             <ul className="space-y-2 text-xs text-[#DFE6FC]">
@@ -81,8 +81,8 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Services (Exact from reference site) */}
-          <div className="space-y-3">
-            <h4 className="font-heading text-base font-bold text-[#ffd875] mb-2">
+          <div className="space-y-3 font-sans">
+            <h4 className="font-sans text-base font-bold text-[#ffd875] mb-2">
               Services
             </h4>
             <ul className="space-y-2 text-xs text-[#DFE6FC]">
@@ -120,8 +120,8 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Contact Us */}
-          <div className="space-y-3">
-            <h4 className="font-heading text-base font-bold text-[#ffd875] mb-2">
+          <div className="space-y-3 font-sans">
+            <h4 className="font-sans text-base font-bold text-[#ffd875] mb-2">
               Contact Us
             </h4>
             <div className="flex items-start gap-2.5 text-xs text-[#DFE6FC]">
