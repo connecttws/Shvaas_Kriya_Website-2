@@ -79,7 +79,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               ))}
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
               <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold font-sans">
                 <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Practitioner Certificate</span>

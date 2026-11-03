@@ -60,7 +60,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
           {/* Category Tabs & Currency Switcher */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[#e2edf6] pb-6">
-            <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none">
+            <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none [-webkit-overflow-scrolling:touch]">
               {categories.map((cat) => (
                 <button
                   key={cat.id}

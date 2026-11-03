@@ -98,7 +98,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
                   onClick={() => setActiveId(offer.id)}
                   className={`p-5 sm:p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
                     isSelected
-                      ? 'bg-gradient-to-r from-white via-white to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-xl shadow-[#1718DF]/10 translate-x-1.5'
+                      ? 'bg-gradient-to-r from-white via-white to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-xl shadow-[#1718DF]/10 sm:translate-x-1.5'
                       : 'bg-white/90 border-[#e2edf6] hover:border-[#1718DF]/40 hover:bg-white'
                   }`}
                 >

@@ -191,7 +191,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <select
                   value={formData.serviceId}
                   onChange={(e) => setFormData({ ...formData, serviceId: e.target.value })}
-                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-3 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
+                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-3 text-base sm:text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                 >
                   {THERAPY_SERVICES.map((s) => (
                     <option key={s.id} value={s.id}>
@@ -212,7 +212,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     value={formData.date}
                     min={new Date().toISOString().split('T')[0]}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-base sm:text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   />
                   {errors.date && <p className="text-red-500 text-xs mt-1">{errors.date}</p>}
                 </div>
@@ -224,7 +224,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <select
                     value={formData.timeSlot}
                     onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-base sm:text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   >
                     {timeSlots.map((ts, i) => (
                       <option key={i} value={ts}>
@@ -301,7 +301,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     placeholder="e.g. Maya Sharma"
                     value={formData.clientName}
                     onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-base sm:text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   />
                   {errors.clientName && <p className="text-red-500 text-xs mt-1">{errors.clientName}</p>}
                 </div>
@@ -316,7 +316,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     placeholder="+91 98765 43210"
                     value={formData.clientPhone}
                     onChange={(e) => setFormData({ ...formData, clientPhone: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-base sm:text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   />
                   {errors.clientPhone && <p className="text-red-500 text-xs mt-1">{errors.clientPhone}</p>}
                 </div>
@@ -332,7 +332,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="name@example.com"
                   value={formData.clientEmail}
                   onChange={(e) => setFormData({ ...formData, clientEmail: e.target.value })}
-                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
+                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-base sm:text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                 />
                 {errors.clientEmail && <p className="text-red-500 text-xs mt-1">{errors.clientEmail}</p>}
               </div>
@@ -346,7 +346,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="e.g., Working through acute insomnia, physical lumbar tightness, or deepening meditation practice..."
                   value={formData.specialIntention}
                   onChange={(e) => setFormData({ ...formData, specialIntention: e.target.value })}
-                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
+                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2 text-base sm:text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                 />
               </div>
 

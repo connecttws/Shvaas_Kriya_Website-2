@@ -59,7 +59,7 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
                 <Sparkles className="w-3.5 h-3.5 text-[#16A34A]" />
                 Sacred Origins & Lineage
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-4xl font-sans font-bold text-[#0E1338] tracking-tight whitespace-nowrap">
+              <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-4xl font-sans font-bold text-[#0E1338] tracking-tight whitespace-normal sm:whitespace-nowrap">
                 What Is Sound Healing?
               </h2>
             </div>

@@ -103,11 +103,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
   return (
     <>
       <header
-        style={{ transform: 'translateZ(0)' }}
+        style={{
+          transform: 'translateZ(0)',
+          paddingTop: 'max(0.6rem, env(safe-area-inset-top, 0.6rem))',
+          paddingLeft: 'env(safe-area-inset-left, 0px)',
+          paddingRight: 'env(safe-area-inset-right, 0px)',
+        }}
         className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,padding,box-shadow] duration-300 ${
           isScrolled
-            ? 'bg-[#0E1338]/95 backdrop-blur-md shadow-xl py-2.5 sm:py-3 border-b border-[#1718DF]/30'
-            : 'bg-[#1718DF] py-3 sm:py-3.5 shadow-md'
+            ? 'bg-[#0E1338]/95 backdrop-blur-md shadow-xl pb-2.5 sm:pb-3 border-b border-[#1718DF]/30'
+            : 'bg-[#1718DF] pb-3 sm:pb-3.5 shadow-md'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -118,10 +123,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-2.5 sm:gap-3 group shrink-0"
+            className="flex items-center gap-2 sm:gap-3 group shrink-0 min-w-0"
           >
             {/* Official Shvaas Circular Logo */}
-            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden shrink-0 transition-transform duration-500 group-hover:scale-105 shadow-md border border-white/25 bg-[#1718DF] flex items-center justify-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full overflow-hidden shrink-0 transition-transform duration-500 group-hover:scale-105 shadow-md border border-white/25 bg-[#1718DF] flex items-center justify-center">
               <img
                 src="/images/shvaas-logo.png"
                 alt="Shvaas Kriya Retreat Logo"
@@ -129,11 +134,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               />
             </div>
 
-            <div className="flex flex-col">
-              <span className="font-sans text-sm xs:text-base sm:text-lg xl:text-xl font-bold tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight">
+            <div className="flex flex-col min-w-0">
+              <span className="font-sans text-xs xs:text-sm sm:text-base xl:text-lg 2xl:text-xl font-bold tracking-wide sm:tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight truncate">
                 Shvaas Kriya Retreat
               </span>
-              <span className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#86EFAC] uppercase -mt-0.5 font-sans font-semibold">
+              <span className="text-[7.5px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.2em] text-[#86EFAC] uppercase -mt-0.5 font-sans font-semibold">
                 Rishikesh & Online
               </span>
             </div>
@@ -307,46 +312,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           </nav>
 
           {/* Desktop Right Action Elements */}
-          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 shrink-0">
+          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3.5 shrink-0">
             {/* Direct Phone Dial */}
             <a
               href="tel:+917208936359"
-              className="flex items-center gap-2 px-2.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition text-xs font-semibold"
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition text-xs font-semibold group font-sans"
               title="Call Shvaas Kriya: +91 72089 36359"
             >
-              <Phone className="w-3.5 h-3.5 text-[#ffd875] fill-current" />
-              <span className="hidden 2xl:inline text-[11px] font-sans font-medium">
+              <Phone className="w-3.5 h-3.5 text-[#ffd875] group-hover:scale-110 transition-transform" />
+              <span className="hidden xl:inline text-[11px] font-sans font-medium">
                 +91 72089 36359
               </span>
             </a>
 
-            {/* Ambient Sound Drone Toggle */}
-            <button
-              onClick={handleToggleAmbient}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium border transition ${
-                ambientPlaying
-                  ? 'bg-white/20 border-white text-white'
-                  : 'bg-black/15 border-white/20 text-white/80 hover:bg-black/25'
-              }`}
-              title="Toggle meditative 432Hz ambient sound"
-            >
-              {ambientPlaying ? (
-                <>
-                  <Volume2 className="w-3.5 h-3.5 text-[#ffd875] animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-wider font-bold">432 Hz On</span>
-                </>
-              ) : (
-                <>
-                  <VolumeX className="w-3.5 h-3.5" />
-                  <span className="text-[10px] uppercase tracking-wider">Audio</span>
-                </>
-              )}
-            </button>
-
             {/* Book Now Button */}
             <button
               onClick={() => onOpenBooking()}
-              className="px-4 xl:px-5 py-2 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5 shrink-0"
+              className="px-4 xl:px-5 py-2 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5 shrink-0 font-sans"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>Book Now</span>
@@ -354,29 +336,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           </div>
 
           {/* Mobile Right Controls (< lg) */}
-          <div className="flex items-center gap-2 lg:hidden">
-            {/* Ambient Sound Drone Quick Button */}
-            <button
-              onClick={handleToggleAmbient}
-              className={`w-8 h-8 rounded-full border transition flex items-center justify-center shrink-0 ${
-                ambientPlaying
-                  ? 'bg-[#ffd875] border-[#ffd875] text-[#0E1338] shadow-sm'
-                  : 'bg-white/10 border-white/20 text-white hover:bg-white/20'
-              }`}
-              title="Toggle 432 Hz Meditative Audio"
-              aria-label="Toggle Meditative Audio"
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
+            {/* Quick Call Button */}
+            <a
+              href="tel:+917208936359"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center transition active:scale-95 shrink-0"
+              title="Call Sanctuary: +91 72089 36359"
+              aria-label="Call Sanctuary"
             >
-              {ambientPlaying ? (
-                <Volume2 className="w-3.5 h-3.5 animate-pulse" />
-              ) : (
-                <VolumeX className="w-3.5 h-3.5" />
-              )}
-            </button>
+              <Phone className="w-3.5 h-3.5 text-[#ffd875]" />
+            </a>
 
             {/* Mobile Instant "Book" CTA */}
             <button
               onClick={() => onOpenBooking()}
-              className="px-3 sm:px-4 py-1.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-md flex items-center gap-1 shrink-0 transition"
+              className="px-3 sm:px-4 py-1.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-md flex items-center gap-1 shrink-0 transition font-sans"
             >
               <Calendar className="w-3 h-3 text-[#0E1338]" />
               <span>Book</span>
@@ -385,11 +359,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             {/* Mobile Hamburger / Close Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition-all active:scale-95 shrink-0"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition-all active:scale-95 shrink-0"
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
+              {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5 text-white" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5 text-white" />}
             </button>
           </div>
         </div>
@@ -408,7 +382,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           {/* Slide-over Drawer Container */}
           <div className="fixed inset-y-0 right-0 w-full sm:max-w-md bg-[#0E1338] text-white shadow-2xl flex flex-col z-50 border-l border-[#1718DF]/30 animate-in slide-in-from-right duration-300">
             {/* Drawer Top Bar */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-[#0A0E2A]">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-[#0A0E2A] pt-[max(1rem,env(safe-area-inset-top))]">
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 shadow-md border border-white/25 bg-[#1718DF] flex items-center justify-center">
                   <img
@@ -477,7 +451,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             </div>
 
             {/* Scrollable Navigation List */}
-            <div className="flex-1 overflow-y-auto px-5 py-2 space-y-5 overscroll-contain">
+            <div className="flex-1 overflow-y-auto px-5 py-2 space-y-5 overscroll-contain [-webkit-overflow-scrolling:touch]">
               {/* Group 1: 5 Signature Experiences */}
               <div>
                 <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#86EFAC] font-bold pb-2 border-b border-white/10 font-sans">
@@ -681,7 +655,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             </div>
 
             {/* Bottom Fixed Action Footer inside Drawer */}
-            <div className="p-4 border-t border-white/10 bg-[#0A0E2A] space-y-2.5 shrink-0">
+            <div className="p-4 pb-[max(1.25rem,calc(env(safe-area-inset-bottom)+0.75rem))] border-t border-white/10 bg-[#0A0E2A] space-y-2.5 shrink-0">
               {/* Direct Phone / WhatsApp Button */}
               <a
                 href="tel:+917208936359"

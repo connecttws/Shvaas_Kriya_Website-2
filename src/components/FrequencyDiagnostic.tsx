@@ -63,7 +63,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
                   onClick={() => setSelectedConcern(concern)}
                   className={`w-full text-left p-4 rounded-2xl border transition-all duration-300 flex items-start justify-between font-sans ${
                     isSelected
-                      ? 'bg-gradient-to-r from-white to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-lg shadow-[#1718DF]/10 translate-x-1'
+                      ? 'bg-gradient-to-r from-white to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-lg shadow-[#1718DF]/10 sm:translate-x-1'
                       : 'bg-white/80 border-[#e2edf6] hover:border-[#1718DF]/40 hover:bg-white text-[#334155]'
                   }`}
                 >
@@ -89,7 +89,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
               <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-[#edf2f7] mb-6">
                 <div className="flex items-center gap-3.5">
                   <div
-                    className="w-13 h-13 rounded-full flex items-center justify-center shadow-md text-white font-bold text-base shrink-0"
+                    className="w-12 h-12 rounded-full flex items-center justify-center shadow-md text-white font-bold text-base shrink-0"
                     style={{ backgroundColor: matchedChakra.color }}
                   >
                     {matchedChakra.note}

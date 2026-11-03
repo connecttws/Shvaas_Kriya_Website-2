@@ -124,7 +124,7 @@ export const SanctuaryTickerCarousel: React.FC = () => {
       {/* Slim & Sleek Marquee Carousel Track */}
       <div
         ref={scrollContainerRef}
-        className="w-full overflow-x-auto scrollbar-none py-1.5"
+        className="w-full overflow-x-auto scrollbar-none py-1.5 [-webkit-overflow-scrolling:touch]"
       >
         <div className="animate-marquee-scroll flex items-center gap-3 sm:gap-4 px-2">
           {duplicatedPillars.map((item, idx) => (

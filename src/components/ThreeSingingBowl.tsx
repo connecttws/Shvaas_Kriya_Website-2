@@ -614,7 +614,7 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
       >
         <div className="flex flex-col gap-2.5">
           {/* Top Row: Chakra Frequency Selector */}
-          <div className="flex items-center justify-between gap-1 overflow-x-auto pb-1 scrollbar-none">
+          <div className="flex items-center justify-between gap-1 overflow-x-auto pb-1 scrollbar-none [-webkit-overflow-scrolling:touch]">
             {CHAKRAS.map((ch) => {
               const isSelected = ch.id === selectedChakra.id;
               return (
@@ -624,7 +624,7 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
                     setSelectedChakra(ch);
                     if (onChakraSelect) onChakraSelect(ch.id);
                   }}
-                  className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-semibold transition-all shrink-0 border ${
+                  className={`flex items-center gap-1.5 px-2 sm:px-2.5 py-1.5 rounded-xl text-[11px] sm:text-xs font-semibold transition-all shrink-0 border ${
                     isSelected
                       ? 'border-[#1718DF] bg-[#EEF0FF] text-[#0E1338] shadow-sm'
                       : 'border-transparent hover:border-[#e2eaf2] text-[#64748b] hover:text-[#1e293b]'
@@ -644,10 +644,10 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
           <div className="flex items-center justify-between pt-1 border-t border-[#edf2f7] text-xs">
             <button
               onClick={handleStrike}
-              className="bg-[#1718DF] hover:bg-[#6882FF] active:scale-95 text-white font-bold px-4 py-2 rounded-xl transition-all shadow-md flex items-center gap-2"
+              className="bg-[#1718DF] hover:bg-[#6882FF] active:scale-95 text-white font-bold px-3 sm:px-4 py-2 rounded-xl transition-all shadow-md flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs"
             >
-              <Sparkles className="w-4 h-4 fill-current text-[#ffd875]" />
-              <span>Strike Singing Bowl</span>
+              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-[#ffd875]" />
+              <span>Strike <span className="hidden xs:inline">Singing</span> Bowl</span>
             </button>
 
             <div className="flex items-center gap-2 sm:gap-3 text-[#64748b]">

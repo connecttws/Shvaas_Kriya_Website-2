@@ -93,19 +93,19 @@ export default function Home() {
             {/* Hero Main Content with Reveal Animation */}
             <RevealOnScroll duration={0.9} yOffset={24}>
               {/* Top Sacred Badge with Baby Green Pulse */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#86EFAC]/80 text-[#1718DF] text-xs uppercase tracking-[0.2em] mb-8 shadow-sm animate-ethereal font-bold font-sans">
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/95 border border-[#86EFAC]/80 text-[#1718DF] text-[10px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.2em] mb-6 sm:mb-8 shadow-sm animate-ethereal font-bold font-sans max-w-full">
                 <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse shrink-0" />
-                <span>Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect</span>
-                <Sparkles className="w-3.5 h-3.5 text-[#1718DF]" />
+                <span className="truncate sm:whitespace-normal">Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect</span>
+                <Sparkles className="w-3.5 h-3.5 text-[#1718DF] shrink-0" />
               </div>
 
               {/* Verified Headline from Shvaas Kriya Retreat Client Brief */}
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-normal text-[#27282c] tracking-tight leading-[1.1] mb-3 max-w-4xl mx-auto">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-[#27282c] tracking-tight leading-[1.15] mb-3 max-w-4xl mx-auto break-words">
                 Welcome to Shvaas Kriya Retreat
               </h1>
 
               {/* Sub-headline - Clean Non-Italic Font */}
-              <div className="text-xl sm:text-2xl md:text-3xl font-serif text-[#1718DF] mb-6 font-medium tracking-tight">
+              <div className="text-lg sm:text-2xl md:text-3xl font-serif text-[#1718DF] mb-5 sm:mb-6 font-medium tracking-tight">
                 A Space to Reconnect Through Breath, Sound & Stillness
               </div>
 
