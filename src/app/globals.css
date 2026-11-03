@@ -6,7 +6,7 @@
 @theme {
   --font-elsie: 'Elsie', display, serif;
   --font-cinzel: 'Cinzel', serif;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-heading: 'Elsie', 'Cinzel', serif;
 
@@ -28,16 +28,16 @@
   --color-bg-blue-tint: #edf4fa;
   --color-bg-ice-mist: #e2edf8;
 
-  --color-text-main: #1e293b;
-  --color-text-muted: #334155;
-  --color-text-light: #475569;
+  --color-text-main: #0E1338;
+  --color-text-muted: #1E293B;
+  --color-text-light: #334155;
 }
 
 :root {
   --font-heading: 'Elsie', 'Cinzel', serif;
   --font-elsie: 'Elsie', display, serif;
   --font-cinzel: 'Cinzel', serif;
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Serene White & Celestial Bluish Himalayan Palette */
@@ -92,7 +92,9 @@ h1, h2, h3, .font-heading {
 }
 
 .font-serif-elegant {
-  font-family: var(--font-serif);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  color: #0E1338;
 }
 
 /* Celestial White-Bluish Himalayan Gradients */

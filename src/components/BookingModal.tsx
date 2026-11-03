@@ -107,14 +107,14 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <h3 className="font-heading text-xl font-bold text-[#27282c]">
                 Reserve Your Sacred Space
               </h3>
-              <p className="text-xs text-[#64748b] font-serif-elegant italic">
+              <p className="text-xs text-[#0E1338] font-semibold">
                 Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-[#64748b] hover:text-[#1e293b] bg-white border border-[#d8e3ed] transition shadow-sm"
+            className="p-2 rounded-xl text-[#0E1338] hover:text-[#1718DF] bg-white border border-[#d8e3ed] transition shadow-sm"
           >
             <X className="w-5 h-5" />
           </button>
@@ -135,26 +135,26 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <h4 className="text-2xl font-heading text-[#27282c] mt-1">
                   We Look Forward to Welcoming You
                 </h4>
-                <p className="text-xs text-[#52637a] max-w-md mx-auto mt-2 font-light">
-                  A confirmation summary has been registered for <strong className="text-[#1e293b]">{confirmedBooking.clientName}</strong>. To guarantee your session time slot with our team, connect directly with our Rishikesh desk below.
+                <p className="text-xs sm:text-sm text-[#0E1338] font-medium max-w-md mx-auto mt-2 leading-relaxed">
+                  A confirmation summary has been registered for <strong className="text-[#0E1338] font-bold">{confirmedBooking.clientName}</strong>. To guarantee your session time slot with our team, connect directly with our Rishikesh desk below.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] text-left max-w-md mx-auto space-y-3 text-xs shadow-sm">
                 <div className="flex justify-between border-b border-[#edf2f7] pb-2">
-                  <span className="text-[#64748b]">Therapy Modality:</span>
-                  <span className="font-semibold text-[#1e293b] text-right">{selectedService.title}</span>
+                  <span className="text-[#0E1338] font-semibold">Therapy Modality:</span>
+                  <span className="font-bold text-[#0E1338] text-right">{selectedService.title}</span>
                 </div>
                 <div className="flex justify-between border-b border-[#edf2f7] pb-2">
-                  <span className="text-[#64748b]">Date & Time:</span>
-                  <span className="font-semibold text-[#1e293b]">{confirmedBooking.date} • {confirmedBooking.timeSlot.split(' ')[0]} {confirmedBooking.timeSlot.split(' ')[1]}</span>
+                  <span className="text-[#0E1338] font-semibold">Date & Time:</span>
+                  <span className="font-bold text-[#0E1338]">{confirmedBooking.date} • {confirmedBooking.timeSlot.split(' ')[0]} {confirmedBooking.timeSlot.split(' ')[1]}</span>
                 </div>
                 <div className="flex justify-between border-b border-[#edf2f7] pb-2">
-                  <span className="text-[#64748b]">Participants:</span>
-                  <span className="font-semibold text-[#1e293b]">{confirmedBooking.guestCount} Guest(s)</span>
+                  <span className="text-[#0E1338] font-semibold">Participants:</span>
+                  <span className="font-bold text-[#0E1338]">{confirmedBooking.guestCount} Guest(s)</span>
                 </div>
                 <div className="flex justify-between pt-1 text-sm font-bold">
-                  <span className="text-[#64748b]">Estimated Exchange:</span>
+                  <span className="text-[#0E1338]">Estimated Exchange:</span>
                   <span className="text-[#1718DF] font-heading">{currency === 'INR' ? `₹${totalPrice.toLocaleString('en-IN')}` : `$${totalPrice} USD`}</span>
                 </div>
               </div>
@@ -181,13 +181,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-2">
+                <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-2">
                   Select Healing Modality or Training
                 </label>
                 <select
                   value={formData.serviceId}
                   onChange={(e) => setFormData({ ...formData, serviceId: e.target.value })}
-                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-3 text-sm text-[#1e293b] focus:outline-none focus:border-[#1718DF]"
+                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-3 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                 >
                   {THERAPY_SERVICES.map((s) => (
                     <option key={s.id} value={s.id}>
@@ -200,7 +200,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-2">
+                  <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-2">
                     Preferred Date
                   </label>
                   <input
@@ -208,19 +208,19 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     value={formData.date}
                     min={new Date().toISOString().split('T')[0]}
                     onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#1e293b] focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   />
                   {errors.date && <p className="text-red-500 text-xs mt-1">{errors.date}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-2">
+                  <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-2">
                     Sanctuary Time Slot
                   </label>
                   <select
                     value={formData.timeSlot}
                     onChange={(e) => setFormData({ ...formData, timeSlot: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#1e293b] focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   >
                     {timeSlots.map((ts, i) => (
                       <option key={i} value={ts}>
@@ -234,7 +234,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-2">
+                  <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-2">
                     Number of Seekers
                   </label>
                   <div className="flex items-center gap-2">
@@ -246,7 +246,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                         className={`flex-1 py-2 rounded-xl text-xs font-bold border transition ${
                           formData.guestCount === num
                             ? 'bg-[#1718DF] border-[#1718DF] text-white shadow-sm'
-                            : 'bg-[#f8fbfd] border-[#d8e3ed] text-[#64748b]'
+                            : 'bg-[#f8fbfd] border-[#d8e3ed] text-[#0E1338]'
                         }`}
                       >
                         {num} {num === 1 ? 'Person' : 'Guests'}
@@ -256,7 +256,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-2">
+                  <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-2">
                     Currency Preference
                   </label>
                   <div className="flex items-center gap-2">
@@ -266,7 +266,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       className={`flex-1 py-2 rounded-xl text-xs font-bold border transition ${
                         currency === 'INR'
                           ? 'bg-[#1718DF] border-[#1718DF] text-white shadow-sm'
-                          : 'bg-[#f8fbfd] border-[#d8e3ed] text-[#64748b]'
+                          : 'bg-[#f8fbfd] border-[#d8e3ed] text-[#0E1338]'
                       }`}
                     >
                       ₹ INR (India)
@@ -277,7 +277,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       className={`flex-1 py-2 rounded-xl text-xs font-bold border transition ${
                         currency === 'USD'
                           ? 'bg-[#1718DF] border-[#1718DF] text-white shadow-sm'
-                          : 'bg-[#f8fbfd] border-[#d8e3ed] text-[#64748b]'
+                          : 'bg-[#f8fbfd] border-[#d8e3ed] text-[#0E1338]'
                       }`}
                     >
                       $ USD (Global)
@@ -288,7 +288,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-1">
+                  <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-1">
                     Your Full Name *
                   </label>
                   <input
@@ -297,13 +297,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     placeholder="e.g. Maya Sharma"
                     value={formData.clientName}
                     onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#1e293b] focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   />
                   {errors.clientName && <p className="text-red-500 text-xs mt-1">{errors.clientName}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-1">
+                  <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-1">
                     WhatsApp or Phone *
                   </label>
                   <input
@@ -312,14 +312,14 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     placeholder="+91 98765 43210"
                     value={formData.clientPhone}
                     onChange={(e) => setFormData({ ...formData, clientPhone: e.target.value })}
-                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#1e293b] focus:outline-none focus:border-[#1718DF]"
+                    className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                   />
                   {errors.clientPhone && <p className="text-red-500 text-xs mt-1">{errors.clientPhone}</p>}
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-1">
+                <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-1">
                   Email Address *
                 </label>
                 <input
@@ -328,13 +328,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="name@example.com"
                   value={formData.clientEmail}
                   onChange={(e) => setFormData({ ...formData, clientEmail: e.target.value })}
-                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#1e293b] focus:outline-none focus:border-[#1718DF]"
+                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2.5 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                 />
                 {errors.clientEmail && <p className="text-red-500 text-xs mt-1">{errors.clientEmail}</p>}
               </div>
 
               <div>
-                <label className="block text-xs uppercase tracking-wider text-[#64748b] font-bold mb-1">
+                <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-1">
                   Special Healing Intention or Ailment (Optional)
                 </label>
                 <textarea
@@ -342,13 +342,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="e.g., Working through acute insomnia, physical lumbar tightness, or deepening meditation practice..."
                   value={formData.specialIntention}
                   onChange={(e) => setFormData({ ...formData, specialIntention: e.target.value })}
-                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2 text-sm text-[#1e293b] focus:outline-none focus:border-[#1718DF]"
+                  className="w-full bg-[#f8fbfd] border border-[#d8e3ed] rounded-xl px-4 py-2 text-sm text-[#0E1338] font-medium focus:outline-none focus:border-[#1718DF]"
                 />
               </div>
 
               <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] uppercase tracking-wider text-[#64748b]">Total Energy Exchange</div>
+                  <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Total Energy Exchange</div>
                   <div className="text-2xl font-heading font-bold text-[#1718DF]">
                     {currency === 'INR' ? `₹${totalPrice.toLocaleString('en-IN')}` : `$${totalPrice} USD`}
                   </div>

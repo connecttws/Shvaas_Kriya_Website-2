@@ -75,7 +75,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight">
             Experiences that meet you where you are.
           </h2>
-          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed mt-2 max-w-2xl font-normal">
+          <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed mt-2 max-w-2xl">
             Find the session, retreat, or learning journey that feels right for you.
           </p>
         </div>
@@ -102,7 +102,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
                         className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 border transition-colors ${
                           isSelected
                             ? 'bg-[#1718DF] text-white border-[#1718DF]'
-                            : 'bg-[#f1f6fb] text-[#64748b] border-[#d8e3ed]'
+                            : 'bg-[#f1f6fb] text-[#0E1338] font-bold border-[#d8e3ed]'
                         }`}
                       >
                         {offer.num}
@@ -118,7 +118,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
                         </h3>
 
                         {isSelected && (
-                          <p className="text-xs sm:text-sm text-[#1e293b] font-normal leading-relaxed mt-2 animate-in fade-in duration-300">
+                          <p className="text-sm sm:text-base text-[#0E1338] font-sans font-medium leading-relaxed mt-2 animate-in fade-in duration-300">
                             {offer.desc}
                           </p>
                         )}

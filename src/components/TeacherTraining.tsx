@@ -53,7 +53,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               Sound Healing & Shvaas Kriya Teacher Training
             </h2>
 
-            <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed">
               Step into the sacred foothills of Rishikesh by the Ganga. Deepen your personal practice and explore the foundations of sound healing and breathwork through structured, certified training journeys.
             </p>
 
@@ -70,7 +70,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
                     <h4 className="text-sm font-heading font-bold text-[#27282c] mb-1">
                       {m.title}
                     </h4>
-                    <p className="text-xs text-[#334155] leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium leading-relaxed">
                       {m.desc}
                     </p>
                   </div>
@@ -79,15 +79,15 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              <div className="flex items-center gap-2 text-xs text-[#334155] font-medium">
+              <div className="flex items-center gap-2 text-xs text-[#0E1338] font-bold">
                 <Check className="w-4 h-4 text-[#1718DF]" />
                 <span>Practitioner Certificate</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-[#334155] font-medium">
+              <div className="flex items-center gap-2 text-xs text-[#0E1338] font-bold">
                 <Check className="w-4 h-4 text-[#1718DF]" />
                 <span>Small Batch (Max 8)</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-[#334155] font-medium">
+              <div className="flex items-center gap-2 text-xs text-[#0E1338] font-bold">
                 <Check className="w-4 h-4 text-[#1718DF]" />
                 <span>Lifetime Mentorship</span>
               </div>
@@ -101,7 +101,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
                 Rishikesh Sanctuary
               </div>
 
-              <div className="flex items-center gap-2 text-xs text-[#64748b] mb-2 font-medium">
+              <div className="flex items-center gap-2 text-xs text-[#0E1338] mb-2 font-semibold">
                 <MapPin className="w-3.5 h-3.5 text-[#1718DF]" />
                 <span>Tapovan Riverside Sanctuary, Rishikesh</span>
               </div>
@@ -109,13 +109,13 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               <h3 className="text-xl font-heading text-[#27282c] mb-1">
                 Intensive Sound & Breath Immersion
               </h3>
-              <p className="text-xs text-[#334155] mb-6 font-normal">
+              <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium mb-6 leading-relaxed">
                 Complete theoretical and practical clinical immersion with full access to master singing bowls, pranayama anatomy, and personal mentorship.
               </p>
 
               <div className="p-4 rounded-2xl bg-white border border-[#e2edf6] mb-6 flex items-center justify-between shadow-sm">
                 <div>
-                  <div className="text-[10px] uppercase tracking-wider text-[#64748b]">Comprehensive Course Tuition</div>
+                  <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Comprehensive Course Tuition</div>
                   <div className="text-2xl font-heading font-bold text-[#1718DF]">
                     {currency === 'INR' ? '₹28,000' : '$350 USD'}
                   </div>

@@ -54,7 +54,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
             Ancient Himalayan Resonances, Masterfully Applied
           </h2>
 
-          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
+          <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
             Every session at Shvaas Kriya Retreat is tailored to your unique rhythm. Using hand-hammered seven-metal Himalayan bowls and Solfeggio frequencies, we guide your breath and mind into deep restorative stillness.
           </p>
 
@@ -68,7 +68,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all ${
                     activeCategory === cat.id
                       ? 'bg-[#1718DF] text-white shadow-md'
-                      : 'text-[#64748b] hover:text-[#1e293b] border border-transparent hover:border-[#d8e3ed]'
+                      : 'text-[#0E1338] hover:text-[#1718DF] border border-transparent hover:border-[#d8e3ed]'
                   }`}
                 >
                   {cat.label}
@@ -78,7 +78,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
             {/* Currency Switcher */}
             <div className="flex items-center gap-2 bg-[#f1f6fb] border border-[#d8e3ed] px-3.5 py-1.5 rounded-full text-xs shadow-sm">
-              <span className="text-[#64748b] font-medium">Display:</span>
+              <span className="text-[#0E1338] font-bold">Display:</span>
               <button
                 onClick={onToggleCurrency}
                 className="font-bold text-[#1718DF] hover:text-[#0E1338] transition"
@@ -131,17 +131,17 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                     </div>
                   )}
 
-                  <p className="text-xs sm:text-sm text-[#1e293b] font-normal leading-relaxed mb-5">
+                  <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium leading-relaxed mb-5">
                     {service.description}
                   </p>
 
                   {/* Highlights */}
                   <div className="space-y-2 mb-5">
-                    <div className="text-[11px] uppercase tracking-wider text-[#64748b] font-bold">
+                    <div className="text-[11px] uppercase tracking-wider text-[#0E1338] font-bold">
                       Therapeutic Benefits
                     </div>
                     {service.benefits.slice(0, 3).map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-[#334155]">
+                      <div key={i} className="flex items-start gap-2 text-xs text-[#0E1338] font-medium">
                         <CheckCircle2 className="w-3.5 h-3.5 text-[#1718DF] shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </div>

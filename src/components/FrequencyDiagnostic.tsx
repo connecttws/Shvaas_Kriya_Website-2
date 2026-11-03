@@ -43,7 +43,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
           <h2 className="text-3xl sm:text-4xl font-heading text-[#27282c] tracking-tight mb-3">
             Identify Your Energetic Resonance
           </h2>
-          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
+          <p className="text-base text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
             Sound is medicine in the Himalayas. Select what your subtle body is calling to release, and discover the exact Solfeggio frequency and therapy calibrated to return you to center.
           </p>
         </div>
@@ -51,7 +51,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: Concern Selector Buttons */}
           <div className="lg:col-span-5 space-y-3">
-            <span className="text-xs uppercase tracking-wider text-[#64748b] font-bold block mb-2">
+            <span className="text-xs uppercase tracking-wider text-[#0E1338] font-bold block mb-2">
               Select Your Current Biofield State:
             </span>
             {DIAGNOSTIC_CONCERNS.map((concern) => {
@@ -70,7 +70,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
                     <div className={`text-sm font-heading font-bold mb-1 ${isSelected ? 'text-[#1718DF]' : 'text-[#27282c]'}`}>
                       {concern.label}
                     </div>
-                    <div className="text-xs text-[#334155] font-normal line-clamp-2">
+                    <div className="text-xs text-[#0E1338] font-medium line-clamp-2">
                       {concern.description}
                     </div>
                   </div>
@@ -115,28 +115,28 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
 
               <div className="space-y-4 mb-6">
                 <div>
-                  <div className="text-[11px] uppercase tracking-wider text-[#64748b] font-bold mb-1">
+                  <div className="text-[11px] uppercase tracking-wider text-[#0E1338] font-bold mb-1">
                     Therapeutic Mechanism
                   </div>
-                  <p className="text-sm text-[#475569] font-light leading-relaxed">
+                  <p className="text-sm text-[#0E1338] font-medium leading-relaxed">
                     {selectedConcern.reason}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 pt-2">
                   <div className="p-3.5 rounded-2xl bg-[#f8fbfd] border border-[#e2edf6]">
-                    <div className="text-[10px] uppercase tracking-wider text-[#64748b] font-semibold">Seed Mantra</div>
+                    <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Seed Mantra</div>
                     <div className="text-base font-heading font-bold text-[#1718DF]">{matchedChakra.mantra}</div>
                   </div>
                   <div className="p-3.5 rounded-2xl bg-[#f8fbfd] border border-[#e2edf6]">
-                    <div className="text-[10px] uppercase tracking-wider text-[#64748b] font-semibold">Elemental Domain</div>
+                    <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Elemental Domain</div>
                     <div className="text-base font-heading font-bold text-[#1718DF]">{matchedChakra.element}</div>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-[#edf2f7] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="text-xs text-[#64748b]">
+                <div className="text-xs text-[#0E1338] font-semibold">
                   Recommended Rishikesh Protocol Available
                 </div>
                 <button
