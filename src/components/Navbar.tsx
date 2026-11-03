@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Phone,
   Volume2,
@@ -13,7 +13,7 @@ import {
   Sparkles,
   MapPin,
   Waves,
-  BookOpen
+  Star
 } from 'lucide-react';
 import { toggleAmbientSound } from '../utils/audioSynthesizer';
 
@@ -26,13 +26,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
   const [ambientPlaying, setAmbientPlaying] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 30);
+          setIsScrolled(window.scrollY > 25);
           ticking = false;
         });
         ticking = true;
@@ -54,6 +55,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
     };
   }, [mobileMenuOpen]);
 
+  // Clean up dropdown timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (dropdownTimeoutRef.current) {
+        clearTimeout(dropdownTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleDropdownEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setServicesDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setServicesDropdownOpen(false);
+    }, 150);
+  };
+
   const handleToggleAmbient = () => {
     const active = toggleAmbientSound();
     setAmbientPlaying(active);
@@ -64,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
       e.preventDefault();
       const el = document.querySelector(targetId);
       if (el) {
-        const headerOffset = 70;
+        const headerOffset = 72;
         const elementPosition = el.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
         window.scrollTo({
@@ -83,11 +106,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         style={{ transform: 'translateZ(0)' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,padding,box-shadow] duration-300 ${
           isScrolled
-            ? 'bg-[#0E1338] shadow-xl py-2.5 sm:py-3 border-b border-[#1718DF]/30'
+            ? 'bg-[#0E1338]/95 backdrop-blur-md shadow-xl py-2.5 sm:py-3 border-b border-[#1718DF]/30'
             : 'bg-[#1718DF] py-3 sm:py-3.5 shadow-md'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo with Sacred Lotus Motif */}
           <a
             href="#"
@@ -95,7 +118,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-2 sm:gap-3 group shrink-0"
+            className="flex items-center gap-2.5 sm:gap-3 group shrink-0"
           >
             {/* Sacred Lotus Icon */}
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center p-1 sm:p-1.5 transition-transform duration-500 group-hover:scale-105 border border-white/20 shrink-0">
@@ -105,90 +128,134 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-heading text-sm xs:text-base sm:text-xl font-bold tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight">
+              <span className="font-heading text-sm xs:text-base sm:text-lg xl:text-xl font-bold tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight">
                 Shvaas Kriya Retreat
               </span>
-              <span className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#ffd875] sm:text-[#DFE6FC] uppercase -mt-0.5 font-sans font-semibold">
+              <span className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#ffd875] uppercase -mt-0.5 font-sans font-semibold">
                 Rishikesh & Online
               </span>
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7 text-xs font-semibold uppercase tracking-[0.12em] text-white/90">
+          {/* Desktop Navigation (Optimized & Gallery Removed) */}
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-7 text-xs font-semibold uppercase tracking-[0.1em] text-white/90">
             <a
               href="#"
               onClick={(e) => {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="hover:text-[#ffd875] transition-colors py-1"
+              className="hover:text-[#ffd875] transition-colors py-1.5"
             >
               Home
             </a>
+
             <a
               href="#what-is-sound-healing"
               onClick={(e) => handleNavClick(e, '#what-is-sound-healing')}
-              className="hover:text-[#ffd875] transition-colors py-1"
+              className="hover:text-[#ffd875] transition-colors py-1.5"
             >
               About Us
             </a>
 
-            {/* Services Dropdown */}
+            {/* Experiences Dropdown with Hover Bridge */}
             <div
-              className="relative"
-              onMouseEnter={() => setServicesDropdownOpen(true)}
-              onMouseLeave={() => setServicesDropdownOpen(false)}
+              className="relative py-1.5"
+              onMouseEnter={handleDropdownEnter}
+              onMouseLeave={handleDropdownLeave}
             >
-              <button className="flex items-center gap-1 hover:text-[#ffd875] transition-colors py-1">
-                <span>Our 5 Experiences</span>
-                <ChevronDown className="w-3.5 h-3.5" />
+              <button
+                type="button"
+                className="flex items-center gap-1 hover:text-[#ffd875] transition-colors focus:outline-none"
+              >
+                <span>5 Experiences</span>
+                <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                    servicesDropdownOpen ? 'rotate-180 text-[#ffd875]' : ''
+                  }`}
+                />
               </button>
+
               {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 w-64 bg-[#0E1338] rounded-xl shadow-2xl py-2 border border-[#1718DF]/30 animate-in fade-in duration-200">
-                  <div className="px-4 py-1 text-[10px] uppercase tracking-widest text-[#ffd875] font-bold">
-                    Official Offerings
+                <div className="absolute top-full left-0 pt-2 w-72 z-50 animate-in fade-in slide-in-from-top-1 duration-200">
+                  <div className="bg-[#0E1338] rounded-2xl shadow-2xl py-3 px-2 border border-[#1718DF]/40 backdrop-blur-xl">
+                    <div className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-widest text-[#ffd875] font-bold border-b border-white/10 flex items-center justify-between">
+                      <span>Curated Journeys</span>
+                      <Sparkles className="w-3 h-3 text-[#ffd875]" />
+                    </div>
+
+                    <div className="mt-1 space-y-0.5">
+                      <a
+                        href="#offers"
+                        onClick={(e) => handleNavClick(e, '#offers')}
+                        className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
+                      >
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
+                          <span className="text-[10px] text-[#ffd875] font-mono">01.</span>
+                          <span>Shvaas Kriya Sessions</span>
+                        </div>
+                        <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
+                          Pranayama, Breathwork & Presence
+                        </div>
+                      </a>
+
+                      <a
+                        href="#offers"
+                        onClick={(e) => handleNavClick(e, '#offers')}
+                        className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
+                      >
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
+                          <span className="text-[10px] text-[#ffd875] font-mono">02.</span>
+                          <span>Shvaas Kriya TTC</span>
+                        </div>
+                        <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
+                          Certified Breathwork Teacher Training
+                        </div>
+                      </a>
+
+                      <a
+                        href="#therapies"
+                        onClick={(e) => handleNavClick(e, '#therapies')}
+                        className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
+                      >
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
+                          <span className="text-[10px] text-[#ffd875] font-mono">03.</span>
+                          <span>Sound Healing Sessions</span>
+                        </div>
+                        <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
+                          Tibetan Singing Bowls & Sacred Gongs
+                        </div>
+                      </a>
+
+                      <a
+                        href="#therapies"
+                        onClick={(e) => handleNavClick(e, '#therapies')}
+                        className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
+                      >
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
+                          <span className="text-[10px] text-[#ffd875] font-mono">04.</span>
+                          <span>Aqua Sound Healing</span>
+                        </div>
+                        <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
+                          Submerged Frequencies in Warm Sacred Pool
+                        </div>
+                      </a>
+
+                      <a
+                        href="#training"
+                        onClick={(e) => handleNavClick(e, '#training')}
+                        className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
+                      >
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
+                          <span className="text-[10px] text-[#ffd875] font-mono">05.</span>
+                          <span>Sound Healing TTC</span>
+                        </div>
+                        <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
+                          Master Acoustic Practitioner Certification
+                        </div>
+                      </a>
+                    </div>
                   </div>
-                  <a
-                    href="#offers"
-                    onClick={(e) => handleNavClick(e, '#offers')}
-                    className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
-                  >
-                    <div className="font-bold">01. Shvaas Kriya Sessions</div>
-                    <div className="text-[11px] text-[#DFE6FC]/80">Online & In-Person Studio</div>
-                  </a>
-                  <a
-                    href="#offers"
-                    onClick={(e) => handleNavClick(e, '#offers')}
-                    className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
-                  >
-                    <div className="font-bold">02. Shvaas Kriya TTC</div>
-                    <div className="text-[11px] text-[#DFE6FC]/80">Certified Teacher Training</div>
-                  </a>
-                  <a
-                    href="#therapies"
-                    onClick={(e) => handleNavClick(e, '#therapies')}
-                    className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
-                  >
-                    <div className="font-bold">03. Sound Healing Sessions</div>
-                    <div className="text-[11px] text-[#DFE6FC]/80">Tibetan Bowls & Sacred Gongs</div>
-                  </a>
-                  <a
-                    href="#therapies"
-                    onClick={(e) => handleNavClick(e, '#therapies')}
-                    className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
-                  >
-                    <div className="font-bold">04. Aqua Sound Healing</div>
-                    <div className="text-[11px] text-[#DFE6FC]/80">Floating in Warm Sacred Pool</div>
-                  </a>
-                  <a
-                    href="#training"
-                    onClick={(e) => handleNavClick(e, '#training')}
-                    className="block px-4 py-2 hover:bg-[#1718DF] hover:text-[#ffd875] text-xs font-medium normal-case"
-                  >
-                    <div className="font-bold">05. Sound Healing TTC</div>
-                    <div className="text-[11px] text-[#DFE6FC]/80">Master Acoustic Healing Certification</div>
-                  </a>
                 </div>
               )}
             </div>
@@ -196,42 +263,48 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             <a
               href="#therapies"
               onClick={(e) => handleNavClick(e, '#therapies')}
-              className="hover:text-[#ffd875] transition-colors py-1"
+              className="hover:text-[#ffd875] transition-colors py-1.5"
             >
               Therapies
             </a>
+
             <a
               href="#sanctuary"
               onClick={(e) => handleNavClick(e, '#sanctuary')}
-              className="hover:text-[#ffd875] transition-colors py-1"
+              className="hover:text-[#ffd875] transition-colors py-1.5"
             >
               3D Bowl
             </a>
+
             <a
-              href="#gallery"
-              onClick={(e) => handleNavClick(e, '#gallery')}
-              className="hover:text-[#ffd875] transition-colors py-1"
+              href="#reviews"
+              onClick={(e) => handleNavClick(e, '#reviews')}
+              className="hover:text-[#ffd875] transition-colors py-1.5"
             >
-              Gallery
+              Reviews
             </a>
+
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="hover:text-[#ffd875] transition-colors py-1"
+              className="hover:text-[#ffd875] transition-colors py-1.5"
             >
               Contact Us
             </a>
           </nav>
 
           {/* Desktop Right Action Elements */}
-          <div className="hidden lg:flex items-center gap-3">
-            {/* Direct Phone Dial Pill */}
+          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3 shrink-0">
+            {/* Direct Phone Dial */}
             <a
               href="tel:+917208936359"
-              className="w-9 h-9 rounded-full bg-white text-[#1718DF] hover:bg-[#ffd875] transition flex items-center justify-center shadow-md shrink-0"
+              className="flex items-center gap-2 px-2.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition text-xs font-semibold"
               title="Call Shvaas Kriya: +91 72089 36359"
             >
-              <Phone className="w-4 h-4 fill-current" />
+              <Phone className="w-3.5 h-3.5 text-[#ffd875] fill-current" />
+              <span className="hidden 2xl:inline text-[11px] font-sans font-medium">
+                +91 72089 36359
+              </span>
             </a>
 
             {/* Ambient Sound Drone Toggle */}
@@ -247,7 +320,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               {ambientPlaying ? (
                 <>
                   <Volume2 className="w-3.5 h-3.5 text-[#ffd875] animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-wider">Audio On</span>
+                  <span className="text-[10px] uppercase tracking-wider font-bold">432 Hz On</span>
                 </>
               ) : (
                 <>
@@ -260,7 +333,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             {/* Book Now Button */}
             <button
               onClick={() => onOpenBooking()}
-              className="px-5 py-2 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5"
+              className="px-4 xl:px-5 py-2 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5 shrink-0"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>Book Now</span>
@@ -269,7 +342,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
 
           {/* Mobile Right Controls (< lg) */}
           <div className="flex items-center gap-2 lg:hidden">
-            {/* Ambient Sound Drone Quick Button (Visible on mobile) */}
+            {/* Ambient Sound Drone Quick Button */}
             <button
               onClick={handleToggleAmbient}
               className={`w-8 h-8 rounded-full border transition flex items-center justify-center shrink-0 ${
@@ -287,7 +360,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               )}
             </button>
 
-            {/* Mobile Instant "Book Now" CTA */}
+            {/* Mobile Instant "Book" CTA */}
             <button
               onClick={() => onOpenBooking()}
               className="px-3 sm:px-4 py-1.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-md flex items-center gap-1 shrink-0 transition"
@@ -475,7 +548,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                           Aqua Sound Healing
                         </div>
                         <div className="text-[10px] text-white/60">
-                          Floating in Warm Water with Submerged Frequencies
+                          Floating in Warm Sacred Pool
                         </div>
                       </div>
                     </div>
@@ -522,7 +595,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     }}
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
                   >
-                    <span>Home (Sanctuary Welcome)</span>
+                    <span>Home (Welcome)</span>
                     <ChevronRight className="w-3.5 h-3.5 text-white/30" />
                   </a>
 
@@ -531,7 +604,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     onClick={(e) => handleNavClick(e, '#what-is-sound-healing')}
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
                   >
-                    <span>About Us (Ancient Lineage & Cymatics)</span>
+                    <span>About Us (Ancient Lineage & Science)</span>
                     <ChevronRight className="w-3.5 h-3.5 text-white/30" />
                   </a>
 
@@ -540,7 +613,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     onClick={(e) => handleNavClick(e, '#therapies')}
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
                   >
-                    <span>Sound Healing Therapies (7 Protocols)</span>
+                    <span>Sound Healing Therapies</span>
                     <ChevronRight className="w-3.5 h-3.5 text-white/30" />
                   </a>
 
@@ -549,7 +622,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     onClick={(e) => handleNavClick(e, '#sanctuary')}
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
                   >
-                    <span>3D Singing Bowl Altar (Interactive)</span>
+                    <span>3D Singing Bowl Altar</span>
                     <ChevronRight className="w-3.5 h-3.5 text-white/30" />
                   </a>
 
@@ -568,15 +641,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
                   >
                     <span>Guest Reviews & Testimonials</span>
-                    <ChevronRight className="w-3.5 h-3.5 text-white/30" />
-                  </a>
-
-                  <a
-                    href="#gallery"
-                    onClick={(e) => handleNavClick(e, '#gallery')}
-                    className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
-                  >
-                    <span>Sanctuary Gallery</span>
                     <ChevronRight className="w-3.5 h-3.5 text-white/30" />
                   </a>
 
