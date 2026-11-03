@@ -150,19 +150,19 @@ export default function Home() {
         </RevealOnScroll>
 
         {/* ===================== 3D SINGING BOWL SANCTUARY (Optimized Three.js WebGL Altar) ===================== */}
-        <section id="sanctuary" className="py-20 relative bg-gradient-to-b from-[#f8fafd] to-[#edf4fa] border-t border-[#e2eaf2]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="sanctuary" className="py-12 sm:py-14 relative bg-gradient-to-b from-[#f8fafd] to-[#edf4fa] border-t border-[#e2eaf2]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <RevealOnScroll>
-              <div className="text-center max-w-2xl mx-auto mb-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-widest mb-3 font-bold shadow-sm">
+              <div className="text-center max-w-2xl mx-auto mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-widest mb-2.5 font-bold shadow-sm font-sans">
                   <Sparkles className="w-3.5 h-3.5" />
                   Interactive 3D Sound Altar
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] tracking-tight mb-3">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold text-[#0E1338] tracking-tight mb-2">
                   Experience The Singing Bowl In Real-Time
                 </h2>
-                <p className="text-base text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
-                  Interact with our procedurally crafted Tibetan bronze vessel. Strike the bowl, adjust the Solfeggio frequency to match any of the seven chakras, and feel the visual and acoustic resonance ripple outwards.
+                <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed max-w-xl mx-auto">
+                  Strike the 7-metal Tibetan vessel, adjust the Solfeggio frequency to match any chakra, and experience the acoustic resonance in real time.
                 </p>
               </div>
             </RevealOnScroll>

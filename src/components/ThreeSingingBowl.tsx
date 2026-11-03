@@ -87,8 +87,8 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
     scene.fog = new THREE.FogExp2(0xf1f6fb, 0.035);
 
     const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 80);
-    camera.position.set(0, 3.4, 6.2);
-    camera.lookAt(0, 0.6, 0);
+    camera.position.set(0, 3.0, 5.6);
+    camera.lookAt(0, 0.5, 0);
 
     const renderer = new THREE.WebGLRenderer({
       antialias: false,
@@ -562,25 +562,25 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
       <div
         ref={mountRef}
         data-testid="three-singing-bowl-canvas"
-        className="w-full h-[440px] md:h-[540px] cursor-grab active:cursor-grabbing"
+        className="w-full h-[320px] sm:h-[360px] md:h-[400px] cursor-grab active:cursor-grabbing"
         onClick={handleStrike}
         title="Click anywhere on the 3D sanctuary to strike the singing bowl"
       />
 
       {/* Top Overlay: Title & Frequency Indicator */}
-      <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
-        <div className="bg-white/95 border border-[#d8e3ed] px-4 py-2 rounded-2xl shadow-md pointer-events-auto flex items-center gap-3">
+      <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between pointer-events-none">
+        <div className="bg-white/95 border border-[#d8e3ed] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl shadow-md pointer-events-auto flex items-center gap-2.5">
           <div
-            className="w-3.5 h-3.5 rounded-full shadow-sm"
+            className="w-3.5 h-3.5 rounded-full shadow-sm shrink-0"
             style={{ backgroundColor: selectedChakra.color }}
           />
           <div>
             <div className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold">
               {selectedChakra.name} ({selectedChakra.sanskrit})
             </div>
-            <div className="text-sm font-sans text-[#0E1338] flex items-center gap-2">
+            <div className="text-xs sm:text-sm font-sans text-[#0E1338] flex items-center gap-2">
               <span className="font-bold">{selectedChakra.frequency} Hz Solfeggio [{selectedChakra.solfeggioKey}]</span>
-              <span className="text-[#64748b] text-xs font-sans">• Note {selectedChakra.note}</span>
+              <span className="text-[#64748b] text-xs font-sans hidden sm:inline">• Note {selectedChakra.note}</span>
             </div>
           </div>
         </div>
@@ -588,10 +588,10 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
         <div className="flex items-center gap-2 pointer-events-auto">
           <button
             onClick={() => setIsZenMode(!isZenMode)}
-            className="bg-white/95 hover:bg-[#f1f6fb] text-[#475569] hover:text-[#1718DF] border border-[#d8e3ed] px-3.5 py-2 rounded-2xl transition text-xs flex items-center gap-1.5 shadow-md font-medium"
+            className="bg-white/95 hover:bg-[#f1f6fb] text-[#475569] hover:text-[#1718DF] border border-[#d8e3ed] px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl sm:rounded-2xl transition text-xs flex items-center gap-1.5 shadow-md font-medium"
             title={isZenMode ? 'Show Controls' : 'Zen View Mode'}
           >
-            {isZenMode ? <Eye className="w-4 h-4 text-[#1718DF]" /> : <EyeOff className="w-4 h-4" />}
+            {isZenMode ? <Eye className="w-3.5 h-3.5 text-[#1718DF]" /> : <EyeOff className="w-3.5 h-3.5" />}
             <span className="hidden sm:inline">{isZenMode ? 'Show Dock' : 'Zen View'}</span>
           </button>
         </div>
@@ -608,7 +608,7 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
 
       {/* Unified Bottom Control Dock */}
       <div
-        className={`absolute bottom-4 left-1/2 -translate-x-1/2 w-[94%] max-w-2xl bg-white/95 border border-[#d8e3ed] rounded-2xl p-3 shadow-xl transition-all duration-500 ${
+        className={`absolute bottom-3 left-1/2 -translate-x-1/2 w-[95%] max-w-xl bg-white/95 border border-[#d8e3ed] rounded-2xl p-2.5 sm:p-3 shadow-xl transition-all duration-500 ${
           isZenMode ? 'translate-y-24 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
         }`}
       >
