@@ -93,9 +93,9 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#frequency-tool" className="hover:text-white transition flex items-center gap-1.5">
+                <a href="#therapies" className="hover:text-white transition flex items-center gap-1.5">
                   <ChevronRight className="w-3.5 h-3.5 text-[#ffd875]" />
-                  <span>Pendulum Healing</span>
+                  <span>Couple Sound Therapy</span>
                 </a>
               </li>
               <li>

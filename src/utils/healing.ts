@@ -191,20 +191,6 @@ export const THERAPY_SERVICES: TherapyService[] = [
     image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop'
   },
   {
-    id: 'aura-cleansing-pendulum',
-    title: 'Aura Cleansing & Pendulum Dowsing',
-    sanskritSubtitle: 'Prana Mandal Shodhan',
-    category: 'deep_therapy',
-    durationMin: 45,
-    priceINR: 2500,
-    priceUSD: 32,
-    highlight: 'Subtle Body Diagnostics & Clearing',
-    description: 'Ancient Himalayan crystal pendulum dowsing pinpoints micro-tears, stagnant emotional debris, and leaks in your auric field. Followed by Tibetan bell smudging and sonic boundary sealing.',
-    benefits: ['Pinpoint specific subconscious blockages', 'Clears foreign energetic residues & heavy auras', 'Fortifies personal boundaries', 'Restores natural mental clarity'],
-    instruments: ['Himalayan Quartz Pendulum', 'Sacred 741Hz Intuition Bowl', 'Bronze Dorje & Ghanta Bell'],
-    image: 'https://images.unsplash.com/photo-1598387993441-a364f854c3e1?q=80&w=800&auto=format&fit=crop'
-  },
-  {
     id: 'tibetan-sound-massage',
     title: 'Tibetan On-Body Sound Massage',
     sanskritSubtitle: 'Deha Nada Abhyanga',
@@ -273,7 +259,7 @@ export const DIAGNOSTIC_CONCERNS: DiagnosticQuestion[] = [
     label: 'Difficulty Speaking Truth & Creative Block',
     description: 'Throat tightness, fear of conflict, feeling unheard or artistically stifled.',
     recommendedChakra: 'throat',
-    recommendedServiceId: 'aura-cleansing-pendulum',
+    recommendedServiceId: 'chakra-balancing-cleansing',
     reason: '741Hz vibrational cleansing clears toxic energetic debris in the throat chakra, opening authentic voice and creative vision.'
   },
   {

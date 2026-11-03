@@ -136,7 +136,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   </p>
 
                   {/* Highlights */}
-                  <div className="space-y-2.5 mb-5">
+                  <div className="space-y-2.5 mb-6">
                     <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold font-sans">
                       Therapeutic Benefits
                     </div>
@@ -145,18 +145,6 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                         <CheckCircle2 className="w-4 h-4 text-[#22C55E] shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </div>
-                    ))}
-                  </div>
-
-                  {/* Instruments */}
-                  <div className="flex flex-wrap gap-1.5 mb-6">
-                    {service.instruments.map((inst, i) => (
-                      <span
-                        key={i}
-                        className="text-xs bg-[#f1f6fb] text-[#334155] px-2.5 py-1 rounded-full border border-[#d8e3ed] font-medium font-sans"
-                      >
-                        {inst}
-                      </span>
                     ))}
                   </div>
                 </div>
