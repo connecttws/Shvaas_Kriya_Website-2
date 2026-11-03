@@ -34,7 +34,7 @@ const PILLARS: PillarItem[] = [
     category: 'Acoustics',
     title: 'Sound & Aqua Sound',
     subtitle: '7-Metal Singing Bowls',
-    badge: '432 Hz Frequencies',
+    badge: '432 Hz Solfeggio',
     iconType: 'acoustics',
   },
   {
@@ -49,7 +49,7 @@ const PILLARS: PillarItem[] = [
     id: 'ttc',
     category: 'Teacher Training',
     title: 'Certified TTC Journeys',
-    subtitle: 'Accredited Master Mentorship',
+    subtitle: 'Accredited Mentorship',
     badge: 'Global Certification',
     iconType: 'ttc',
   },
@@ -68,7 +68,7 @@ export const SanctuaryTickerCarousel: React.FC = () => {
 
   const handleScrollManual = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -320 : 320;
+      const scrollAmount = direction === 'left' ? -280 : 280;
       scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
@@ -76,17 +76,17 @@ export const SanctuaryTickerCarousel: React.FC = () => {
   const renderIcon = (type: PillarItem['iconType']) => {
     switch (type) {
       case 'location':
-        return <MapPin className="w-5 h-5 text-[#22C55E]" />;
+        return <MapPin className="w-4 h-4 text-[#22C55E]" />;
       case 'offerings':
-        return <Sparkles className="w-5 h-5 text-[#1718DF]" />;
+        return <Sparkles className="w-4 h-4 text-[#1718DF]" />;
       case 'acoustics':
-        return <Waves className="w-5 h-5 text-[#22C55E]" />;
+        return <Waves className="w-4 h-4 text-[#22C55E]" />;
       case 'ethos':
-        return <Heart className="w-5 h-5 text-[#1718DF]" />;
+        return <Heart className="w-4 h-4 text-[#1718DF]" />;
       case 'ttc':
-        return <Award className="w-5 h-5 text-[#22C55E]" />;
+        return <Award className="w-4 h-4 text-[#22C55E]" />;
       case 'lineage':
-        return <Compass className="w-5 h-5 text-[#1718DF]" />;
+        return <Compass className="w-4 h-4 text-[#1718DF]" />;
     }
   };
 
@@ -94,79 +94,69 @@ export const SanctuaryTickerCarousel: React.FC = () => {
   const duplicatedPillars = [...PILLARS, ...PILLARS];
 
   return (
-    <div className="relative w-full overflow-hidden py-6 mt-2">
-      {/* Top and Bottom Decorative Glow Divider with Blue and Baby Green Shade */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-[#22C55E]/40 to-transparent" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-[#1718DF]/30 to-transparent" />
+    <div className="relative w-full overflow-hidden py-3 mt-1">
+      {/* Subtle Top & Bottom Hairline Dividers */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#86EFAC]/40 to-transparent" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#CCD6F7]/40 to-transparent" />
 
       {/* Side Fade Gradient Masks */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 z-20 pointer-events-none bg-gradient-to-r from-[#f6f9fc] via-[#f6f9fc]/80 to-transparent" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 z-20 pointer-events-none bg-gradient-to-l from-[#f6f9fc] via-[#f6f9fc]/80 to-transparent" />
+      <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 z-20 pointer-events-none bg-gradient-to-r from-[#f6f9fc] via-[#f6f9fc]/80 to-transparent" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 z-20 pointer-events-none bg-gradient-to-l from-[#f6f9fc] via-[#f6f9fc]/80 to-transparent" />
 
       {/* Manual Arrow Controls (Desktop Subtle Overlay) */}
-      <div className="hidden lg:flex items-center justify-between absolute inset-x-2 top-1/2 -translate-y-1/2 z-30 pointer-events-none px-2">
+      <div className="hidden lg:flex items-center justify-between absolute inset-x-1 top-1/2 -translate-y-1/2 z-30 pointer-events-none px-1">
         <button
           onClick={() => handleScrollManual('left')}
-          className="pointer-events-auto w-9 h-9 rounded-full bg-white/95 border border-[#CCD6F7] text-[#0E1338] hover:text-[#1718DF] hover:border-[#22C55E] flex items-center justify-center shadow-lg transition active:scale-95"
+          className="pointer-events-auto w-8 h-8 rounded-full bg-white/95 border border-[#CCD6F7] text-[#0E1338] hover:text-[#1718DF] hover:border-[#22C55E] flex items-center justify-center shadow-md transition active:scale-95"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-4 h-4" />
         </button>
         <button
           onClick={() => handleScrollManual('right')}
-          className="pointer-events-auto w-9 h-9 rounded-full bg-white/95 border border-[#CCD6F7] text-[#0E1338] hover:text-[#1718DF] hover:border-[#22C55E] flex items-center justify-center shadow-lg transition active:scale-95"
+          className="pointer-events-auto w-8 h-8 rounded-full bg-white/95 border border-[#CCD6F7] text-[#0E1338] hover:text-[#1718DF] hover:border-[#22C55E] flex items-center justify-center shadow-md transition active:scale-95"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-4 h-4" />
         </button>
       </div>
 
-      {/* Marquee Carousel Track */}
+      {/* Slim & Sleek Marquee Carousel Track */}
       <div
         ref={scrollContainerRef}
-        className="w-full overflow-x-auto scrollbar-none py-2"
+        className="w-full overflow-x-auto scrollbar-none py-1.5"
       >
-        <div className="animate-marquee-scroll flex items-center gap-4 sm:gap-6 px-4">
+        <div className="animate-marquee-scroll flex items-center gap-3 sm:gap-4 px-2">
           {duplicatedPillars.map((item, idx) => (
             <div
               key={`${item.id}-${idx}`}
-              className="w-[280px] sm:w-[320px] shrink-0 rounded-2xl bg-gradient-to-br from-white via-[#f7fcf8] to-[#f4f7fe] border border-[#CCD6F7]/80 hover:border-[#22C55E] p-4 sm:p-5 shadow-sm hover:shadow-xl transition-all duration-300 relative group overflow-hidden"
+              className="w-[240px] sm:w-[260px] shrink-0 rounded-xl bg-white/90 hover:bg-white border border-[#86EFAC]/50 hover:border-[#22C55E] py-2.5 px-3.5 shadow-sm hover:shadow-md transition-all duration-300 relative group overflow-hidden flex items-center gap-3 text-left"
             >
-              {/* Top Accent Gradient Bar blending Blue & Baby Green */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1718DF] via-[#22C55E] to-[#1718DF]" />
+              {/* Slim Top Dual-Tone Accent Line */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1718DF] to-[#22C55E]" />
 
-              <div className="flex items-start justify-between gap-3 mb-3">
-                <div className="flex items-center gap-2">
-                  <div className="w-9 h-9 rounded-xl bg-white border border-[#e2edf6] shadow-sm flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-                    {renderIcon(item.iconType)}
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
-                      <span className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold font-sans">
-                        {item.category}
-                      </span>
-                    </div>
-                  </div>
+              {/* Compact Icon */}
+              <div className="w-8 h-8 rounded-lg bg-[#f0fdf4] border border-[#86EFAC]/40 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                {renderIcon(item.iconType)}
+              </div>
+
+              {/* Compact Information Block */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-1 mb-0.5">
+                  <span className="text-[10px] uppercase tracking-wider text-[#1718DF] font-bold font-sans truncate">
+                    {item.category}
+                  </span>
+                  <span className="text-[9px] font-semibold text-[#16A34A] bg-[#ECFDF5] px-1.5 py-0.2 rounded font-sans shrink-0">
+                    {item.badge}
+                  </span>
                 </div>
-
-                <span className="text-[10px] font-semibold text-[#16A34A] bg-[#ECFDF5] border border-[#86EFAC]/70 px-2.5 py-0.5 rounded-full font-sans">
-                  {item.badge}
-                </span>
-              </div>
-
-              {/* Title & Subtitle in Simple, Clean, Highly Readable Typography */}
-              <div className="space-y-1 text-left pl-1">
-                <h4 className="text-base sm:text-lg font-bold text-[#0E1338] font-sans group-hover:text-[#1718DF] transition-colors leading-snug">
+                <div className="text-xs sm:text-sm font-bold text-[#0E1338] font-sans truncate leading-tight">
                   {item.title}
-                </h4>
-                <p className="text-xs sm:text-sm text-[#334155] font-sans font-medium leading-relaxed">
+                </div>
+                <div className="text-[11px] text-[#475569] font-sans font-normal truncate leading-tight mt-0.5">
                   {item.subtitle}
-                </p>
+                </div>
               </div>
-
-              {/* Subtle Bottom Ambient Leaf Aura */}
-              <div className="absolute -bottom-6 -right-6 w-20 h-20 rounded-full bg-[#22C55E]/10 pointer-events-none blur-xl group-hover:bg-[#22C55E]/20 transition-all" />
             </div>
           ))}
         </div>
@@ -174,4 +164,3 @@ export const SanctuaryTickerCarousel: React.FC = () => {
     </div>
   );
 };
-

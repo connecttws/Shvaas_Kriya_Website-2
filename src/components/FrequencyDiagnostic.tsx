@@ -41,7 +41,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
             <Activity className="w-3.5 h-3.5 text-[#16A34A]" />
             Vibrational Diagnostic Engine
           </div>
-          <h2 className="text-3xl sm:text-4xl font-heading text-[#0E1338] tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] mb-4">
             Identify Your Energetic Resonance
           </h2>
           <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-2xl mx-auto">
@@ -61,22 +61,22 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
                 <button
                   key={concern.concernId}
                   onClick={() => setSelectedConcern(concern)}
-                  className={`w-full text-left p-4 rounded-2xl border transition-all duration-300 flex items-start justify-between ${
+                  className={`w-full text-left p-4 rounded-2xl border transition-all duration-300 flex items-start justify-between font-sans ${
                     isSelected
                       ? 'bg-gradient-to-r from-white to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-lg shadow-[#1718DF]/10 translate-x-1'
                       : 'bg-white/80 border-[#e2edf6] hover:border-[#1718DF]/40 hover:bg-white text-[#334155]'
                   }`}
                 >
-                  <div>
-                    <div className={`text-base font-heading font-bold mb-1 ${isSelected ? 'text-[#1718DF]' : 'text-[#0E1338]'}`}>
+                  <div className="space-y-1">
+                    <div className={`text-base font-sans font-bold ${isSelected ? 'text-[#1718DF]' : 'text-[#0E1338]'}`}>
                       {concern.label}
                     </div>
-                    <div className="text-xs sm:text-sm text-[#1E293B] font-normal line-clamp-2 leading-relaxed">
+                    <div className="text-sm text-[#334155] font-sans font-normal leading-relaxed">
                       {concern.description}
                     </div>
                   </div>
                   {isSelected && (
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#22C55E] shrink-0 mt-1 shadow-md animate-pulse" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#22C55E] shrink-0 mt-1 shadow-md animate-pulse ml-2" />
                   )}
                 </button>
               );
@@ -85,28 +85,28 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
 
           {/* Right Column: Diagnostic Result Card */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-3xl bg-white border border-[#d8e3ed] p-6 sm:p-8 shadow-xl">
+            <div className="relative rounded-3xl bg-white border border-[#d8e3ed] p-6 sm:p-8 shadow-xl font-sans">
               <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-[#edf2f7] mb-6">
                 <div className="flex items-center gap-3">
                   <div
-                    className="w-11 h-11 rounded-full flex items-center justify-center shadow-md text-white font-bold text-xs"
+                    className="w-12 h-12 rounded-full flex items-center justify-center shadow-md text-white font-bold text-sm shrink-0"
                     style={{ backgroundColor: matchedChakra.color }}
                   >
                     {matchedChakra.note}
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-widest text-[#1718DF] font-bold">
+                    <div className="text-xs uppercase tracking-widest text-[#1718DF] font-bold font-sans">
                       Target Frequency Vortex
                     </div>
-                    <div className="text-lg font-heading text-[#27282c]">
-                      {matchedChakra.name} • {matchedChakra.frequency} Hz Solfeggio
+                    <div className="text-xl sm:text-2xl font-sans font-bold text-[#0E1338]">
+                      {matchedChakra.name} • {matchedChakra.frequency} Hz
                     </div>
                   </div>
                 </div>
 
                 <button
                   onClick={handleTestSound}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs font-bold hover:bg-[#1718DF] hover:text-white transition shadow-sm"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs font-bold hover:bg-[#1718DF] hover:text-white transition shadow-sm font-sans active:scale-95"
                   title="Play singing bowl strike at this frequency"
                 >
                   <Play className={`w-3.5 h-3.5 fill-current ${isPlayingSound ? 'animate-ping' : ''}`} />
@@ -116,33 +116,33 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
 
               <div className="space-y-4 mb-6">
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-1 font-sans">
+                  <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-1.5 font-sans">
                     Therapeutic Mechanism
                   </div>
-                  <p className="text-sm sm:text-base text-[#1E293B] font-normal leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed">
                     {selectedConcern.reason}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 pt-2">
-                  <div className="p-3.5 rounded-2xl bg-[#f8fbfd] border border-[#e2edf6]">
-                    <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Seed Mantra</div>
-                    <div className="text-base font-heading font-bold text-[#1718DF]">{matchedChakra.mantra}</div>
+                  <div className="p-4 rounded-2xl bg-[#f8fbfd] border border-[#e2edf6]">
+                    <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold font-sans mb-0.5">Seed Mantra</div>
+                    <div className="text-xl font-sans font-bold text-[#1718DF]">{matchedChakra.mantra}</div>
                   </div>
-                  <div className="p-3.5 rounded-2xl bg-[#f8fbfd] border border-[#e2edf6]">
-                    <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Elemental Domain</div>
-                    <div className="text-base font-heading font-bold text-[#1718DF]">{matchedChakra.element}</div>
+                  <div className="p-4 rounded-2xl bg-[#f8fbfd] border border-[#e2edf6]">
+                    <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold font-sans mb-0.5">Elemental Domain</div>
+                    <div className="text-xl font-sans font-bold text-[#1718DF]">{matchedChakra.element}</div>
                   </div>
                 </div>
               </div>
 
               <div className="pt-4 border-t border-[#edf2f7] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="text-xs text-[#0E1338] font-semibold">
+                <div className="text-sm text-[#0E1338] font-semibold font-sans">
                   Recommended Rishikesh Protocol Available
                 </div>
                 <button
                   onClick={() => onBookRecommended(selectedConcern.recommendedServiceId)}
-                  className="px-6 py-2.5 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2"
+                  className="px-6 py-3 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center justify-center gap-2 font-sans active:scale-95"
                 >
                   <span>Book This Prescribed Session</span>
                   <ArrowRight className="w-4 h-4 text-[#ffd875]" />
