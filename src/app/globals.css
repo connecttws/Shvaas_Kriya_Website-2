@@ -29,8 +29,8 @@
   --color-bg-ice-mist: #e2edf8;
 
   --color-text-main: #1e293b;
-  --color-text-muted: #56677d;
-  --color-text-light: #7c8ba1;
+  --color-text-muted: #334155;
+  --color-text-light: #475569;
 }
 
 :root {
@@ -61,8 +61,8 @@
 
   /* Text */
   --color-text-main: #1e293b;
-  --color-text-muted: #56677d;
-  --color-text-light: #7c8ba1;
+  --color-text-muted: #334155;
+  --color-text-light: #475569;
 }
 
 html {

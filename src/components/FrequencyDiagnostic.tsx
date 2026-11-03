@@ -43,7 +43,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
           <h2 className="text-3xl sm:text-4xl font-heading text-[#27282c] tracking-tight mb-3">
             Identify Your Energetic Resonance
           </h2>
-          <p className="text-sm text-[#52637a] font-serif-elegant italic leading-relaxed">
+          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
             Sound is medicine in the Himalayas. Select what your subtle body is calling to release, and discover the exact Solfeggio frequency and therapy calibrated to return you to center.
           </p>
         </div>
@@ -70,7 +70,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
                     <div className={`text-sm font-heading font-bold mb-1 ${isSelected ? 'text-[#1718DF]' : 'text-[#27282c]'}`}>
                       {concern.label}
                     </div>
-                    <div className="text-xs text-[#64748b] font-light line-clamp-2">
+                    <div className="text-xs text-[#334155] font-normal line-clamp-2">
                       {concern.description}
                     </div>
                   </div>

@@ -53,7 +53,7 @@ export const FAQSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic leading-relaxed">
+          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
             Explore quick and helpful responses to guide you through everything you need to know before getting started.
           </p>
         </div>
@@ -92,7 +92,7 @@ export const FAQSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#475569] font-light leading-relaxed border-t border-[#DFE6FC] animate-in fade-in duration-300">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[#1e293b] font-normal leading-relaxed border-t border-[#DFE6FC] animate-in fade-in duration-300">
                     <p>{faq.answer}</p>
                   </div>
                 )}

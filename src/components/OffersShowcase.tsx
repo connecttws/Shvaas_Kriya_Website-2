@@ -75,7 +75,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight">
             Experiences that meet you where you are.
           </h2>
-          <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic leading-relaxed mt-2 max-w-2xl">
+          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed mt-2 max-w-2xl font-normal">
             Find the session, retreat, or learning journey that feels right for you.
           </p>
         </div>
@@ -118,7 +118,7 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
                         </h3>
 
                         {isSelected && (
-                          <p className="text-xs sm:text-sm text-[#52637a] font-light leading-relaxed mt-2 animate-in fade-in duration-300">
+                          <p className="text-xs sm:text-sm text-[#1e293b] font-normal leading-relaxed mt-2 animate-in fade-in duration-300">
                             {offer.desc}
                           </p>
                         )}

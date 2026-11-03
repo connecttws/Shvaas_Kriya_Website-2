@@ -54,7 +54,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
             Ancient Himalayan Resonances, Masterfully Applied
           </h2>
 
-          <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic leading-relaxed">
+          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
             Every session at Shvaas Kriya Retreat is tailored to your unique rhythm. Using hand-hammered seven-metal Himalayan bowls and Solfeggio frequencies, we guide your breath and mind into deep restorative stillness.
           </p>
 
@@ -131,7 +131,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                     </div>
                   )}
 
-                  <p className="text-xs sm:text-sm text-[#52637a] font-light leading-relaxed mb-5">
+                  <p className="text-xs sm:text-sm text-[#1e293b] font-normal leading-relaxed mb-5">
                     {service.description}
                   </p>
 

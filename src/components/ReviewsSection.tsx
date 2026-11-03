@@ -64,7 +64,7 @@ export const ReviewsSection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight mb-4">
             Words from Realigned Souls
           </h2>
-          <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic leading-relaxed">
+          <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
             Read authentic impressions from international seekers, yoga practitioners, and travelers who found sanctuary with us in Rishikesh.
           </p>
         </div>
@@ -88,7 +88,7 @@ export const ReviewsSection: React.FC = () => {
 
                 <Quote className="w-8 h-8 text-[#1718DF]/25 mb-3" />
 
-                <p className="text-sm text-[#334155] font-light leading-relaxed mb-6 font-sans">
+                <p className="text-sm text-[#1e293b] font-normal leading-relaxed mb-6 font-sans">
                   &quot;{rev.comment}&quot;
                 </p>
               </div>

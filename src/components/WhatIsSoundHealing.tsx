@@ -56,7 +56,7 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
               </h2>
             </div>
 
-            <p className="text-sm sm:text-base text-[#475569] leading-relaxed font-light">
+            <p className="text-sm sm:text-base text-[#1e293b] leading-relaxed font-normal">
               Everything in the universe is in a constant state of vibration, including every cell in your body. When we are healthy, we vibrate at a harmonious frequency. While sound healing is gaining popularity in modern wellness, its roots are ancient and span across the globe. It is not a &quot;new&quot; invention, but a re-discovery of timeless wisdom.
             </p>
 
@@ -66,8 +66,8 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
                 <h4 className="text-sm font-heading font-bold text-[#1718DF] mb-1">
                   Vedic Roots:
                 </h4>
-                <p className="text-xs text-[#52637a] leading-relaxed">
-                  In ancient India, the concept of <strong className="text-[#1e293b]">Nada Brahma</strong> (&quot;The world is sound&quot;) was central to spiritual practice. The Vedas utilized mantras and chanting to balance the chakras and focus the mind.
+                <p className="text-xs text-[#1e293b] leading-relaxed font-normal">
+                  In ancient India, the concept of <strong className="text-[#1718DF]">Nada Brahma</strong> (&quot;The world is sound&quot;) was central to spiritual practice. The Vedas utilized mantras and chanting to balance the chakras and focus the mind.
                 </p>
               </div>
 
@@ -76,7 +76,7 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
                 <h4 className="text-sm font-heading font-bold text-[#1718DF] mb-1">
                   The Himalayas:
                 </h4>
-                <p className="text-xs text-[#52637a] leading-relaxed">
+                <p className="text-xs text-[#1e293b] leading-relaxed font-normal">
                   For centuries, Tibetan monks have used metal singing bowls in meditation and ceremonial practices to induce deep trance states.
                 </p>
               </div>
@@ -86,7 +86,7 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
                 <h4 className="text-sm font-heading font-bold text-[#1718DF] mb-1">
                   Ancient Greece:
                 </h4>
-                <p className="text-xs text-[#52637a] leading-relaxed">
+                <p className="text-xs text-[#1e293b] leading-relaxed font-normal">
                   Pythagoras, the famous mathematician and philosopher, prescribed specific musical intervals to treat physical and emotional ailments, calling it &quot;medicine for the soul.&quot;
                 </p>
               </div>

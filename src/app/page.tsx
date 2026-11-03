@@ -101,8 +101,8 @@ export default function Home() {
                 A Space to Reconnect Through Breath, Sound & Stillness
               </div>
 
-              {/* Sub-copy from Client Brief */}
-              <p className="text-base sm:text-lg md:text-xl text-[#52637a] font-serif-elegant italic max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+              {/* Sub-copy from Client Brief - High Contrast & Dark Legibility */}
+              <p className="text-base sm:text-lg md:text-xl text-[#1e293b] font-serif-elegant max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
                 Step away from the noise of everyday life and make room for yourself. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in breath, sound, and presence.
               </p>
 
@@ -135,22 +135,22 @@ export default function Home() {
                 <div className="space-y-1">
                   <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Location</div>
                   <div className="text-sm font-heading font-bold text-[#27282c]">Rishikesh, UK</div>
-                  <div className="text-[11px] text-[#64748b] font-light">By Sacred Ganga River</div>
+                  <div className="text-[11px] text-[#334155] font-medium">By Sacred Ganga River</div>
                 </div>
                 <div className="space-y-1">
                   <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Offerings</div>
                   <div className="text-sm font-heading font-bold text-[#27282c]">5 Signature Paths</div>
-                  <div className="text-[11px] text-[#64748b] font-light">Sessions, TTC & Retreats</div>
+                  <div className="text-[11px] text-[#334155] font-medium">Sessions, TTC & Retreats</div>
                 </div>
                 <div className="space-y-1">
                   <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Acoustics</div>
                   <div className="text-sm font-heading font-bold text-[#27282c]">Sound & Aqua Sound</div>
-                  <div className="text-[11px] text-[#64748b] font-light">7-Metal Singing Bowls</div>
+                  <div className="text-[11px] text-[#334155] font-medium">7-Metal Singing Bowls</div>
                 </div>
                 <div className="space-y-1">
                   <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Core Ethos</div>
                   <div className="text-sm font-heading font-bold text-[#27282c]">Breathe · Listen</div>
-                  <div className="text-[11px] text-[#64748b] font-light">Reconnect Inward</div>
+                  <div className="text-[11px] text-[#334155] font-medium">Reconnect Inward</div>
                 </div>
               </div>
             </RevealOnScroll>
@@ -174,7 +174,7 @@ export default function Home() {
                 <h2 className="text-3xl sm:text-4xl font-heading text-[#27282c] tracking-tight mb-3">
                   Experience The Singing Bowl In Real-Time
                 </h2>
-                <p className="text-sm text-[#52637a] font-serif-elegant italic leading-relaxed">
+                <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
                   Interact with our procedurally crafted Tibetan bronze vessel. Strike the bowl, adjust the Solfeggio frequency to match any of the seven chakras, and feel the visual and acoustic resonance ripple outwards.
                 </p>
               </div>
@@ -252,7 +252,7 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] mb-4">
                 Come to Rishikesh. Leave a Little More Connected.
               </h2>
-              <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic max-w-xl mx-auto mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant max-w-xl mx-auto mb-8 leading-relaxed font-normal">
                 Step away from your routine and spend time with mindful movement, soothing sound, nourishing food, and the natural beauty of Rishikesh.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

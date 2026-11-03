@@ -53,7 +53,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               Sound Healing & Shvaas Kriya Teacher Training
             </h2>
 
-            <p className="text-sm sm:text-base text-[#52637a] font-serif-elegant italic leading-relaxed">
+            <p className="text-sm sm:text-base text-[#1e293b] font-serif-elegant leading-relaxed font-normal">
               Step into the sacred foothills of Rishikesh by the Ganga. Deepen your personal practice and explore the foundations of sound healing and breathwork through structured, certified training journeys.
             </p>
 
@@ -70,7 +70,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
                     <h4 className="text-sm font-heading font-bold text-[#27282c] mb-1">
                       {m.title}
                     </h4>
-                    <p className="text-xs text-[#52637a] leading-relaxed">
+                    <p className="text-xs text-[#334155] leading-relaxed font-normal">
                       {m.desc}
                     </p>
                   </div>
@@ -109,7 +109,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               <h3 className="text-xl font-heading text-[#27282c] mb-1">
                 Intensive Sound & Breath Immersion
               </h3>
-              <p className="text-xs text-[#52637a] mb-6 font-light">
+              <p className="text-xs text-[#334155] mb-6 font-normal">
                 Complete theoretical and practical clinical immersion with full access to master singing bowls, pranayama anatomy, and personal mentorship.
               </p>
 
