@@ -3,17 +3,25 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://shvaaskriya.com'),
   title: "Shvaas Kriya Retreat | Rishikesh & Online Sanctuary",
   description:
     "A space to reconnect through breath, sound & stillness. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in presence.",
+  icons: {
+    icon: "/images/shvaas-logo.png",
+    shortcut: "/images/shvaas-logo.png",
+    apple: "/images/shvaas-logo.png",
+  },
   openGraph: {
     title: "Shvaas Kriya Retreat | Breathe · Listen · Reconnect",
     description:
       "A space to reconnect through breath, sound & stillness. Mindful sessions, soulful retreats in Rishikesh, and learning journeys.",
+    images: ["/images/shvaas-logo.png"],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    images: ["/images/shvaas-logo.png"],
   },
 };
 

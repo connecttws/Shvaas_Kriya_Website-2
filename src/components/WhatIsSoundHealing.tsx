@@ -134,11 +134,13 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
                 </svg>
               </div>
 
-              {/* Center Sacred Lotus Icon in Shvaas Blue #1718DF */}
-              <div className="absolute w-20 h-20 rounded-full bg-[#1718DF] flex items-center justify-center shadow-lg border-2 border-[#6882FF]">
-                <svg className="w-10 h-10 text-white fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2C12 2 8 8 8 13C8 15.21 9.79 17 12 17C14.21 17 16 15.21 16 13C16 8 12 2 12 2ZM12 15C10.9 15 10 14.1 10 13C10 9.8 12 5.5 12 5.5C12 5.5 14 9.8 14 13C14 14.1 13.1 15 12 15ZM6.5 10C5.5 11.5 5 13.2 5 15C5 18.9 8.1 22 12 22C15.9 22 19 18.9 19 15C19 13.2 18.5 11.5 17.5 10C16.8 11.8 15.5 13.3 14 14.2C14.6 13.2 15 12.1 15 11C15 8.8 13.5 6.5 12 5C10.5 6.5 9 8.8 9 11C9 12.1 9.4 13.2 10 14.2C8.5 13.3 7.2 11.8 6.5 10Z"/>
-                </svg>
+              {/* Center Official Shvaas Logo in Spinning Seal */}
+              <div className="absolute w-20 h-20 rounded-full overflow-hidden shadow-xl border-2 border-[#6882FF] bg-[#1718DF] flex items-center justify-center">
+                <img
+                  src="/images/shvaas-logo.png"
+                  alt="Shvaas Kriya Sacred Emblem"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

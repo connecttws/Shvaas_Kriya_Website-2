@@ -111,7 +111,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo with Sacred Lotus Motif */}
+          {/* Brand Logo with Official Shvaas Emblem */}
           <a
             href="#"
             onClick={(e) => {
@@ -120,11 +120,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             }}
             className="flex items-center gap-2.5 sm:gap-3 group shrink-0"
           >
-            {/* Sacred Lotus Icon */}
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center p-1 sm:p-1.5 transition-transform duration-500 group-hover:scale-105 border border-white/20 shrink-0">
-              <svg className="w-full h-full text-white fill-current" viewBox="0 0 24 24">
-                <path d="M12 2C12 2 8 8 8 13C8 15.21 9.79 17 12 17C14.21 17 16 15.21 16 13C16 8 12 2 12 2ZM12 15C10.9 15 10 14.1 10 13C10 9.8 12 5.5 12 5.5C12 5.5 14 9.8 14 13C14 14.1 13.1 15 12 15ZM6.5 10C5.5 11.5 5 13.2 5 15C5 18.9 8.1 22 12 22C15.9 22 19 18.9 19 15C19 13.2 18.5 11.5 17.5 10C16.8 11.8 15.5 13.3 14 14.2C14.6 13.2 15 12.1 15 11C15 8.8 13.5 6.5 12 5C10.5 6.5 9 8.8 9 11C9 12.1 9.4 13.2 10 14.2C8.5 13.3 7.2 11.8 6.5 10Z" />
-              </svg>
+            {/* Official Shvaas Circular Logo */}
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full overflow-hidden shrink-0 transition-transform duration-500 group-hover:scale-105 shadow-md border border-white/25 bg-[#1718DF] flex items-center justify-center">
+              <img
+                src="/images/shvaas-logo.png"
+                alt="Shvaas Kriya Retreat Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             <div className="flex flex-col">
@@ -396,11 +398,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           <div className="fixed inset-y-0 right-0 w-full sm:max-w-md bg-[#0E1338] text-white shadow-2xl flex flex-col z-50 border-l border-[#1718DF]/30 animate-in slide-in-from-right duration-300">
             {/* Drawer Top Bar */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-[#0A0E2A]">
-              <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center p-1 border border-white/20">
-                  <svg className="w-full h-full text-white fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2C12 2 8 8 8 13C8 15.21 9.79 17 12 17C14.21 17 16 15.21 16 13C16 8 12 2 12 2ZM12 15C10.9 15 10 14.1 10 13C10 9.8 12 5.5 12 5.5C12 5.5 14 9.8 14 13C14 14.1 13.1 15 12 15ZM6.5 10C5.5 11.5 5 13.2 5 15C5 18.9 8.1 22 12 22C15.9 22 19 18.9 19 15C19 13.2 18.5 11.5 17.5 10C16.8 11.8 15.5 13.3 14 14.2C14.6 13.2 15 12.1 15 11C15 8.8 13.5 6.5 12 5C10.5 6.5 9 8.8 9 11C9 12.1 9.4 13.2 10 14.2C8.5 13.3 7.2 11.8 6.5 10Z" />
-                  </svg>
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 shadow-md border border-white/25 bg-[#1718DF] flex items-center justify-center">
+                  <img
+                    src="/images/shvaas-logo.png"
+                    alt="Shvaas Kriya Retreat Logo"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="font-heading text-base font-bold text-white leading-tight">
