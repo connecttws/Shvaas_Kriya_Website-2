@@ -274,6 +274,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             </a>
 
             <a
+              href="#retreats"
+              onClick={(e) => handleNavClick(e, '#retreats')}
+              className="hover:text-[#ffd875] transition-colors py-1.5"
+            >
+              Retreats
+            </a>
+
+            <a
               href="#sanctuary"
               onClick={(e) => handleNavClick(e, '#sanctuary')}
               className="hover:text-[#ffd875] transition-colors py-1.5"
@@ -621,6 +629,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
                   >
                     <span>Sound Healing Therapies</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-white/30" />
+                  </a>
+
+                  <a
+                    href="#retreats"
+                    onClick={(e) => handleNavClick(e, '#retreats')}
+                    className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition text-xs font-semibold text-white/90 hover:text-white"
+                  >
+                    <span>Retreats in Rishikesh</span>
                     <ChevronRight className="w-3.5 h-3.5 text-white/30" />
                   </a>
 

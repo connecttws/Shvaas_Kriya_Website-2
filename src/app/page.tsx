@@ -114,25 +114,40 @@ export default function Home() {
                 Step away from the noise of everyday life and make room for yourself. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in breath, sound, and presence.
               </p>
 
-              {/* Dual Hero CTAs */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+              {/* Dual Hero CTAs from Client Brief */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-10">
                 <button
-                  onClick={() => handleOpenBooking()}
-                  className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-[0.18em] active:scale-95 transition-all shadow-xl shadow-[#1718DF]/20 flex items-center justify-center gap-2"
+                  onClick={() => {
+                    const el = document.getElementById('offers');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    else handleOpenBooking();
+                  }}
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-[0.18em] active:scale-95 transition-all shadow-xl shadow-[#1718DF]/20 flex items-center justify-center gap-2 font-sans"
                 >
                   <span>Explore Our Experiences</span>
                   <ArrowRight className="w-4 h-4 text-[#ffd875]" />
                 </button>
 
                 <button
+                  onClick={() => {
+                    const el = document.getElementById('retreats');
+                    if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    else handleOpenBooking();
+                  }}
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white hover:bg-[#f1f6fb] text-[#0E1338] border border-[#CCD6F7] hover:border-[#1718DF] text-xs uppercase tracking-[0.18em] font-bold transition-all flex items-center justify-center gap-2 shadow-sm font-sans"
+                >
+                  <span>Find Your Retreat</span>
+                </button>
+
+                <button
                   onClick={handleStrikeHeroSample}
-                  className="w-full sm:w-auto px-7 py-4 rounded-full bg-white/95 hover:bg-[#f1f6fb] text-[#27282c] border border-[#d8e3ed] hover:border-[#22C55E] text-xs uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 shadow-sm group"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#334155] hover:text-[#1718DF] border border-[#d8e3ed] hover:border-[#22C55E] text-xs uppercase tracking-[0.15em] font-semibold transition-all flex items-center justify-center gap-2 shadow-sm group font-sans"
                   title="Play 528Hz Tibetan Singing Bowl Strike"
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] flex items-center justify-center text-[#1718DF] group-hover:scale-110 transition-transform">
-                    <Play className="w-3 h-3 fill-current ml-0.5" />
+                  <div className="w-5 h-5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] flex items-center justify-center text-[#1718DF] group-hover:scale-110 transition-transform">
+                    <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
                   </div>
-                  <span>Strike 528Hz Miracle Bowl</span>
+                  <span>Strike 528Hz Bowl</span>
                 </button>
               </div>
             </RevealOnScroll>
@@ -143,6 +158,27 @@ export default function Home() {
             </RevealOnScroll>
           </div>
         </section>
+
+        {/* ===================== ETHOS: A MOMENT TO BREATHE (Client Exact Copy) ===================== */}
+        <RevealOnScroll>
+          <section className="py-14 sm:py-16 relative bg-gradient-to-b from-white via-[#f7fcf9] to-white border-y border-[#e2edf6] text-center overflow-hidden">
+            <div className="absolute top-0 left-1/3 w-96 h-96 rounded-full bg-[#22C55E]/10 pointer-events-none blur-3xl" />
+            <div className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full bg-[#1718DF]/10 pointer-events-none blur-3xl" />
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-3.5 font-bold shadow-sm font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
+                A Moment of Stillness
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-sans font-bold text-[#0E1338] tracking-tight mb-4 leading-tight">
+                Sometimes, All You Need Is a Moment to Breathe.
+              </h2>
+              <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-3xl mx-auto">
+                In a world that constantly asks you to do more, Shvaas Kriya Retreat invites you to slow down, listen inward, and reconnect with what matters. Through breathwork, yoga, sound, and mindful experiences, we create space for stillness, reflection, and meaningful connection.
+              </p>
+            </div>
+          </section>
+        </RevealOnScroll>
 
         {/* ===================== WHAT IS SOUND HEALING? (Reference Section with Rotating Badge) ===================== */}
         <RevealOnScroll>
@@ -232,39 +268,62 @@ export default function Home() {
           <FAQSection />
         </RevealOnScroll>
 
-        {/* ===================== SACRED CALL TO AWAKENING BANNER ===================== */}
+        {/* ===================== RETREATS IN RISHIKESH (Exact Client Copy) ===================== */}
         <RevealOnScroll>
-          <section className="py-20 relative bg-gradient-to-b from-[#f1f6fb] via-[#f7fcf8] to-white border-t border-[#e2eaf2] overflow-hidden">
+          <section id="retreats" className="py-20 sm:py-24 relative bg-gradient-to-b from-[#f1f6fb] via-[#f7fcf8] to-white border-t border-[#e2eaf2] overflow-hidden scroll-mt-20">
             {/* Ambient Dual-Tone Blue & Baby Green Glows */}
             <div className="absolute top-0 left-1/4 w-80 h-80 rounded-full bg-[#22C55E]/10 pointer-events-none blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-[#1718DF]/10 pointer-events-none blur-3xl" />
 
-            <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-4 font-bold shadow-sm">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-4 font-bold shadow-sm font-sans">
                 <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
-                Sanctuary Invitation
+                Retreats in Rishikesh
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] mb-4">
-                Come to Rishikesh. Leave a Little More Connected.
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-sans font-bold text-[#0E1338] mb-4 tracking-tight leading-tight">
+                Come to Rishikesh. Make Space for Yourself.
               </h2>
-              <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal max-w-xl mx-auto mb-8 leading-relaxed">
-                Step away from your routine and spend time with mindful movement, soothing sound, nourishing food, and the natural beauty of Rishikesh.
+              <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal max-w-3xl mx-auto mb-8 leading-relaxed">
+                Discover Rishikesh through thoughtfully curated retreats that bring together mindful mornings, sound healing, sattvic meals, herbal teas, local explorations, and the beauty of Ganga Aarti. Each retreat is shaped around the experience, with selected hospitality partners and spaces that complement the journey.
               </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button
-                  onClick={() => handleOpenBooking()}
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition active:scale-95"
-                >
-                  Book A Session / Retreat
-                </button>
-                <a
-                  href="https://wa.me/917208936359"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md active:scale-95"
-                >
-                  <span>Chat on WhatsApp (+91 72089 36359)</span>
-                </a>
+
+              {/* Retreat Highlights Badges */}
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mb-10">
+                {['Mindful Mornings & Yoga', 'Sound & Aqua Sound Healing', 'Sattvic Meals & Herbal Teas', 'Ganga Aarti & Local Explorations', 'Curated Boutique Spaces'].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className="text-xs sm:text-sm font-semibold text-[#0E1338] bg-white border border-[#86EFAC]/70 px-3.5 py-1.5 rounded-full shadow-sm font-sans flex items-center gap-1.5"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E]" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              {/* Callout Box from Client Brief */}
+              <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#CCD6F7] shadow-xl max-w-2xl mx-auto">
+                <h3 className="text-xl sm:text-2xl font-sans font-bold text-[#0E1338] mb-2">
+                  Your Journey Back to Yourself Can Begin Here.
+                </h3>
+                <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal mb-6 leading-relaxed">
+                  Find the session, retreat, or learning journey that feels right for you.
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
+                  <button
+                    onClick={() => handleOpenBooking()}
+                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition active:scale-95 font-sans"
+                  >
+                    Explore Experiences / Enquire Now
+                  </button>
+                  <a
+                    href="https://wa.me/917208936359"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md active:scale-95 font-sans"
+                  >
+                    <span>Chat on WhatsApp (+91 72089 36359)</span>
+                  </a>
+                </div>
               </div>
             </div>
           </section>
