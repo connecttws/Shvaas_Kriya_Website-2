@@ -312,23 +312,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           </nav>
 
           {/* Desktop Right Action Elements */}
-          <div className="hidden lg:flex items-center gap-2.5 xl:gap-3.5 shrink-0">
-            {/* Direct Phone Dial */}
-            <a
-              href="tel:+917208936359"
-              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition text-xs font-semibold group font-sans"
-              title="Call Shvaas Kriya: +91 72089 36359"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#ffd875] group-hover:scale-110 transition-transform" />
-              <span className="hidden xl:inline text-[11px] font-sans font-medium">
-                +91 72089 36359
-              </span>
-            </a>
-
+          <div className="hidden lg:flex items-center shrink-0">
             {/* Book Now Button */}
             <button
               onClick={() => onOpenBooking()}
-              className="px-4 xl:px-5 py-2 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5 shrink-0 font-sans"
+              className="px-5 py-2.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-xs uppercase tracking-wider transition shadow-md flex items-center gap-1.5 shrink-0 font-sans"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>Book Now</span>
@@ -336,34 +324,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           </div>
 
           {/* Mobile Right Controls (< lg) */}
-          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
-            {/* Quick Call Button */}
-            <a
-              href="tel:+917208936359"
-              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center transition active:scale-95 shrink-0"
-              title="Call Sanctuary: +91 72089 36359"
-              aria-label="Call Sanctuary"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#ffd875]" />
-            </a>
-
-            {/* Mobile Instant "Book" CTA */}
+          <div className="flex items-center gap-2 sm:gap-2.5 lg:hidden">
+            {/* Mobile Instant "Book Now" CTA */}
             <button
               onClick={() => onOpenBooking()}
-              className="px-3 sm:px-4 py-1.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-md flex items-center gap-1 shrink-0 transition font-sans"
+              className="px-3.5 sm:px-4 py-1.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-md flex items-center gap-1.5 shrink-0 transition font-sans"
             >
-              <Calendar className="w-3 h-3 text-[#0E1338]" />
-              <span>Book</span>
+              <Calendar className="w-3.5 h-3.5 text-[#0E1338]" />
+              <span>Book Now</span>
             </button>
 
             {/* Mobile Hamburger / Close Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition-all active:scale-95 shrink-0"
+              className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition-all active:scale-95 shrink-0"
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5 text-white" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5 text-white" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
             </button>
           </div>
         </div>
