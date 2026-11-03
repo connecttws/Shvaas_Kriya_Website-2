@@ -4,16 +4,22 @@
 @source "../app";
 
 @theme {
-  --font-elsie: 'Elsie', display, serif;
+  --font-elsie: 'Playfair Display', Georgia, serif;
   --font-cinzel: 'Cinzel', serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: 'Elsie', 'Cinzel', serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
 
   --color-shvaas-blue: #1718DF;
   --color-shvaas-navy: #0E1338;
   --color-shvaas-hover: #6882FF;
   --color-shvaas-soft: #EEF0FF;
+
+  /* Fresh Baby Green Leaf Accent from Shvaas Logo */
+  --color-leaf-green: #22C55E;
+  --color-leaf-emerald: #16A34A;
+  --color-leaf-soft: #ECFDF5;
+  --color-leaf-border: rgba(34, 197, 94, 0.3);
 
   --color-plum-brand: #1718DF;
   --color-plum-deep: #0E1338;
@@ -34,11 +40,17 @@
 }
 
 :root {
-  --font-heading: 'Elsie', 'Cinzel', serif;
-  --font-elsie: 'Elsie', display, serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-elsie: 'Playfair Display', Georgia, serif;
   --font-cinzel: 'Cinzel', serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Fresh Baby Green Leaf Accent from Shvaas Logo */
+  --color-leaf-green: #22C55E;
+  --color-leaf-emerald: #16A34A;
+  --color-leaf-soft: #ECFDF5;
+  --color-leaf-border: rgba(34, 197, 94, 0.3);
 
   /* Serene White & Celestial Bluish Himalayan Palette */
   --color-bg-base: #f6f9fc;
@@ -60,9 +72,9 @@
   --color-gold-warm: #d4af37;
 
   /* Text */
-  --color-text-main: #1e293b;
-  --color-text-muted: #334155;
-  --color-text-light: #475569;
+  --color-text-main: #0E1338;
+  --color-text-muted: #1E293B;
+  --color-text-light: #334155;
 }
 
 html {
@@ -72,19 +84,20 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: #f6f9fc;
-  color: #1e293b;
+  color: #1E293B;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, .font-heading {
-  font-family: var(--font-elsie);
-  letter-spacing: 0.01em;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .font-elsie {
-  font-family: var(--font-elsie);
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 .font-cinzel {
@@ -94,6 +107,7 @@ h1, h2, h3, .font-heading {
 .font-serif-elegant {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 500;
+  font-style: normal;
   color: #0E1338;
 }
 
@@ -157,6 +171,27 @@ h1, h2, h3, .font-heading {
 .animate-ethereal {
   animation: etherealFloat 6s ease-in-out infinite;
   transform: translateZ(0);
+}
+
+/* Moving Carousel Marquee Ticker */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee-scroll {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-scroll:hover {
+  animation-play-state: paused;
 }
 
 /* Light theme refined scrollbar */

@@ -46,19 +46,20 @@ export const FAQSection: React.FC = () => {
     <section className="py-24 bg-white relative overflow-hidden border-t border-[#e2eaf2]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-widest mb-3 font-bold shadow-sm">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-3 font-bold shadow-sm font-sans">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
+            <HelpCircle className="w-3.5 h-3.5 text-[#16A34A]" />
             Questions & Answers
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight mb-4">
             Frequently Asked Questions
           </h2>
-          <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-2xl mx-auto">
             Explore quick and helpful responses to guide you through everything you need to know before getting started.
           </p>
         </div>
 
-        {/* Accordion List (Exact Reference Shvaas Blue Style #1718DF) */}
+        {/* Accordion List (Shvaas Blue Style with Baby Green Open Accent) */}
         <div className="space-y-3.5">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
@@ -67,7 +68,7 @@ export const FAQSection: React.FC = () => {
                 key={idx}
                 className={`rounded-2xl transition-all duration-300 overflow-hidden border ${
                   isOpen
-                    ? 'bg-white border-[#1718DF] shadow-lg shadow-[#1718DF]/10'
+                    ? 'bg-gradient-to-r from-white via-white to-[#f7fcf9] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-lg shadow-[#1718DF]/10'
                     : 'bg-[#1718DF] hover:bg-[#6882FF] border-[#1718DF] shadow-sm'
                 }`}
               >
@@ -92,7 +93,7 @@ export const FAQSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#0E1338] font-sans font-medium leading-relaxed border-t border-[#DFE6FC] animate-in fade-in duration-300">
+                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed border-t border-[#DFE6FC] animate-in fade-in duration-300">
                     <p>{faq.answer}</p>
                   </div>
                 )}

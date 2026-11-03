@@ -26,16 +26,17 @@ export const Footer: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-xs text-[#DFE6FC] leading-relaxed font-light">
+            <p className="text-sm text-[#DFE6FC] leading-relaxed font-normal">
               A space to reconnect through breath, sound & stillness. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in presence.
             </p>
 
             <div className="pt-2">
-              <span className="text-[11px] uppercase tracking-widest text-[#ffd875] font-semibold block mb-1">
+              <span className="text-[11px] uppercase tracking-widest text-[#22C55E] font-bold block mb-1 font-sans">
                 Sanctuary Ethos
               </span>
-              <span className="text-sm font-elsie text-white italic">
-                Breathe · Listen · Reconnect
+              <span className="text-base font-sans font-semibold text-white flex items-center gap-1.5">
+                <span>Breathe · Listen · Reconnect</span>
+                <span className="w-2 h-2 rounded-full bg-[#22C55E] inline-block" />
               </span>
             </div>
           </div>

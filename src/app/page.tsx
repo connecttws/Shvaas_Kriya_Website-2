@@ -12,6 +12,7 @@ import { GallerySection } from '../components/GallerySection';
 import { ReviewsSection } from '../components/ReviewsSection';
 import { FAQSection } from '../components/FAQSection';
 import { BookingModal } from '../components/BookingModal';
+import { SanctuaryTickerCarousel } from '../components/SanctuaryTickerCarousel';
 import { Footer } from '../components/Footer';
 import { RevealOnScroll } from '../components/RevealOnScroll';
 import { Sparkles, ArrowRight, Play } from 'lucide-react';
@@ -66,29 +67,36 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="flex-1">
-        {/* ===================== HERO SECTION (White & Serene Bluish Himalayan Mist) ===================== */}
-        <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 overflow-hidden bg-gradient-to-b from-[#e8f1fb] via-[#f3f7fc] to-[#f8fafd]">
-          {/* Subtle Ambient Celestial Mist Glows (Hardware-accelerated CSS radial gradients) */}
+        {/* ===================== HERO SECTION (White, Royal Blue & Baby-Green Mist) ===================== */}
+        <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-gradient-to-b from-[#e8f1fb] via-[#f3f7fc] to-[#f8fafd]">
+          {/* Subtle Ambient Celestial Blue & Baby-Green Mist Glows */}
           <div
-            className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[550px] pointer-events-none rounded-full"
+            className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[950px] h-[550px] pointer-events-none rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(216, 232, 250, 0.6) 0%, rgba(224, 239, 255, 0.25) 45%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(34, 197, 94, 0.12) 0%, rgba(23, 24, 223, 0.08) 40%, rgba(224, 239, 255, 0.25) 60%, transparent 75%)',
             }}
           />
           <div
-            className="absolute top-10 left-10 w-96 h-96 pointer-events-none rounded-full"
+            className="absolute top-10 right-10 w-96 h-96 pointer-events-none rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(237, 228, 245, 0.45) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(34, 197, 94, 0.14) 0%, transparent 70%)',
+            }}
+          />
+          <div
+            className="absolute top-20 left-10 w-80 h-80 pointer-events-none rounded-full"
+            style={{
+              background: 'radial-gradient(circle, rgba(23, 24, 223, 0.08) 0%, transparent 70%)',
             }}
           />
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             {/* Hero Main Content with Reveal Animation */}
             <RevealOnScroll duration={0.9} yOffset={24}>
-              {/* Top Sacred Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-[#d6e3f0] text-[#1718DF] text-xs uppercase tracking-[0.25em] mb-8 shadow-sm animate-ethereal font-bold">
-                <Sparkles className="w-3.5 h-3.5 text-[#1718DF]" />
+              {/* Top Sacred Badge with Baby Green Pulse */}
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/95 border border-[#86EFAC]/80 text-[#1718DF] text-xs uppercase tracking-[0.2em] mb-8 shadow-sm animate-ethereal font-bold font-sans">
+                <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse shrink-0" />
                 <span>Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect</span>
+                <Sparkles className="w-3.5 h-3.5 text-[#1718DF]" />
               </div>
 
               {/* Verified Headline from Shvaas Kriya Retreat Client Brief */}
@@ -96,8 +104,8 @@ export default function Home() {
                 Welcome to Shvaas Kriya Retreat
               </h1>
 
-              {/* Sub-headline */}
-              <div className="text-xl sm:text-2xl md:text-3xl font-serif italic text-[#1718DF] mb-6 font-normal">
+              {/* Sub-headline - Clean Non-Italic Font */}
+              <div className="text-xl sm:text-2xl md:text-3xl font-serif text-[#1718DF] mb-6 font-medium tracking-tight">
                 A Space to Reconnect Through Breath, Sound & Stillness
               </div>
 
@@ -107,7 +115,7 @@ export default function Home() {
               </p>
 
               {/* Dual Hero CTAs */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
                 <button
                   onClick={() => handleOpenBooking()}
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-[0.18em] active:scale-95 transition-all shadow-xl shadow-[#1718DF]/20 flex items-center justify-center gap-2"
@@ -118,7 +126,7 @@ export default function Home() {
 
                 <button
                   onClick={handleStrikeHeroSample}
-                  className="w-full sm:w-auto px-7 py-4 rounded-full bg-white/95 hover:bg-[#f1f6fb] text-[#27282c] border border-[#d8e3ed] text-xs uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 shadow-sm group"
+                  className="w-full sm:w-auto px-7 py-4 rounded-full bg-white/95 hover:bg-[#f1f6fb] text-[#27282c] border border-[#d8e3ed] hover:border-[#22C55E] text-xs uppercase tracking-[0.18em] font-semibold transition-all flex items-center justify-center gap-2 shadow-sm group"
                   title="Play 528Hz Tibetan Singing Bowl Strike"
                 >
                   <div className="w-6 h-6 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] flex items-center justify-center text-[#1718DF] group-hover:scale-110 transition-transform">
@@ -129,30 +137,9 @@ export default function Home() {
               </div>
             </RevealOnScroll>
 
-            {/* Key Sanctuary Pillars Bar with Staggered Slide In */}
+            {/* Moving Carousel for Key Sanctuary Pillars with Blue & Baby-Green Shades */}
             <RevealOnScroll delay={0.2} duration={0.8} yOffset={20}>
-              <div className="pt-8 border-t border-[#d8e3ed] grid grid-cols-2 md:grid-cols-4 gap-6 text-left max-w-4xl mx-auto">
-                <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Location</div>
-                  <div className="text-sm font-heading font-bold text-[#0E1338]">Rishikesh, UK</div>
-                  <div className="text-[11px] text-[#0E1338] font-semibold">By Sacred Ganga River</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Offerings</div>
-                  <div className="text-sm font-heading font-bold text-[#0E1338]">5 Signature Paths</div>
-                  <div className="text-[11px] text-[#0E1338] font-semibold">Sessions, TTC & Retreats</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Acoustics</div>
-                  <div className="text-sm font-heading font-bold text-[#0E1338]">Sound & Aqua Sound</div>
-                  <div className="text-[11px] text-[#0E1338] font-semibold">7-Metal Singing Bowls</div>
-                </div>
-                <div className="space-y-1">
-                  <div className="text-[11px] uppercase tracking-wider text-[#1718DF] font-bold">Core Ethos</div>
-                  <div className="text-sm font-heading font-bold text-[#0E1338]">Breathe · Listen</div>
-                  <div className="text-[11px] text-[#0E1338] font-semibold">Reconnect Inward</div>
-                </div>
-              </div>
+              <SanctuaryTickerCarousel />
             </RevealOnScroll>
           </div>
         </section>
@@ -247,18 +234,26 @@ export default function Home() {
 
         {/* ===================== SACRED CALL TO AWAKENING BANNER ===================== */}
         <RevealOnScroll>
-          <section className="py-20 relative bg-gradient-to-b from-[#f1f6fb] to-white border-t border-[#e2eaf2]">
-            <div className="max-w-4xl mx-auto px-4 text-center">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] mb-4">
+          <section className="py-20 relative bg-gradient-to-b from-[#f1f6fb] via-[#f7fcf8] to-white border-t border-[#e2eaf2] overflow-hidden">
+            {/* Ambient Dual-Tone Blue & Baby Green Glows */}
+            <div className="absolute top-0 left-1/4 w-80 h-80 rounded-full bg-[#22C55E]/10 pointer-events-none blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full bg-[#1718DF]/10 pointer-events-none blur-3xl" />
+
+            <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-4 font-bold shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
+                Sanctuary Invitation
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] mb-4">
                 Come to Rishikesh. Leave a Little More Connected.
               </h2>
-              <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium max-w-xl mx-auto mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal max-w-xl mx-auto mb-8 leading-relaxed">
                 Step away from your routine and spend time with mindful movement, soothing sound, nourishing food, and the natural beauty of Rishikesh.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button
                   onClick={() => handleOpenBooking()}
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition"
+                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition active:scale-95"
                 >
                   Book A Session / Retreat
                 </button>
@@ -266,9 +261,9 @@ export default function Home() {
                   href="https://wa.me/917208936359"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white hover:bg-[#f1f6fb] text-[#27282c] border border-[#d8e3ed] text-xs uppercase tracking-wider font-semibold transition flex items-center justify-center gap-2 shadow-sm"
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md active:scale-95"
                 >
-                  <span>Direct WhatsApp Inquiries</span>
+                  <span>Chat on WhatsApp (+91 72089 36359)</span>
                 </a>
               </div>
             </div>

@@ -57,14 +57,15 @@ export const ReviewsSection: React.FC = () => {
     <section id="reviews" className="py-24 bg-[#f4f8fc] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-[0.25em] mb-4 font-bold shadow-sm">
-            <Heart className="w-3.5 h-3.5 text-[#1718DF]" />
-            Echoes of Awakening
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-4 font-bold shadow-sm font-sans">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
+            <Heart className="w-3.5 h-3.5 text-[#16A34A]" />
+            Seeker Testimonials
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight mb-4">
             Words from Realigned Souls
           </h2>
-          <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-2xl mx-auto">
             Read authentic impressions from international seekers, yoga practitioners, and travelers who found sanctuary with us in Rishikesh.
           </p>
         </div>
@@ -74,8 +75,11 @@ export const ReviewsSection: React.FC = () => {
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-3xl bg-white border border-[#e2edf6] hover:border-[#1718DF]/40 transition-all duration-300 relative group flex flex-col justify-between shadow-md hover:shadow-xl"
+              className="p-8 rounded-3xl bg-white border border-[#CCD6F7]/80 hover:border-[#22C55E]/60 transition-all duration-300 relative group flex flex-col justify-between shadow-md hover:shadow-xl overflow-hidden"
             >
+              {/* Top Dual Accent Bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1718DF] via-[#22C55E] to-[#1718DF]" />
+
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-1 text-[#e5b324]">
@@ -83,34 +87,34 @@ export const ReviewsSection: React.FC = () => {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-[11px] text-[#0E1338] font-sans font-semibold">{rev.date}</span>
+                  <span className="text-xs text-[#0E1338] font-sans font-semibold">{rev.date}</span>
                 </div>
 
-                <Quote className="w-8 h-8 text-[#1718DF]/30 mb-3" />
+                <Quote className="w-8 h-8 text-[#1718DF]/20 mb-3" />
 
-                <p className="text-sm sm:text-base text-[#0E1338] font-normal leading-relaxed mb-6 font-sans">
+                <p className="text-sm sm:text-base text-[#1E293B] font-normal leading-relaxed mb-6 font-sans">
                   &quot;{rev.comment}&quot;
                 </p>
               </div>
 
               <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between">
                 <div>
-                  <div className="text-sm font-heading font-bold text-[#27282c] flex items-center gap-1.5">
+                  <div className="text-base font-heading font-bold text-[#0E1338] flex items-center gap-1.5">
                     <span>{rev.name}</span>
                     {rev.verified && (
                       <span title="Verified Guest" className="inline-flex">
-                        <CheckCircle className="w-3.5 h-3.5 text-[#27ae60]" />
+                        <CheckCircle className="w-4 h-4 text-[#22C55E]" />
                       </span>
                     )}
                   </div>
-                  <div className="text-xs text-[#0E1338] font-medium flex items-center gap-1 mt-0.5">
-                    <MapPin className="w-3 h-3 text-[#1718DF]" />
+                  <div className="text-xs text-[#334155] font-medium flex items-center gap-1 mt-0.5 font-sans">
+                    <MapPin className="w-3.5 h-3.5 text-[#22C55E]" />
                     <span>{rev.location}</span>
                   </div>
                 </div>
 
                 <div className="text-right">
-                  <span className="text-[10px] uppercase tracking-wider text-[#1718DF] bg-[#EEF0FF] px-2.5 py-1 rounded-full border border-[#CCD6F7] font-semibold">
+                  <span className="text-[10px] uppercase tracking-wider text-[#16A34A] bg-[#ECFDF5] px-2.5 py-1 rounded-full border border-[#86EFAC] font-semibold font-sans">
                     {rev.session}
                   </span>
                 </div>

@@ -44,16 +44,17 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Course Overview */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-[0.2em] font-bold shadow-sm">
-              <Award className="w-3.5 h-3.5 text-[#1718DF]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] font-bold shadow-sm font-sans">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
+              <Award className="w-3.5 h-3.5 text-[#16A34A]" />
               Accredited Himalayan Certification
             </div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] leading-tight">
               Sound Healing & Shvaas Kriya Teacher Training
             </h2>
 
-            <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed">
+            <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed">
               Step into the sacred foothills of Rishikesh by the Ganga. Deepen your personal practice and explore the foundations of sound healing and breathwork through structured, certified training journeys.
             </p>
 
@@ -61,16 +62,16 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               {modules.map((m) => (
                 <div
                   key={m.num}
-                  className="p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] hover:border-[#1718DF]/40 transition flex gap-4 items-start shadow-sm"
+                  className="p-4 rounded-2xl bg-gradient-to-r from-[#f8fbfe] to-[#f4fcf7] border border-[#e2edf6] hover:border-[#22C55E]/40 transition flex gap-4 items-start shadow-sm"
                 >
                   <span className="font-heading font-bold text-sm text-[#1718DF] bg-[#EEF0FF] px-2.5 py-1 rounded-xl border border-[#CCD6F7] shrink-0">
                     {m.num}
                   </span>
                   <div>
-                    <h4 className="text-sm font-heading font-bold text-[#27282c] mb-1">
+                    <h4 className="text-base font-bold text-[#0E1338] font-sans mb-1">
                       {m.title}
                     </h4>
-                    <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium leading-relaxed">
+                    <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed">
                       {m.desc}
                     </p>
                   </div>
@@ -79,16 +80,16 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
-              <div className="flex items-center gap-2 text-xs text-[#0E1338] font-bold">
-                <Check className="w-4 h-4 text-[#1718DF]" />
+              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold">
+                <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Practitioner Certificate</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-[#0E1338] font-bold">
-                <Check className="w-4 h-4 text-[#1718DF]" />
+              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold">
+                <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Small Batch (Max 8)</span>
               </div>
-              <div className="flex items-center gap-2 text-xs text-[#0E1338] font-bold">
-                <Check className="w-4 h-4 text-[#1718DF]" />
+              <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold">
+                <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Lifetime Mentorship</span>
               </div>
             </div>
@@ -96,32 +97,32 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
 
           {/* Right Column: Enrollment Card & Batches */}
           <div className="lg:col-span-5">
-            <div className="rounded-3xl bg-gradient-to-b from-white to-[#f4f8fc] border border-[#d8e3ed] p-6 sm:p-8 shadow-2xl relative">
-              <div className="absolute -top-3 right-6 bg-[#1718DF] text-white font-bold text-[10px] tracking-widest uppercase px-3 py-1 rounded-full shadow-md">
+            <div className="rounded-3xl bg-gradient-to-b from-white via-[#f7fcf9] to-[#f4f8fc] border border-[#CCD6F7] p-6 sm:p-8 shadow-2xl relative">
+              <div className="absolute -top-3 right-6 bg-gradient-to-r from-[#1718DF] to-[#16A34A] text-white font-bold text-[10px] tracking-widest uppercase px-3.5 py-1 rounded-full shadow-md font-sans">
                 Rishikesh Sanctuary
               </div>
 
               <div className="flex items-center gap-2 text-xs text-[#0E1338] mb-2 font-semibold">
-                <MapPin className="w-3.5 h-3.5 text-[#1718DF]" />
+                <MapPin className="w-3.5 h-3.5 text-[#22C55E]" />
                 <span>Tapovan Riverside Sanctuary, Rishikesh</span>
               </div>
 
-              <h3 className="text-xl font-heading text-[#27282c] mb-1">
+              <h3 className="text-xl sm:text-2xl font-heading text-[#0E1338] mb-1">
                 Intensive Sound & Breath Immersion
               </h3>
-              <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal mb-6 leading-relaxed">
                 Complete theoretical and practical clinical immersion with full access to master singing bowls, pranayama anatomy, and personal mentorship.
               </p>
 
               <div className="p-4 rounded-2xl bg-white border border-[#e2edf6] mb-6 flex items-center justify-between shadow-sm">
                 <div>
-                  <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold">Comprehensive Course Tuition</div>
+                  <div className="text-[10px] uppercase tracking-wider text-[#0E1338] font-bold font-sans">Comprehensive Course Tuition</div>
                   <div className="text-2xl font-heading font-bold text-[#1718DF]">
                     {currency === 'INR' ? '₹28,000' : '$350 USD'}
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="text-[11px] text-[#27ae60] bg-[#e8f8ee] px-2.5 py-1 rounded-full border border-[#b2e8c2] font-semibold">
+                  <span className="text-xs text-[#16A34A] bg-[#ECFDF5] px-3 py-1 rounded-full border border-[#86EFAC] font-semibold font-sans">
                     Cert. Included
                   </span>
                 </div>

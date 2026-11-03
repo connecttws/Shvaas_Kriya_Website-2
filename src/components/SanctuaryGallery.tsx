@@ -34,7 +34,7 @@ export const SanctuaryGallery: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#fff8eb] tracking-tight mb-5">
             Where Ancient Wisdom Meets Sacred Stillness
           </h2>
-          <p className="text-sm sm:text-base text-[#b0a595] font-serif-elegant italic leading-relaxed">
+          <p className="text-base sm:text-lg text-[#b0a595] font-sans font-normal leading-relaxed">
             Rishikesh is the historic world center of yoga, meditation, and spiritual awakening. Shvaas Kriya Retreat was established to create space for conscious breath, sound, and deep personal reconnection.
           </p>
         </div>
@@ -70,22 +70,22 @@ export const SanctuaryGallery: React.FC = () => {
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
             <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">1,400+</span>
             <span className="text-xs uppercase tracking-wider text-[#a89d89]">Souls Transformed</span>
-            <span className="text-[10px] text-[#696150] mt-1 font-serif-elegant italic">From 42+ Countries</span>
+            <span className="text-xs text-[#a89d89] mt-1 font-sans">From 42+ Countries</span>
           </div>
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
             <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">7 Metal</span>
             <span className="text-xs uppercase tracking-wider text-[#a89d89]">Authentic Tibetan Bowls</span>
-            <span className="text-[10px] text-[#696150] mt-1 font-serif-elegant italic">Singing up to 90s sustain</span>
+            <span className="text-xs text-[#a89d89] mt-1 font-sans">Singing up to 90s sustain</span>
           </div>
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
             <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">432 & 528 Hz</span>
             <span className="text-xs uppercase tracking-wider text-[#a89d89]">Solfeggio Frequencies</span>
-            <span className="text-[10px] text-[#696150] mt-1 font-serif-elegant italic">Miracle & cellular repair</span>
+            <span className="text-xs text-[#a89d89] mt-1 font-sans">Miracle & cellular repair</span>
           </div>
           <div className="p-6 rounded-2xl bg-[#0e1017] border border-[#232532] text-center flex flex-col items-center justify-center min-h-[170px]">
             <span className="font-heading text-3xl font-bold text-[#e6c167] mb-1">5.0 ★★★★★</span>
             <span className="text-xs uppercase tracking-wider text-[#a89d89]">Sanctuary Rating</span>
-            <span className="text-[10px] text-[#696150] mt-1 font-serif-elegant italic">Rishikesh Spiritual Community</span>
+            <span className="text-xs text-[#a89d89] mt-1 font-sans">Rishikesh Spiritual Community</span>
           </div>
         </div>
       </div>

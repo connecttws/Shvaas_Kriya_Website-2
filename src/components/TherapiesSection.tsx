@@ -45,16 +45,16 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-[0.25em] mb-4 font-bold shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-[#1718DF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-4 font-bold shadow-sm font-sans">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
             Sacred Modalities & Sound Therapies
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight mb-4">
             Ancient Himalayan Resonances, Masterfully Applied
           </h2>
 
-          <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-2xl mx-auto">
             Every session at Shvaas Kriya Retreat is tailored to your unique rhythm. Using hand-hammered seven-metal Himalayan bowls and Solfeggio frequencies, we guide your breath and mind into deep restorative stillness.
           </p>
 
@@ -67,7 +67,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all ${
                     activeCategory === cat.id
-                      ? 'bg-[#1718DF] text-white shadow-md'
+                      ? 'bg-gradient-to-r from-[#1718DF] to-[#16A34A] text-white shadow-md'
                       : 'text-[#0E1338] hover:text-[#1718DF] border border-transparent hover:border-[#d8e3ed]'
                   }`}
                 >
@@ -121,28 +121,28 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   </div>
 
                   {/* Therapy Details */}
-                  <h3 className="text-xl font-heading text-[#27282c] group-hover:text-[#1718DF] transition-colors mb-1">
+                  <h3 className="text-xl font-heading text-[#0E1338] group-hover:text-[#1718DF] transition-colors mb-1">
                     {service.title}
                   </h3>
 
                   {service.sanskritSubtitle && (
-                    <div className="text-xs font-serif-elegant italic text-[#1718DF] mb-3">
+                    <div className="text-xs sm:text-sm font-sans font-semibold text-[#1718DF] mb-3 tracking-wide">
                       {service.sanskritSubtitle}
                     </div>
                   )}
 
-                  <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium leading-relaxed mb-5">
+                  <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed mb-5">
                     {service.description}
                   </p>
 
                   {/* Highlights */}
-                  <div className="space-y-2 mb-5">
-                    <div className="text-[11px] uppercase tracking-wider text-[#0E1338] font-bold">
+                  <div className="space-y-2.5 mb-5">
+                    <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold">
                       Therapeutic Benefits
                     </div>
                     {service.benefits.slice(0, 3).map((benefit, i) => (
-                      <div key={i} className="flex items-start gap-2 text-xs text-[#0E1338] font-medium">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#1718DF] shrink-0 mt-0.5" />
+                      <div key={i} className="flex items-start gap-2 text-sm text-[#1E293B] font-medium">
+                        <CheckCircle2 className="w-4 h-4 text-[#22C55E] shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </div>
                     ))}

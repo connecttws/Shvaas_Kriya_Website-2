@@ -36,14 +36,15 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
     <section id="frequency-tool" className="py-20 relative bg-[#f1f6fb] border-t border-b border-[#e2eaf2]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] text-[#1718DF] text-xs uppercase tracking-widest mb-3 font-bold shadow-sm">
-            <Activity className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] mb-3 font-bold shadow-sm font-sans">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
+            <Activity className="w-3.5 h-3.5 text-[#16A34A]" />
             Vibrational Diagnostic Engine
           </div>
-          <h2 className="text-3xl sm:text-4xl font-heading text-[#27282c] tracking-tight mb-3">
+          <h2 className="text-3xl sm:text-4xl font-heading text-[#0E1338] tracking-tight mb-3">
             Identify Your Energetic Resonance
           </h2>
-          <p className="text-base text-[#0E1338] font-sans font-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed max-w-2xl mx-auto">
             Sound is medicine in the Himalayas. Select what your subtle body is calling to release, and discover the exact Solfeggio frequency and therapy calibrated to return you to center.
           </p>
         </div>
@@ -51,7 +52,7 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Column: Concern Selector Buttons */}
           <div className="lg:col-span-5 space-y-3">
-            <span className="text-xs uppercase tracking-wider text-[#0E1338] font-bold block mb-2">
+            <span className="text-xs uppercase tracking-wider text-[#0E1338] font-bold block mb-2 font-sans">
               Select Your Current Biofield State:
             </span>
             {DIAGNOSTIC_CONCERNS.map((concern) => {
@@ -62,20 +63,20 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
                   onClick={() => setSelectedConcern(concern)}
                   className={`w-full text-left p-4 rounded-2xl border transition-all duration-300 flex items-start justify-between ${
                     isSelected
-                      ? 'bg-white border-[#1718DF] shadow-lg shadow-[#1718DF]/10 translate-x-1'
-                      : 'bg-white/70 border-[#e2edf6] hover:border-[#1718DF]/40 hover:bg-white text-[#334155]'
+                      ? 'bg-gradient-to-r from-white to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-lg shadow-[#1718DF]/10 translate-x-1'
+                      : 'bg-white/80 border-[#e2edf6] hover:border-[#1718DF]/40 hover:bg-white text-[#334155]'
                   }`}
                 >
                   <div>
-                    <div className={`text-sm font-heading font-bold mb-1 ${isSelected ? 'text-[#1718DF]' : 'text-[#27282c]'}`}>
+                    <div className={`text-base font-heading font-bold mb-1 ${isSelected ? 'text-[#1718DF]' : 'text-[#0E1338]'}`}>
                       {concern.label}
                     </div>
-                    <div className="text-xs text-[#0E1338] font-medium line-clamp-2">
+                    <div className="text-xs sm:text-sm text-[#1E293B] font-normal line-clamp-2 leading-relaxed">
                       {concern.description}
                     </div>
                   </div>
                   {isSelected && (
-                    <div className="w-2.5 h-2.5 rounded-full bg-[#1718DF] shrink-0 mt-1 shadow-md" />
+                    <div className="w-2.5 h-2.5 rounded-full bg-[#22C55E] shrink-0 mt-1 shadow-md animate-pulse" />
                   )}
                 </button>
               );
@@ -115,10 +116,10 @@ export const FrequencyDiagnostic: React.FC<FrequencyDiagnosticProps> = ({
 
               <div className="space-y-4 mb-6">
                 <div>
-                  <div className="text-[11px] uppercase tracking-wider text-[#0E1338] font-bold mb-1">
+                  <div className="text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-1 font-sans">
                     Therapeutic Mechanism
                   </div>
-                  <p className="text-sm text-[#0E1338] font-medium leading-relaxed">
+                  <p className="text-sm sm:text-base text-[#1E293B] font-normal leading-relaxed">
                     {selectedConcern.reason}
                   </p>
                 </div>

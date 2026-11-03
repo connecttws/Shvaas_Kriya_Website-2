@@ -7,6 +7,9 @@
       "plumDeep": "#0E1338",
       "plumHover": "#6882FF",
       "plumSoft": "#EEF0FF",
+      "leafGreen": "#22C55E",
+      "leafEmerald": "#16A34A",
+      "leafSoft": "#ECFDF5",
       "goldAccent": "#c1a78c",
       "goldWarm": "#d4af37",
       "goldLight": "#ffd875"
@@ -19,27 +22,27 @@
       "mistHero": "#e8f1fb"
     },
     "text": {
-      "main": "#1e293b",
-      "muted": "#334155",
-      "light": "#475569",
-      "heading": "#27282c"
+      "main": "#0E1338",
+      "muted": "#1E293B",
+      "light": "#334155",
+      "heading": "#0E1338"
     },
     "border": {
       "subtle": "#d8e3ed",
       "plum": "rgba(23, 24, 223, 0.2)",
+      "leaf": "rgba(34, 197, 94, 0.3)",
       "ice": "#e2eaf2"
     }
   },
   "fonts": {
-    "heading": "Elsie, Cinzel, serif",
-    "elsie": "Elsie, display, serif",
-    "cinzel": "Cinzel, serif",
-    "serifElegant": "Cormorant Garamond, Georgia, serif",
+    "heading": "Playfair Display, Georgia, serif",
+    "serif": "Playfair Display, Georgia, serif",
     "sans": "Plus Jakarta Sans, sans-serif"
   },
   "components": {
     "buttonPrimary": "bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-[0.18em] rounded-full shadow-xl shadow-[#1718DF]/20 transition-all",
-    "buttonSecondary": "bg-white/95 hover:bg-[#f1f6fb] text-[#27282c] border border-[#d8e3ed] text-xs uppercase tracking-[0.18em] font-semibold rounded-full transition-all shadow-sm",
+    "buttonSecondary": "bg-white/95 hover:bg-[#f1f6fb] text-[#0E1338] border border-[#d8e3ed] text-xs uppercase tracking-[0.18em] font-semibold rounded-full transition-all shadow-sm",
+    "buttonGreen": "bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-md transition-all",
     "cardSurface": "bg-white rounded-2xl border border-[#e2eaf2] shadow-sm hover:shadow-md transition-shadow",
     "cardSoftBlue": "bg-gradient-to-b from-[#ffffff] to-[#f4f8fc] rounded-2xl border border-[#d6e3f0]"
   }

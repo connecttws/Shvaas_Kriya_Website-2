@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               <span className="font-heading text-sm xs:text-base sm:text-lg xl:text-xl font-bold tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight">
                 Shvaas Kriya Retreat
               </span>
-              <span className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#ffd875] uppercase -mt-0.5 font-sans font-semibold">
+              <span className="text-[8px] sm:text-[9px] tracking-[0.2em] text-[#86EFAC] uppercase -mt-0.5 font-sans font-semibold">
                 Rishikesh & Online
               </span>
             </div>
@@ -181,8 +181,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
               {servicesDropdownOpen && (
                 <div className="absolute top-full left-0 pt-2 w-72 z-50 animate-in fade-in slide-in-from-top-1 duration-200">
                   <div className="bg-[#0E1338] rounded-2xl shadow-2xl py-3 px-2 border border-[#1718DF]/40 backdrop-blur-xl">
-                    <div className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-widest text-[#ffd875] font-bold border-b border-white/10 flex items-center justify-between">
-                      <span>Curated Journeys</span>
+                    <div className="px-3 pb-2 pt-1 text-[10px] uppercase tracking-widest text-[#86EFAC] font-bold border-b border-white/10 flex items-center justify-between font-sans">
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E]" />
+                        Curated Journeys
+                      </span>
                       <Sparkles className="w-3 h-3 text-[#ffd875]" />
                     </div>
 
@@ -192,8 +195,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                         onClick={(e) => handleNavClick(e, '#offers')}
                         className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
                       >
-                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
-                          <span className="text-[10px] text-[#ffd875] font-mono">01.</span>
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5 font-sans">
+                          <span className="text-[10px] text-[#22C55E] font-mono font-bold">01.</span>
                           <span>Shvaas Kriya Sessions</span>
                         </div>
                         <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
@@ -206,8 +209,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                         onClick={(e) => handleNavClick(e, '#offers')}
                         className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
                       >
-                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
-                          <span className="text-[10px] text-[#ffd875] font-mono">02.</span>
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5 font-sans">
+                          <span className="text-[10px] text-[#22C55E] font-mono font-bold">02.</span>
                           <span>Shvaas Kriya TTC</span>
                         </div>
                         <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
@@ -220,8 +223,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                         onClick={(e) => handleNavClick(e, '#therapies')}
                         className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
                       >
-                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
-                          <span className="text-[10px] text-[#ffd875] font-mono">03.</span>
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5 font-sans">
+                          <span className="text-[10px] text-[#22C55E] font-mono font-bold">03.</span>
                           <span>Sound Healing Sessions</span>
                         </div>
                         <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
@@ -234,8 +237,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                         onClick={(e) => handleNavClick(e, '#therapies')}
                         className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
                       >
-                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
-                          <span className="text-[10px] text-[#ffd875] font-mono">04.</span>
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5 font-sans">
+                          <span className="text-[10px] text-[#22C55E] font-mono font-bold">04.</span>
                           <span>Aqua Sound Healing</span>
                         </div>
                         <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
@@ -248,8 +251,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                         onClick={(e) => handleNavClick(e, '#training')}
                         className="block px-3 py-2 rounded-xl hover:bg-white/10 hover:text-[#ffd875] transition group normal-case"
                       >
-                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5">
-                          <span className="text-[10px] text-[#ffd875] font-mono">05.</span>
+                        <div className="font-bold text-xs text-white group-hover:text-[#ffd875] flex items-center gap-1.5 font-sans">
+                          <span className="text-[10px] text-[#22C55E] font-mono font-bold">05.</span>
                           <span>Sound Healing TTC</span>
                         </div>
                         <div className="text-[11px] text-[#DFE6FC]/70 pl-4 font-normal">
@@ -469,8 +472,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             <div className="flex-1 overflow-y-auto px-5 py-2 space-y-5 overscroll-contain">
               {/* Group 1: 5 Signature Experiences */}
               <div>
-                <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#ffd875] font-bold pb-2 border-b border-white/10">
-                  <Sparkles className="w-3.5 h-3.5 text-[#ffd875]" />
+                <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest text-[#86EFAC] font-bold pb-2 border-b border-white/10 font-sans">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E]" />
                   <span>Our 5 Signature Experiences</span>
                 </div>
 
@@ -481,11 +484,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <span className="text-[10px] font-bold text-[#ffd875] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
+                      <span className="text-[10px] font-bold text-[#22C55E] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
                         01
                       </span>
                       <div>
-                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors">
+                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors font-sans">
                           Shvaas Kriya Sessions
                         </div>
                         <div className="text-[10px] text-white/60">
@@ -502,11 +505,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <span className="text-[10px] font-bold text-[#ffd875] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
+                      <span className="text-[10px] font-bold text-[#22C55E] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
                         02
                       </span>
                       <div>
-                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors">
+                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors font-sans">
                           Shvaas Kriya TTC
                         </div>
                         <div className="text-[10px] text-white/60">
@@ -523,11 +526,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <span className="text-[10px] font-bold text-[#ffd875] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
+                      <span className="text-[10px] font-bold text-[#22C55E] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
                         03
                       </span>
                       <div>
-                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors">
+                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors font-sans">
                           Sound Healing Sessions
                         </div>
                         <div className="text-[10px] text-white/60">
@@ -544,11 +547,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <span className="text-[10px] font-bold text-[#ffd875] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
+                      <span className="text-[10px] font-bold text-[#22C55E] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
                         04
                       </span>
                       <div>
-                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors">
+                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors font-sans">
                           Aqua Sound Healing
                         </div>
                         <div className="text-[10px] text-white/60">
@@ -565,11 +568,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                     className="flex items-center justify-between p-2.5 rounded-xl hover:bg-white/5 transition group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <span className="text-[10px] font-bold text-[#ffd875] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
+                      <span className="text-[10px] font-bold text-[#22C55E] px-1.5 py-0.5 rounded bg-white/10 mt-0.5">
                         05
                       </span>
                       <div>
-                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors">
+                        <div className="text-xs font-bold text-white group-hover:text-[#ffd875] transition-colors font-sans">
                           Sound Healing TTC
                         </div>
                         <div className="text-[10px] text-white/60">

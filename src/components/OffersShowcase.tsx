@@ -69,13 +69,14 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
         
         {/* Section Header */}
         <div id="offers" className="mb-14 scroll-mt-24">
-          <div className="text-xs uppercase tracking-[0.25em] text-[#1718DF] font-bold mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] font-bold shadow-sm mb-3 font-sans">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
             Explore Our Experiences
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] tracking-tight">
             Experiences that meet you where you are.
           </h2>
-          <p className="text-base sm:text-lg text-[#0E1338] font-sans font-medium leading-relaxed mt-2 max-w-2xl">
+          <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed mt-2 max-w-2xl">
             Find the session, retreat, or learning journey that feels right for you.
           </p>
         </div>
@@ -91,17 +92,17 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
                   onClick={() => setActiveId(offer.id)}
                   className={`p-6 rounded-2xl border transition-all duration-300 cursor-pointer ${
                     isSelected
-                      ? 'bg-white border-[#1718DF] shadow-xl shadow-[#1718DF]/10 translate-x-2'
-                      : 'bg-white/80 border-[#e2edf6] hover:border-[#1718DF]/40 hover:bg-white'
+                      ? 'bg-gradient-to-r from-white via-white to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#1718DF]/30 shadow-xl shadow-[#1718DF]/10 translate-x-1.5'
+                      : 'bg-white/90 border-[#e2edf6] hover:border-[#1718DF]/40 hover:bg-white'
                   }`}
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex items-start gap-4">
                       {/* Number Pill */}
                       <span
-                        className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 border transition-colors ${
+                        className={`w-10 h-10 rounded-full flex items-center justify-center font-mono text-xs font-bold shrink-0 border transition-all ${
                           isSelected
-                            ? 'bg-[#1718DF] text-white border-[#1718DF]'
+                            ? 'bg-gradient-to-br from-[#1718DF] to-[#16A34A] text-white border-transparent shadow-md'
                             : 'bg-[#f1f6fb] text-[#0E1338] font-bold border-[#d8e3ed]'
                         }`}
                       >
@@ -111,14 +112,14 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
                       <div>
                         <h3
                           className={`text-xl sm:text-2xl font-heading mb-2 transition-colors ${
-                            isSelected ? 'text-[#1718DF]' : 'text-[#27282c]'
+                            isSelected ? 'text-[#1718DF]' : 'text-[#0E1338]'
                           }`}
                         >
                           {offer.title}
                         </h3>
 
                         {isSelected && (
-                          <p className="text-sm sm:text-base text-[#0E1338] font-sans font-medium leading-relaxed mt-2 animate-in fade-in duration-300">
+                          <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed mt-2 animate-in fade-in duration-300">
                             {offer.desc}
                           </p>
                         )}

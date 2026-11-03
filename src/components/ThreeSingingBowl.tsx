@@ -675,9 +675,9 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
                 <RotateCw className="w-4 h-4" />
               </button>
 
-              <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#f1f6fb] border border-[#d8e3ed] text-[#334155]">
+              <div className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#f1f6fb] border border-[#CCD6F7] text-[#0E1338]">
                 <Music className="w-3.5 h-3.5 text-[#1718DF]" />
-                <span className="font-serif-elegant italic text-sm">Seed Mantra: {selectedChakra.mantra}</span>
+                <span className="font-sans font-semibold text-sm">Seed Mantra: {selectedChakra.mantra}</span>
               </div>
             </div>
           </div>

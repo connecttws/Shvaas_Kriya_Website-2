@@ -10,11 +10,17 @@ interface WhatIsSoundHealingProps {
 export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnMore }) => {
   return (
     <section id="what-is-sound-healing" className="py-24 bg-white relative overflow-hidden">
-      {/* Soft celestial bluish mist glow (High-performance hardware-accelerated radial gradient) */}
+      {/* Soft celestial bluish & baby-green mist glow */}
       <div
         className="absolute top-1/2 left-0 w-[550px] h-[550px] pointer-events-none rounded-full"
         style={{
           background: 'radial-gradient(circle, rgba(219, 234, 254, 0.45) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute top-12 right-10 w-96 h-96 pointer-events-none rounded-full"
+        style={{
+          background: 'radial-gradient(circle, rgba(34, 197, 94, 0.12) 0%, transparent 70%)',
         }}
       />
 
@@ -33,11 +39,11 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b]/50 via-transparent to-transparent opacity-60" />
                 
-                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-white/95 border border-[#e2eaf2] text-center shadow-lg">
-                  <span className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold block">
+                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-white/95 border border-[#86EFAC]/70 text-center shadow-lg">
+                  <span className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold block font-sans">
                     Himalayan Sound Healer
                   </span>
-                  <span className="text-xs text-[#475569] font-serif-elegant italic">
+                  <span className="text-xs text-[#0E1338] font-sans font-semibold">
                     Rishikesh Himalayan Foothills
                   </span>
                 </div>
@@ -48,45 +54,49 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
           {/* Center Column: Text Content & 3 Lineages */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <div className="text-xs uppercase tracking-[0.25em] text-[#1718DF] font-bold mb-2">
-                Sacred Origins
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] font-bold shadow-sm mb-3 font-sans">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
+                Sacred Origins & Lineage
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#27282c] leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#0E1338] leading-tight">
                 What Is Sound Healing?
               </h2>
             </div>
 
-            <p className="text-base text-[#0E1338] font-sans font-medium leading-relaxed">
+            <p className="text-base sm:text-lg text-[#1E293B] font-sans font-normal leading-relaxed">
               Everything in the universe is in a constant state of vibration, including every cell in your body. When we are healthy, we vibrate at a harmonious frequency. While sound healing is gaining popularity in modern wellness, its roots are ancient and span across the globe. It is not a &quot;new&quot; invention, but a re-discovery of timeless wisdom.
             </p>
 
-            <div className="space-y-3.5 pt-2">
+            <div className="space-y-4 pt-2">
               {/* Vedic Roots */}
-              <div className="p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] hover:border-[#1718DF]/40 transition-all shadow-sm">
-                <h4 className="text-sm font-heading font-bold text-[#1718DF] mb-1">
-                  Vedic Roots:
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#f8fbfe] to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#e2edf6] hover:border-[#1718DF]/40 transition-all shadow-sm">
+                <h4 className="text-base font-bold text-[#1718DF] font-sans mb-1.5 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#22C55E] shrink-0" />
+                  <span>Vedic Roots (Nada Brahma)</span>
                 </h4>
-                <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium leading-relaxed">
-                  In ancient India, the concept of <strong className="text-[#1718DF]">Nada Brahma</strong> (&quot;The world is sound&quot;) was central to spiritual practice. The Vedas utilized mantras and chanting to balance the chakras and focus the mind.
+                <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed">
+                  In ancient India, the concept of <strong className="text-[#1718DF] font-semibold">Nada Brahma</strong> (&quot;The world is sound&quot;) was central to spiritual practice. The Vedas utilized mantras and chanting to balance the chakras and focus the mind.
                 </p>
               </div>
 
               {/* The Himalayas */}
-              <div className="p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] hover:border-[#1718DF]/40 transition-all shadow-sm">
-                <h4 className="text-sm font-heading font-bold text-[#1718DF] mb-1">
-                  The Himalayas:
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#f8fbfe] to-[#f4fcf7] border-l-4 border-l-[#1718DF] border-t border-r border-b border-[#e2edf6] hover:border-[#22C55E]/40 transition-all shadow-sm">
+                <h4 className="text-base font-bold text-[#1718DF] font-sans mb-1.5 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#1718DF] shrink-0" />
+                  <span>The Himalayan Tradition</span>
                 </h4>
-                <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed">
                   For centuries, Tibetan monks have used metal singing bowls in meditation and ceremonial practices to induce deep trance states.
                 </p>
               </div>
 
               {/* Ancient Greece */}
-              <div className="p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] hover:border-[#1718DF]/40 transition-all shadow-sm">
-                <h4 className="text-sm font-heading font-bold text-[#1718DF] mb-1">
-                  Ancient Greece:
+              <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#f8fbfe] to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#e2edf6] hover:border-[#1718DF]/40 transition-all shadow-sm">
+                <h4 className="text-base font-bold text-[#1718DF] font-sans mb-1.5 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#22C55E] shrink-0" />
+                  <span>Pythagorean Acoustic Science</span>
                 </h4>
-                <p className="text-xs sm:text-sm text-[#0E1338] font-sans font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed">
                   Pythagoras, the famous mathematician and philosopher, prescribed specific musical intervals to treat physical and emotional ailments, calling it &quot;medicine for the soul.&quot;
                 </p>
               </div>

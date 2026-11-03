@@ -108,10 +108,10 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               />
             </div>
             <div>
-              <h3 className="font-heading text-xl font-bold text-[#27282c]">
+              <h3 className="font-heading text-xl font-bold text-[#0E1338]">
                 Reserve Your Sacred Space
               </h3>
-              <p className="text-xs text-[#0E1338] font-semibold">
+              <p className="text-xs sm:text-sm text-[#1E293B] font-semibold font-sans">
                 Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect
               </p>
             </div>

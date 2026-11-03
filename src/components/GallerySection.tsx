@@ -57,7 +57,7 @@ export const GallerySection: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-white tracking-tight mb-4">
             Moments of Presence & Healing in Rishikesh
           </h2>
-          <p className="text-sm sm:text-base text-[#DFE6FC] font-serif-elegant italic leading-relaxed">
+          <p className="text-base sm:text-lg text-[#DFE6FC] font-sans font-normal leading-relaxed">
             Witness the warmth, transformative stillness, and mindful connections forged during our sessions, teacher trainings, and retreats at Shvaas Kriya Retreat.
           </p>
         </div>
