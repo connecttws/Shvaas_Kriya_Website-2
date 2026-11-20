@@ -85,18 +85,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     if (targetId.startsWith('#') && targetId.length > 1) {
       e.preventDefault();
-      const el = document.querySelector(targetId);
-      if (el) {
-        const headerOffset = 72;
-        const elementPosition = el.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
       setMobileMenuOpen(false);
       setServicesDropdownOpen(false);
+      // Allow mobile drawer transition and body overflow unlock before smooth scrolling
+      setTimeout(() => {
+        const el = document.querySelector(targetId);
+        if (el) {
+          const headerOffset = 70;
+          const elementPosition = el.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 150);
     }
   };
 
@@ -126,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             className="flex items-center gap-2 sm:gap-3 group shrink-0 min-w-0"
           >
             {/* Official Shvaas Circular Logo */}
-            <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full overflow-hidden shrink-0 transition-transform duration-500 group-hover:scale-105 shadow-md border border-white/25 bg-[#1718DF] flex items-center justify-center">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-full overflow-hidden shrink-0 transition-transform duration-500 group-hover:scale-105 shadow-md border border-white/25 bg-[#1718DF] flex items-center justify-center">
               <img
                 src="/images/shvaas-logo.png"
                 alt="Shvaas Kriya Retreat Logo"
@@ -135,10 +138,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
             </div>
 
             <div className="flex flex-col min-w-0">
-              <span className="font-sans text-xs xs:text-sm sm:text-base xl:text-lg 2xl:text-xl font-bold tracking-wide sm:tracking-wider text-white group-hover:text-[#ffd875] transition-colors leading-tight truncate">
+              <span className="font-sans text-[15px] sm:text-[17px] md:text-lg xl:text-xl font-bold tracking-tight sm:tracking-normal text-white group-hover:text-[#ffd875] transition-colors leading-tight truncate">
                 Shvaas Kriya Retreat
               </span>
-              <span className="text-[7.5px] sm:text-[9px] tracking-[0.18em] sm:tracking-[0.2em] text-[#86EFAC] uppercase -mt-0.5 font-sans font-semibold">
+              <span className="text-[8.5px] sm:text-[10px] tracking-[0.14em] sm:tracking-[0.2em] text-[#86EFAC] uppercase -mt-0.5 font-sans font-semibold truncate">
                 Rishikesh & Online
               </span>
             </div>
@@ -324,24 +327,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           </div>
 
           {/* Mobile Right Controls (< lg) */}
-          <div className="flex items-center gap-2 sm:gap-2.5 lg:hidden">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 lg:hidden shrink-0">
             {/* Mobile Instant "Book Now" CTA */}
             <button
               onClick={() => onOpenBooking()}
-              className="px-3.5 sm:px-4 py-1.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-md flex items-center gap-1.5 shrink-0 transition font-sans"
+              className="px-2.5 sm:px-4 py-1.5 rounded-full bg-[#ffd875] hover:bg-[#ffe399] active:scale-95 text-[#0E1338] font-bold text-[10px] sm:text-xs uppercase tracking-wider shadow-md flex items-center gap-1 sm:gap-1.5 shrink-0 transition font-sans"
             >
-              <Calendar className="w-3.5 h-3.5 text-[#0E1338]" />
+              <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#0E1338]" />
               <span>Book Now</span>
             </button>
 
             {/* Mobile Hamburger / Close Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition-all active:scale-95 shrink-0"
+              className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white flex items-center justify-center transition-all active:scale-95 shrink-0"
               aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
+              {mobileMenuOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5 text-white" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5 text-white" />}
             </button>
           </div>
         </div>
@@ -358,7 +361,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
           />
 
           {/* Slide-over Drawer Container */}
-          <div className="fixed inset-y-0 right-0 w-full sm:max-w-md bg-[#0E1338] text-white shadow-2xl flex flex-col z-50 border-l border-[#1718DF]/30 animate-in slide-in-from-right duration-300">
+          <div className="fixed inset-y-0 right-0 w-full sm:max-w-md h-[100dvh] bg-[#0E1338] text-white shadow-2xl flex flex-col z-50 border-l border-[#1718DF]/30 animate-in slide-in-from-right duration-300">
             {/* Drawer Top Bar */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-[#0A0E2A] pt-[max(1rem,env(safe-area-inset-top))]">
               <div className="flex items-center gap-3">

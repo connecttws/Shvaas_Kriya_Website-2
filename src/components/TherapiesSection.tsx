@@ -60,24 +60,26 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
           {/* Category Tabs & Currency Switcher */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[#e2edf6] pb-6">
-            <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none [-webkit-overflow-scrolling:touch]">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all ${
-                    activeCategory === cat.id
-                      ? 'bg-gradient-to-r from-[#1718DF] to-[#16A34A] text-white shadow-md'
-                      : 'text-[#0E1338] hover:text-[#1718DF] border border-transparent hover:border-[#d8e3ed]'
-                  }`}
-                >
-                  {cat.label}
-                </button>
-              ))}
+            <div className="relative w-full sm:w-auto overflow-hidden">
+              <div className="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0 scrollbar-none [-webkit-overflow-scrolling:touch]">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setActiveCategory(cat.id)}
+                    className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all shrink-0 ${
+                      activeCategory === cat.id
+                        ? 'bg-gradient-to-r from-[#1718DF] to-[#16A34A] text-white shadow-md'
+                        : 'text-[#0E1338] hover:text-[#1718DF] border border-transparent hover:border-[#d8e3ed]'
+                    }`}
+                  >
+                    {cat.label}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Currency Switcher */}
-            <div className="flex items-center gap-2 bg-[#f1f6fb] border border-[#d8e3ed] px-3.5 py-1.5 rounded-full text-xs shadow-sm">
+            <div className="flex items-center gap-2 bg-[#f1f6fb] border border-[#d8e3ed] px-3.5 py-1.5 rounded-full text-xs shadow-sm shrink-0">
               <span className="text-[#0E1338] font-bold">Display:</span>
               <button
                 onClick={onToggleCurrency}
@@ -90,14 +92,14 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
         </div>
 
         {/* Therapy Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {filteredServices.map((service) => {
             const displayPrice = currency === 'INR' ? `₹${service.priceINR.toLocaleString('en-IN')}` : `$${service.priceUSD}`;
 
             return (
               <div
                 key={service.id}
-                className="group relative rounded-3xl bg-white border border-[#e2edf6] hover:border-[#1718DF]/40 transition-all duration-300 p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1"
+                className="group relative rounded-3xl bg-white border border-[#e2edf6] hover:border-[#1718DF]/40 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-between shadow-md hover:shadow-xl hover:-translate-y-1"
               >
                 <div>
                   {/* Photo Container */}
@@ -150,18 +152,18 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                 </div>
 
                 {/* Card Footer */}
-                <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between font-sans">
-                  <div>
-                    <div className="text-xs uppercase tracking-wider text-[#475569] font-bold font-sans">Energy Exchange</div>
-                    <div className="text-2xl font-bold font-sans text-[#1718DF]">
+                <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between gap-2 font-sans">
+                  <div className="min-w-0">
+                    <div className="text-[10px] sm:text-xs uppercase tracking-wider text-[#475569] font-bold font-sans truncate">Energy Exchange</div>
+                    <div className="text-xl sm:text-2xl font-bold font-sans text-[#1718DF]">
                       {displayPrice}
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
                     <button
                       onClick={() => setModalService(service)}
-                      className="p-2.5 rounded-xl bg-[#f1f6fb] border border-[#d8e3ed] text-[#334155] hover:text-[#1718DF] hover:bg-white transition"
+                      className="p-2 sm:p-2.5 rounded-xl bg-[#f1f6fb] border border-[#d8e3ed] text-[#334155] hover:text-[#1718DF] hover:bg-white transition"
                       title="View Details"
                     >
                       <ChevronRight className="w-4 h-4" />
@@ -169,10 +171,10 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
                     <button
                       onClick={() => onSelectTherapy(service.id)}
-                      className="px-4 py-2.5 rounded-xl bg-[#1718DF] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#6882FF] active:scale-95 transition shadow-md flex items-center gap-1.5 font-sans"
+                      className="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-[#1718DF] text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider hover:bg-[#6882FF] active:scale-95 transition shadow-md flex items-center gap-1 sm:gap-1.5 font-sans"
                     >
                       <span>Reserve</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#ffd875]" />
+                      <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#ffd875]" />
                     </button>
                   </div>
                 </div>
@@ -183,16 +185,16 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
 
         {/* Modal for Extended Therapy Breakdown */}
         {modalService && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
-            <div className="max-w-2xl w-full bg-white border border-[#d8e3ed] rounded-3xl p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
+            <div className="max-w-2xl w-full bg-white border border-[#d8e3ed] rounded-3xl p-5 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
               <button
                 onClick={() => setModalService(null)}
-                className="absolute top-5 right-5 p-2 rounded-full text-[#64748b] hover:text-[#1e293b] bg-[#f1f6fb] border border-[#d8e3ed] transition"
+                className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-full text-[#64748b] hover:text-[#1e293b] bg-[#f1f6fb] border border-[#d8e3ed] transition z-10"
               >
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="w-full h-56 rounded-2xl overflow-hidden mb-6 relative">
+              <div className="w-full h-48 sm:h-56 rounded-2xl overflow-hidden mb-5 sm:mb-6 relative">
                 <div
                   className="w-full h-full bg-cover bg-center"
                   style={{ backgroundImage: `url(${modalService.image})` }}
@@ -202,27 +204,27 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                   <span className="text-[10px] uppercase tracking-widest text-[#ffd875] font-bold block mb-1">
                     Rishikesh Sanctuary Session
                   </span>
-                  <h3 className="text-2xl font-sans font-bold text-white">
+                  <h3 className="text-xl sm:text-2xl font-sans font-bold text-white">
                     {modalService.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="space-y-4 text-base text-[#1E293B] font-sans leading-relaxed">
+              <div className="space-y-4 text-sm sm:text-base text-[#1E293B] font-sans leading-relaxed">
                 <p>{modalService.description}</p>
 
-                <div className="p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] space-y-2">
+                <div className="p-3.5 sm:p-4 rounded-2xl bg-[#f8fbfe] border border-[#e2edf6] space-y-2">
                   <div className="text-xs uppercase tracking-wider font-bold text-[#1718DF] font-sans">
                     Preparation & Sanctuary Etiquette:
                   </div>
-                  <ul className="text-sm space-y-1 text-[#334155] list-disc list-inside font-sans">
+                  <ul className="text-xs sm:text-sm space-y-1 text-[#334155] list-disc list-inside font-sans">
                     <li>Wear loose, breathable cotton or natural fiber clothing without metallic buckles.</li>
                     <li>Arrive 10 minutes prior to settle into the energetic stillness of our space.</li>
                     <li>Hydrate well prior to the session; pure cellular hydration enhances acoustic wave propagation.</li>
                   </ul>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-[#edf2f7] font-sans">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-4 border-t border-[#edf2f7] font-sans">
                   <div>
                     <span className="text-xs text-[#475569] font-bold block">Duration: {formatDuration(modalService.durationMin)}</span>
                     <span className="text-2xl font-sans font-bold text-[#1718DF]">
@@ -236,7 +238,7 @@ export const TherapiesSection: React.FC<TherapiesSectionProps> = ({
                       setModalService(null);
                       onSelectTherapy(id);
                     }}
-                    className="px-6 py-3 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-md transition flex items-center gap-2"
+                    className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-md transition flex items-center justify-center gap-2"
                   >
                     <Calendar className="w-4 h-4 text-[#ffd875]" />
                     <span>Proceed to Book</span>

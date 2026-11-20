@@ -241,19 +241,19 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   <label className="block text-xs uppercase tracking-wider text-[#0E1338] font-bold mb-2">
                     Number of Seekers
                   </label>
-                  <div className="flex items-center gap-2">
+                  <div className="grid grid-cols-4 gap-1.5 sm:gap-2">
                     {[1, 2, 3, 4].map((num) => (
                       <button
                         key={num}
                         type="button"
                         onClick={() => setFormData({ ...formData, guestCount: num })}
-                        className={`flex-1 py-2 rounded-xl text-xs font-bold border transition ${
+                        className={`py-2 rounded-xl text-xs font-bold border transition ${
                           formData.guestCount === num
                             ? 'bg-[#1718DF] border-[#1718DF] text-white shadow-sm'
                             : 'bg-[#f8fbfd] border-[#d8e3ed] text-[#0E1338]'
                         }`}
                       >
-                        {num} {num === 1 ? 'Person' : 'Guests'}
+                        {num} <span className="hidden xs:inline sm:inline">{num === 1 ? 'Person' : 'Guests'}</span>
                       </button>
                     ))}
                   </div>
@@ -350,17 +350,17 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 />
               </div>
 
-              <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between font-sans">
+              <div className="pt-4 border-t border-[#edf2f7] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3.5 font-sans">
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-[#475569] font-bold font-sans">Total Energy Exchange</div>
-                  <div className="text-2xl font-sans font-bold text-[#1718DF]">
+                  <div className="text-[10px] sm:text-xs uppercase tracking-wider text-[#475569] font-bold font-sans">Total Energy Exchange</div>
+                  <div className="text-xl sm:text-2xl font-sans font-bold text-[#1718DF]">
                     {currency === 'INR' ? `₹${totalPrice.toLocaleString('en-IN')}` : `$${totalPrice} USD`}
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="px-7 py-3 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition flex items-center gap-2"
+                  className="w-full sm:w-auto px-6 sm:px-7 py-3 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2 active:scale-95"
                 >
                   <span>Request Sanctuary Slot</span>
                   <ArrowRight className="w-4 h-4 text-[#ffd875]" />

@@ -62,27 +62,27 @@ export const GallerySection: React.FC = () => {
           </p>
         </div>
 
-        {/* Gallery Grid (Matching reference layout with varied heights and rounded-3xl corners) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* Gallery Grid (Mobile-friendly 2-column on mobile, varied heights on desktop) */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3.5 sm:gap-6">
           {photos.map((photo, i) => (
             <div
               key={i}
-              className={`group relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-[#0E1338] min-h-[260px] ${photo.span}`}
+              className={`group relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-[#0E1338] min-h-[190px] sm:min-h-[260px] ${photo.span}`}
             >
               <div
-                className="w-full h-full min-h-[260px] bg-cover bg-center transition-transform duration-700 group-hover:scale-108"
+                className="w-full h-full min-h-[190px] sm:min-h-[260px] bg-cover bg-center transition-transform duration-700 group-hover:scale-108"
                 style={{ backgroundImage: `url(${photo.image})` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-300" />
 
-              <div className="absolute bottom-5 left-5 right-5 text-left transition-transform duration-300 group-hover:-translate-y-1">
-                <span className="text-[10px] uppercase tracking-widest text-[#ffd875] font-semibold block mb-1">
+              <div className="absolute bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 text-left transition-transform duration-300 group-hover:-translate-y-1">
+                <span className="text-[8px] sm:text-[10px] uppercase tracking-wider text-[#ffd875] font-semibold block mb-0.5 sm:mb-1">
                   Shvaas Kriya Rishikesh
                 </span>
-                <h4 className="text-lg font-sans text-white font-bold mb-1">
+                <h4 className="text-xs sm:text-lg font-sans text-white font-bold mb-0.5 sm:mb-1 leading-tight line-clamp-1 sm:line-clamp-none">
                   {photo.title}
                 </h4>
-                <p className="text-xs text-[#DFE6FC] font-light line-clamp-2">
+                <p className="text-[11px] sm:text-xs text-[#DFE6FC] font-light line-clamp-2 hidden xs:block sm:block">
                   {photo.caption}
                 </p>
               </div>

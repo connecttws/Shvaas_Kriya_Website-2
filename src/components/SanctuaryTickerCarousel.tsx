@@ -99,44 +99,26 @@ export const SanctuaryTickerCarousel: React.FC = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#86EFAC]/40 to-transparent" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#CCD6F7]/40 to-transparent" />
 
-      {/* Side Fade Gradient Masks */}
-      <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-20 z-20 pointer-events-none bg-gradient-to-r from-[#f6f9fc] via-[#f6f9fc]/80 to-transparent" />
-      <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-20 z-20 pointer-events-none bg-gradient-to-l from-[#f6f9fc] via-[#f6f9fc]/80 to-transparent" />
-
-      {/* Manual Arrow Controls (Desktop Subtle Overlay) */}
-      <div className="hidden lg:flex items-center justify-between absolute inset-x-1 top-1/2 -translate-y-1/2 z-30 pointer-events-none px-1">
-        <button
-          onClick={() => handleScrollManual('left')}
-          className="pointer-events-auto w-8 h-8 rounded-full bg-white/95 border border-[#CCD6F7] text-[#0E1338] hover:text-[#1718DF] hover:border-[#22C55E] flex items-center justify-center shadow-md transition active:scale-95"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-4 h-4" />
-        </button>
-        <button
-          onClick={() => handleScrollManual('right')}
-          className="pointer-events-auto w-8 h-8 rounded-full bg-white/95 border border-[#CCD6F7] text-[#0E1338] hover:text-[#1718DF] hover:border-[#22C55E] flex items-center justify-center shadow-md transition active:scale-95"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-4 h-4" />
-        </button>
-      </div>
+      {/* Side Fade Gradient Masks - Matched to Hero Bottom Shade #f8fafd */}
+      <div className="absolute left-0 top-0 bottom-0 w-10 sm:w-20 z-20 pointer-events-none bg-gradient-to-r from-[#f8fafd] via-[#f8fafd]/80 to-transparent" />
+      <div className="absolute right-0 top-0 bottom-0 w-10 sm:w-20 z-20 pointer-events-none bg-gradient-to-l from-[#f8fafd] via-[#f8fafd]/80 to-transparent" />
 
       {/* Slim & Sleek Marquee Carousel Track */}
       <div
         ref={scrollContainerRef}
-        className="w-full overflow-x-auto scrollbar-none py-1.5 [-webkit-overflow-scrolling:touch]"
+        className="w-full overflow-x-auto scrollbar-none py-1.5 touch-pan-x [-webkit-overflow-scrolling:touch]"
       >
-        <div className="animate-marquee-scroll flex items-center gap-3 sm:gap-4 px-2">
+        <div className="animate-marquee-scroll active:[animation-play-state:paused] flex items-center gap-2.5 sm:gap-4 px-2">
           {duplicatedPillars.map((item, idx) => (
             <div
               key={`${item.id}-${idx}`}
-              className="w-[240px] sm:w-[260px] shrink-0 rounded-xl bg-white/90 hover:bg-white border border-[#86EFAC]/50 hover:border-[#22C55E] py-2.5 px-3.5 shadow-sm hover:shadow-md transition-all duration-300 relative group overflow-hidden flex items-center gap-3 text-left"
+              className="w-[210px] sm:w-[260px] shrink-0 rounded-xl bg-white/90 hover:bg-white border border-[#86EFAC]/50 hover:border-[#22C55E] py-2 sm:py-2.5 px-3 sm:px-3.5 shadow-sm hover:shadow-md transition-all duration-300 relative group overflow-hidden flex items-center gap-2.5 sm:gap-3 text-left"
             >
               {/* Slim Top Dual-Tone Accent Line */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#1718DF] to-[#22C55E]" />
 
               {/* Compact Icon */}
-              <div className="w-8 h-8 rounded-lg bg-[#f0fdf4] border border-[#86EFAC]/40 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#f0fdf4] border border-[#86EFAC]/40 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 {renderIcon(item.iconType)}
               </div>
 

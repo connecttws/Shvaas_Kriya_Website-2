@@ -75,7 +75,7 @@ export const ReviewsSection: React.FC = () => {
           {reviews.map((rev, idx) => (
             <div
               key={idx}
-              className="p-8 rounded-3xl bg-white border border-[#CCD6F7]/80 hover:border-[#22C55E]/60 transition-all duration-300 relative group flex flex-col justify-between shadow-md hover:shadow-xl overflow-hidden"
+              className="p-5 sm:p-7 md:p-8 rounded-2xl sm:rounded-3xl bg-white border border-[#CCD6F7]/80 hover:border-[#22C55E]/60 transition-all duration-300 relative group flex flex-col justify-between shadow-md hover:shadow-xl overflow-hidden"
             >
               {/* Top Dual Accent Bar */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1718DF] via-[#22C55E] to-[#1718DF]" />
@@ -97,9 +97,9 @@ export const ReviewsSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#edf2f7] flex items-center justify-between font-sans">
+              <div className="pt-4 border-t border-[#edf2f7] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5 font-sans">
                 <div>
-                  <div className="text-lg font-sans font-bold text-[#0E1338] flex items-center gap-1.5">
+                  <div className="text-base sm:text-lg font-sans font-bold text-[#0E1338] flex items-center gap-1.5">
                     <span>{rev.name}</span>
                     {rev.verified && (
                       <span title="Verified Guest" className="inline-flex">
@@ -113,8 +113,8 @@ export const ReviewsSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="text-right">
-                  <span className="text-[10px] uppercase tracking-wider text-[#16A34A] bg-[#ECFDF5] px-2.5 py-1 rounded-full border border-[#86EFAC] font-semibold font-sans">
+                <div className="sm:text-right shrink-0">
+                  <span className="text-[10px] uppercase tracking-wider text-[#16A34A] bg-[#ECFDF5] px-2.5 py-1 rounded-full border border-[#86EFAC] font-semibold font-sans inline-block">
                     {rev.session}
                   </span>
                 </div>

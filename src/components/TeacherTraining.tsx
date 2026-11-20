@@ -79,7 +79,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
               ))}
             </div>
 
-            <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
               <div className="flex items-center gap-2 text-sm text-[#0E1338] font-bold font-sans">
                 <Check className="w-4 h-4 text-[#22C55E]" />
                 <span>Practitioner Certificate</span>
@@ -97,17 +97,17 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
 
           {/* Right Column: Enrollment Card & Batches */}
           <div className="lg:col-span-5">
-            <div className="rounded-3xl bg-gradient-to-b from-white via-[#f7fcf9] to-[#f4f8fc] border border-[#CCD6F7] p-6 sm:p-8 shadow-2xl relative font-sans">
+            <div className="rounded-3xl bg-gradient-to-b from-white via-[#f7fcf9] to-[#f4f8fc] border border-[#CCD6F7] p-5 sm:p-8 shadow-2xl relative font-sans">
               <div className="absolute -top-3 right-6 bg-gradient-to-r from-[#1718DF] to-[#16A34A] text-white font-bold text-[10px] tracking-widest uppercase px-3.5 py-1 rounded-full shadow-md font-sans">
                 Rishikesh Sanctuary
               </div>
 
-              <div className="flex items-center gap-2 text-sm text-[#0E1338] mb-2 font-bold font-sans">
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-[#0E1338] mb-2 font-bold font-sans">
                 <MapPin className="w-4 h-4 text-[#22C55E] shrink-0" />
                 <span>Tapovan Riverside Sanctuary, Rishikesh</span>
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-sans font-bold text-[#0E1338] mb-2.5 tracking-tight">
+              <h3 className="text-xl sm:text-3xl font-sans font-bold text-[#0E1338] mb-2.5 tracking-tight">
                 Intensive Sound & Breath Immersion
               </h3>
               <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal mb-6 leading-relaxed">
@@ -116,7 +116,7 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
 
               <div className="p-4 sm:p-5 rounded-2xl bg-white border border-[#e2edf6] mb-6 flex items-center justify-between shadow-sm">
                 <div>
-                  <div className="text-xs uppercase tracking-wider text-[#475569] font-bold font-sans mb-1">
+                  <div className="text-[10px] sm:text-xs uppercase tracking-wider text-[#475569] font-bold font-sans mb-1">
                     Comprehensive Course Tuition
                   </div>
                   <div className="text-2xl sm:text-3xl font-sans font-extrabold text-[#1718DF] tracking-tight">
@@ -137,13 +137,13 @@ export const TeacherTraining: React.FC<TeacherTrainingProps> = ({ onEnroll, curr
                 {upcomingBatches.map((b, i) => (
                   <div
                     key={i}
-                    className="p-3.5 rounded-xl bg-white border border-[#e2edf6] hover:border-[#22C55E]/50 transition flex items-center justify-between text-sm shadow-sm font-sans"
+                    className="p-3 sm:p-3.5 rounded-xl bg-white border border-[#e2edf6] hover:border-[#22C55E]/50 transition flex flex-col xs:flex-row sm:flex-row items-start sm:items-center justify-between gap-1.5 sm:gap-2 text-xs sm:text-sm shadow-sm font-sans"
                   >
-                    <div className="flex items-center gap-2.5 text-[#0E1338] font-bold">
-                      <Calendar className="w-4 h-4 text-[#1718DF] shrink-0" />
+                    <div className="flex items-center gap-2 text-[#0E1338] font-bold">
+                      <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#1718DF] shrink-0" />
                       <span>{b.dates}</span>
                     </div>
-                    <span className="text-xs text-[#16A34A] bg-[#ECFDF5] px-2.5 py-1 rounded-full border border-[#86EFAC] font-bold font-sans shrink-0">
+                    <span className="text-[11px] sm:text-xs text-[#16A34A] bg-[#ECFDF5] px-2.5 py-0.5 rounded-full border border-[#86EFAC] font-bold font-sans shrink-0">
                       {b.seats}
                     </span>
                   </div>

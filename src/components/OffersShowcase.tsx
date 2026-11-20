@@ -126,6 +126,18 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
 
                         {isSelected && (
                           <div className="mt-2 animate-in fade-in duration-300 space-y-3.5">
+                            {/* Mobile In-Card Visual Preview */}
+                            <div className="lg:hidden w-full h-44 rounded-xl overflow-hidden relative border border-[#CCD6F7] shadow-sm my-2">
+                              <img
+                                src={offer.image}
+                                alt={offer.title}
+                                className="w-full h-full object-cover"
+                              />
+                              <div className="absolute top-2 left-2 px-2.5 py-0.5 rounded-full bg-white/95 text-[#1718DF] text-[10px] font-bold uppercase tracking-wider shadow-sm font-sans">
+                                {offer.category}
+                              </div>
+                            </div>
+
                             <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed">
                               {offer.desc}
                             </p>
@@ -166,8 +178,8 @@ export const OffersShowcase: React.FC<OffersShowcaseProps> = ({ onSelectOffer })
             })}
           </div>
 
-          {/* Right Column: Dynamic Visual Showcase */}
-          <div className="lg:col-span-5 flex justify-center">
+          {/* Right Column: Dynamic Visual Showcase (Desktop Only, as Mobile previews directly in card) */}
+          <div className="hidden lg:flex lg:col-span-5 justify-center">
             <div className="relative w-full max-w-md">
               <div className="w-full h-[440px] sm:h-[490px] rounded-t-full rounded-b-3xl overflow-hidden border-2 border-[#d8e3ed] shadow-2xl relative bg-[#f1f6fb]">
                 <div

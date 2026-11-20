@@ -562,33 +562,33 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
       <div
         ref={mountRef}
         data-testid="three-singing-bowl-canvas"
-        className="w-full h-[320px] sm:h-[360px] md:h-[400px] cursor-grab active:cursor-grabbing"
+        className="w-full h-[400px] sm:h-[440px] md:h-[480px] cursor-grab active:cursor-grabbing touch-pan-y"
         onClick={handleStrike}
         title="Click anywhere on the 3D sanctuary to strike the singing bowl"
       />
 
       {/* Top Overlay: Title & Frequency Indicator */}
-      <div className="absolute top-3 left-3 right-3 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between pointer-events-none">
-        <div className="bg-white/95 border border-[#d8e3ed] px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl shadow-md pointer-events-auto flex items-center gap-2.5">
+      <div className="absolute top-2.5 left-2.5 right-2.5 sm:top-4 sm:left-4 sm:right-4 flex items-center justify-between pointer-events-none">
+        <div className="bg-white/95 border border-[#d8e3ed] px-2.5 sm:px-4 py-1 sm:py-2 rounded-xl sm:rounded-2xl shadow-md pointer-events-auto flex items-center gap-2 sm:gap-2.5">
           <div
-            className="w-3.5 h-3.5 rounded-full shadow-sm shrink-0"
+            className="w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full shadow-sm shrink-0"
             style={{ backgroundColor: selectedChakra.color }}
           />
           <div>
-            <div className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold">
+            <div className="text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-[#1718DF] font-bold">
               {selectedChakra.name} ({selectedChakra.sanskrit})
             </div>
-            <div className="text-xs sm:text-sm font-sans text-[#0E1338] flex items-center gap-2">
-              <span className="font-bold">{selectedChakra.frequency} Hz Solfeggio [{selectedChakra.solfeggioKey}]</span>
+            <div className="text-[11px] sm:text-sm font-sans text-[#0E1338] flex items-center gap-1.5 sm:gap-2">
+              <span className="font-bold">{selectedChakra.frequency} Hz <span className="hidden sm:inline">Solfeggio [{selectedChakra.solfeggioKey}]</span></span>
               <span className="text-[#64748b] text-xs font-sans hidden sm:inline">• Note {selectedChakra.note}</span>
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-2 pointer-events-auto">
+        <div className="flex items-center gap-1.5 sm:gap-2 pointer-events-auto">
           <button
             onClick={() => setIsZenMode(!isZenMode)}
-            className="bg-white/95 hover:bg-[#f1f6fb] text-[#475569] hover:text-[#1718DF] border border-[#d8e3ed] px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl sm:rounded-2xl transition text-xs flex items-center gap-1.5 shadow-md font-medium"
+            className="bg-white/95 hover:bg-[#f1f6fb] text-[#475569] hover:text-[#1718DF] border border-[#d8e3ed] px-2.5 py-1 sm:px-3.5 sm:py-2 rounded-xl sm:rounded-2xl transition text-[11px] sm:text-xs flex items-center gap-1 sm:gap-1.5 shadow-md font-medium"
             title={isZenMode ? 'Show Controls' : 'Zen View Mode'}
           >
             {isZenMode ? <Eye className="w-3.5 h-3.5 text-[#1718DF]" /> : <EyeOff className="w-3.5 h-3.5" />}
@@ -600,19 +600,19 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
       {/* Interactive Center Click Prompt */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className={`transition-opacity duration-700 pointer-events-none text-center ${isStriking ? 'opacity-0 scale-95' : 'opacity-40 hover:opacity-80'}`}>
-          <div className="text-xs uppercase tracking-[0.25em] text-[#1718DF] font-semibold drop-shadow-sm bg-white/70 px-4 py-1.5 rounded-full border border-white/80">
-            Click Anywhere To Strike & Resonate
+          <div className="text-[11px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#1718DF] font-semibold drop-shadow-sm bg-white/70 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full border border-white/80">
+            Click Anywhere To Strike
           </div>
         </div>
       </div>
 
       {/* Unified Bottom Control Dock */}
       <div
-        className={`absolute bottom-3 left-1/2 -translate-x-1/2 w-[95%] max-w-xl bg-white/95 border border-[#d8e3ed] rounded-2xl p-2.5 sm:p-3 shadow-xl transition-all duration-500 ${
+        className={`absolute bottom-2.5 left-1/2 -translate-x-1/2 w-[96%] max-w-xl bg-white/95 border border-[#d8e3ed] rounded-2xl p-2 sm:p-3 shadow-xl transition-all duration-500 ${
           isZenMode ? 'translate-y-24 opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
         }`}
       >
-        <div className="flex flex-col gap-2.5">
+        <div className="flex flex-col gap-2 sm:gap-2.5">
           {/* Top Row: Chakra Frequency Selector */}
           <div className="flex items-center justify-between gap-1 overflow-x-auto pb-1 scrollbar-none [-webkit-overflow-scrolling:touch]">
             {CHAKRAS.map((ch) => {
@@ -624,14 +624,14 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
                     setSelectedChakra(ch);
                     if (onChakraSelect) onChakraSelect(ch.id);
                   }}
-                  className={`flex items-center gap-1.5 px-2 sm:px-2.5 py-1.5 rounded-xl text-[11px] sm:text-xs font-semibold transition-all shrink-0 border ${
+                  className={`flex items-center gap-1 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl text-[10px] sm:text-xs font-semibold transition-all shrink-0 border ${
                     isSelected
-                      ? 'border-[#1718DF] bg-[#EEF0FF] text-[#0E1338] shadow-sm'
+                      ? 'border-[#1718DF] bg-[#EEF0FF] text-[#0E1338] shadow-sm font-bold'
                       : 'border-transparent hover:border-[#e2eaf2] text-[#64748b] hover:text-[#1e293b]'
                   }`}
                 >
                   <span
-                    className="w-2.5 h-2.5 rounded-full shrink-0"
+                    className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full shrink-0"
                     style={{ backgroundColor: ch.color }}
                   />
                   <span>{ch.frequency}Hz</span>
@@ -644,40 +644,40 @@ export const ThreeSingingBowl: React.FC<ThreeSingingBowlProps> = ({
           <div className="flex items-center justify-between pt-1 border-t border-[#edf2f7] text-xs">
             <button
               onClick={handleStrike}
-              className="bg-[#1718DF] hover:bg-[#6882FF] active:scale-95 text-white font-bold px-3 sm:px-4 py-2 rounded-xl transition-all shadow-md flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs"
+              className="bg-[#1718DF] hover:bg-[#6882FF] active:scale-95 text-white font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl transition-all shadow-md flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs shrink-0"
             >
-              <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-[#ffd875]" />
-              <span>Strike <span className="hidden xs:inline">Singing</span> Bowl</span>
+              <Sparkles className="w-3.5 h-3.5 fill-current text-[#ffd875]" />
+              <span>Strike <span className="hidden xs:inline sm:inline">Singing</span> Bowl</span>
             </button>
 
-            <div className="flex items-center gap-2 sm:gap-3 text-[#64748b]">
+            <div className="flex items-center gap-1.5 sm:gap-3 text-[#64748b]">
               <button
                 onClick={() => setSoundEnabled(!soundEnabled)}
-                className={`p-2 rounded-xl border transition ${
+                className={`p-1.5 sm:p-2 rounded-xl border transition ${
                   soundEnabled
                     ? 'border-[#1718DF]/40 bg-[#EEF0FF] text-[#1718DF]'
                     : 'border-[#e2eaf2] text-[#94a3b8]'
                 }`}
                 title={soundEnabled ? 'Harmonic sound enabled' : 'Muted'}
               >
-                {soundEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
+                {soundEnabled ? <Volume2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <VolumeX className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               </button>
 
               <button
                 onClick={() => setAutoRotate(!autoRotate)}
-                className={`p-2 rounded-xl border transition ${
+                className={`p-1.5 sm:p-2 rounded-xl border transition ${
                   autoRotate
                     ? 'border-[#1718DF]/40 bg-[#EEF0FF] text-[#1718DF]'
                     : 'border-[#e2eaf2] text-[#94a3b8]'
                 }`}
                 title={autoRotate ? 'Auto-rotation active' : 'Rotation paused'}
               >
-                <RotateCw className="w-4 h-4" />
+                <RotateCw className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
 
-              <div className="hidden sm:flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#f1f6fb] border border-[#CCD6F7] text-[#0E1338]">
+              <div className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#f1f6fb] border border-[#CCD6F7] text-[#0E1338]">
                 <Music className="w-3.5 h-3.5 text-[#1718DF]" />
-                <span className="font-sans font-semibold text-sm">Seed Mantra: {selectedChakra.mantra}</span>
+                <span className="font-sans font-semibold text-xs sm:text-sm">Mantra: {selectedChakra.mantra}</span>
               </div>
             </div>
           </div>

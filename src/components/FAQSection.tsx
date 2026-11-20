@@ -74,26 +74,26 @@ export const FAQSection: React.FC = () => {
               >
                 <button
                   onClick={() => toggleFAQ(idx)}
-                  className={`w-full py-4 px-6 text-left flex items-center justify-between gap-4 transition-colors font-sans ${
+                  className={`w-full py-3.5 sm:py-4 px-4 sm:px-6 text-left flex items-center justify-between gap-3 sm:gap-4 transition-colors font-sans ${
                     isOpen ? 'text-[#1718DF]' : 'text-white'
                   }`}
                 >
-                  <span className="font-sans text-base sm:text-lg font-bold">
+                  <span className="font-sans text-sm sm:text-base md:text-lg font-bold">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border transition-transform ${
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 border transition-transform ${
                       isOpen
                         ? 'bg-[#EEF0FF] border-[#CCD6F7] text-[#1718DF] rotate-180'
                         : 'bg-white/15 border-white/30 text-white'
                     }`}
                   >
-                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                    {isOpen ? <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> : <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed border-t border-[#DFE6FC] animate-in fade-in duration-300">
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-1 text-xs sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed border-t border-[#DFE6FC] animate-in fade-in duration-300">
                     <p>{faq.answer}</p>
                   </div>
                 )}

@@ -24,7 +24,7 @@ const ThreeSingingBowl = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="w-full h-[560px] rounded-3xl bg-[#f1f6fb] flex items-center justify-center border border-[#e2eaf2]">
+      <div className="w-full h-[400px] sm:h-[440px] md:h-[480px] rounded-3xl bg-[#f1f6fb] flex items-center justify-center border border-[#e2eaf2]">
         <div className="text-center space-y-3">
           <div className="w-12 h-12 rounded-full border-2 border-[#1718DF] border-t-transparent animate-spin mx-auto" />
           <p className="text-xs uppercase tracking-widest text-[#1718DF] font-bold">
@@ -68,7 +68,7 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1">
         {/* ===================== HERO SECTION (White, Royal Blue & Baby-Green Mist) ===================== */}
-        <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-gradient-to-b from-[#e8f1fb] via-[#f3f7fc] to-[#f8fafd]">
+        <section className="relative pt-24 sm:pt-32 pb-8 sm:pb-12 overflow-hidden bg-gradient-to-b from-[#e8f1fb] via-[#f3f7fc] to-[#f8fafd]">
           {/* Subtle Ambient Celestial Blue & Baby-Green Mist Glows */}
           <div
             className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[950px] h-[550px] pointer-events-none rounded-full"
@@ -90,72 +90,73 @@ export default function Home() {
           />
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            {/* Hero Main Content with Reveal Animation */}
-            <RevealOnScroll duration={0.9} yOffset={24}>
-              {/* Top Sacred Badge with Baby Green Pulse */}
-              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/95 border border-[#86EFAC]/80 text-[#1718DF] text-[10px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.2em] mb-6 sm:mb-8 shadow-sm animate-ethereal font-bold font-sans max-w-full">
-                <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse shrink-0" />
-                <span className="truncate sm:whitespace-normal">Rishikesh & Online Sanctuary • Breathe · Listen · Reconnect</span>
-                <Sparkles className="w-3.5 h-3.5 text-[#1718DF] shrink-0" />
-              </div>
+            {/* Top Sacred Badge with Baby Green Pulse (Instant render, no SSR fade delay) */}
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-white/95 border border-[#86EFAC]/80 text-[#1718DF] text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-[0.2em] mb-4 sm:mb-6 shadow-sm font-bold font-sans max-w-full">
+              <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse shrink-0" />
+              <span className="truncate sm:overflow-visible">
+                <span className="hidden sm:inline">Rishikesh &amp; Online Sanctuary • </span>Breathe · Listen · Reconnect
+              </span>
+              <Sparkles className="w-3.5 h-3.5 text-[#1718DF] shrink-0" />
+            </div>
 
-              {/* Verified Headline from Shvaas Kriya Retreat Client Brief */}
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-[#27282c] tracking-tight leading-[1.15] mb-3 max-w-4xl mx-auto break-words">
+            {/* Verified Headline lockup with balanced responsive sizing */}
+            <h1 className="font-serif tracking-tight text-[#0E1338] max-w-4xl mx-auto mb-3 sm:mb-4">
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] sm:leading-[1.14]">
                 Welcome to Shvaas Kriya Retreat
-              </h1>
+              </span>
+              <span className="block text-base sm:text-2xl md:text-3xl font-serif italic font-normal text-[#1718DF] leading-snug mt-2 sm:mt-3">
+                A Space to Reconnect Through Breath, Sound &amp; Stillness
+              </span>
+            </h1>
 
-              {/* Sub-headline - Clean Non-Italic Font */}
-              <div className="text-lg sm:text-2xl md:text-3xl font-serif text-[#1718DF] mb-5 sm:mb-6 font-medium tracking-tight">
-                A Space to Reconnect Through Breath, Sound & Stillness
-              </div>
+            {/* Sub-copy from Client Brief - High Contrast & Dark Legibility */}
+            <p className="text-sm sm:text-base md:text-lg text-[#334155] font-sans font-normal max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
+              Step away from the noise of everyday life and make room for yourself. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in breath, sound, and presence.
+            </p>
 
-              {/* Sub-copy from Client Brief - High Contrast & Dark Legibility */}
-              <p className="text-base sm:text-lg md:text-xl text-[#0E1338] font-sans font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
-                Step away from the noise of everyday life and make room for yourself. Explore mindful sessions, soulful retreats in Rishikesh, and learning journeys rooted in breath, sound, and presence.
-              </p>
+            {/* Unified Hero CTAs with balanced mobile touch targets */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-3.5 mb-8 sm:mb-10 w-full max-w-sm sm:max-w-none mx-auto">
+              <button
+                onClick={() => {
+                  const el = document.getElementById('offers');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  else handleOpenBooking();
+                }}
+                className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-full bg-[#1718DF] hover:bg-[#2e30f0] text-white font-bold text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] active:scale-95 transition-all shadow-lg shadow-[#1718DF]/20 flex items-center justify-center gap-2 font-sans"
+              >
+                <span>Explore Our Experiences</span>
+                <ArrowRight className="w-4 h-4 text-[#ffd875]" />
+              </button>
 
-              {/* Dual Hero CTAs from Client Brief */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-10">
-                <button
-                  onClick={() => {
-                    const el = document.getElementById('offers');
-                    if (el) el.scrollIntoView({ behavior: 'smooth' });
-                    else handleOpenBooking();
-                  }}
-                  className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-[0.18em] active:scale-95 transition-all shadow-xl shadow-[#1718DF]/20 flex items-center justify-center gap-2 font-sans"
-                >
-                  <span>Explore Our Experiences</span>
-                  <ArrowRight className="w-4 h-4 text-[#ffd875]" />
-                </button>
-
+              <div className="grid grid-cols-2 sm:flex items-center gap-2 sm:gap-3.5 w-full sm:w-auto">
                 <button
                   onClick={() => {
                     const el = document.getElementById('retreats');
                     if (el) el.scrollIntoView({ behavior: 'smooth' });
                     else handleOpenBooking();
                   }}
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-white hover:bg-[#f1f6fb] text-[#0E1338] border border-[#CCD6F7] hover:border-[#1718DF] text-xs uppercase tracking-[0.18em] font-bold transition-all flex items-center justify-center gap-2 shadow-sm font-sans"
+                  className="w-full sm:w-auto px-4 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white hover:bg-[#f1f6fb] text-[#0E1338] border border-[#CCD6F7] hover:border-[#1718DF] text-xs uppercase tracking-wider sm:tracking-[0.16em] font-bold transition-all flex items-center justify-center gap-1.5 sm:gap-2 shadow-sm font-sans"
                 >
-                  <span>Find Your Retreat</span>
+                  <span>Find Retreat</span>
                 </button>
 
                 <button
                   onClick={handleStrikeHeroSample}
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#334155] hover:text-[#1718DF] border border-[#d8e3ed] hover:border-[#22C55E] text-xs uppercase tracking-[0.15em] font-semibold transition-all flex items-center justify-center gap-2 shadow-sm group font-sans"
+                  className="w-full sm:w-auto px-3.5 sm:px-6 py-3 sm:py-3.5 rounded-full bg-white hover:bg-[#f8fafd] text-[#0E1338] hover:text-[#1718DF] border border-[#CCD6F7] hover:border-[#22C55E] text-xs uppercase tracking-wider sm:tracking-[0.14em] font-semibold transition-all flex items-center justify-center gap-1.5 sm:gap-2 shadow-sm group font-sans"
                   title="Play 528Hz Tibetan Singing Bowl Strike"
                 >
-                  <div className="w-5 h-5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] flex items-center justify-center text-[#1718DF] group-hover:scale-110 transition-transform">
-                    <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#EEF0FF] border border-[#CCD6F7] flex items-center justify-center text-[#1718DF] group-hover:scale-110 transition-transform shrink-0">
+                    <Play className="w-2 h-2 sm:w-2.5 sm:h-2.5 fill-current ml-0.5" />
                   </div>
-                  <span>Strike 528Hz Bowl</span>
+                  <span>528Hz Bowl</span>
                 </button>
               </div>
-            </RevealOnScroll>
+            </div>
 
             {/* Moving Carousel for Key Sanctuary Pillars with Blue & Baby-Green Shades */}
-            <RevealOnScroll delay={0.2} duration={0.8} yOffset={20}>
+            <div className="w-full pt-1 sm:pt-2">
               <SanctuaryTickerCarousel />
-            </RevealOnScroll>
+            </div>
           </div>
         </section>
 
@@ -301,17 +302,17 @@ export default function Home() {
               </div>
 
               {/* Callout Box from Client Brief */}
-              <div className="p-6 sm:p-8 rounded-3xl bg-white border border-[#CCD6F7] shadow-xl max-w-2xl mx-auto">
+              <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-white border border-[#CCD6F7] shadow-xl max-w-2xl mx-auto">
                 <h3 className="text-xl sm:text-2xl font-sans font-bold text-[#0E1338] mb-2">
                   Your Journey Back to Yourself Can Begin Here.
                 </h3>
                 <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal mb-6 leading-relaxed">
                   Find the session, retreat, or learning journey that feels right for you.
                 </p>
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
                   <button
                     onClick={() => handleOpenBooking()}
-                    className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition active:scale-95 font-sans"
+                    className="w-full sm:w-auto px-6 sm:px-8 py-3.5 rounded-xl bg-[#1718DF] hover:bg-[#6882FF] text-white font-bold text-xs uppercase tracking-wider shadow-lg transition active:scale-95 font-sans"
                   >
                     Explore Experiences / Enquire Now
                   </button>
@@ -319,7 +320,7 @@ export default function Home() {
                     href="https://wa.me/917208936359"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md active:scale-95 font-sans"
+                    className="w-full sm:w-auto px-5 sm:px-7 py-3.5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold text-xs uppercase tracking-wider transition flex items-center justify-center gap-2 shadow-md active:scale-95 font-sans"
                   >
                     <span>Chat on WhatsApp (+91 72089 36359)</span>
                   </a>

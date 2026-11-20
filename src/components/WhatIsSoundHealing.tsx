@@ -27,48 +27,24 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           
-          {/* Left Column: Arched Window Photo (Subtly Shrunk) */}
-          <div className="lg:col-span-3 flex justify-center">
-            <div className="relative group">
-              <div className="w-[220px] sm:w-[250px] h-[310px] sm:h-[360px] rounded-t-full rounded-b-3xl overflow-hidden border-2 border-[#d6e2ee] shadow-lg relative bg-[#f1f6fb]">
-                <div
-                  className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                  style={{
-                    backgroundImage: `url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop')`,
-                  }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0E1338]/60 via-transparent to-transparent opacity-70" />
-                
-                <div className="absolute bottom-3 left-3 right-3 p-2.5 rounded-xl bg-white/95 border border-[#86EFAC]/70 text-center shadow-md">
-                  <span className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold block font-sans">
-                    Himalayan Sound Healer
-                  </span>
-                  <span className="text-[11px] text-[#0E1338] font-sans font-semibold">
-                    Rishikesh Himalayan Foothills
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Center Column: Text Content & 3 Lineages (Generous 6 cols so headline fits on 1 line) */}
-          <div className="lg:col-span-6 space-y-4">
-            <div>
+          {/* Center Column: Text Content & 3 Lineages - Appears FIRST on mobile for proper context */}
+          <div className="order-1 lg:order-2 lg:col-span-6 space-y-4">
+            <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#86EFAC] text-[#16A34A] text-xs uppercase tracking-[0.2em] font-bold shadow-sm mb-2.5 font-sans">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
                 <Sparkles className="w-3.5 h-3.5 text-[#16A34A]" />
                 Sacred Origins & Lineage
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-4xl font-sans font-bold text-[#0E1338] tracking-tight whitespace-normal sm:whitespace-nowrap">
+              <h2 className="text-2xl sm:text-3xl lg:text-[2.2rem] xl:text-4xl font-sans font-bold text-[#0E1338] tracking-tight">
                 What Is Sound Healing?
               </h2>
             </div>
 
-            <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed">
+            <p className="text-sm sm:text-base text-[#1E293B] font-sans font-normal leading-relaxed text-center lg:text-left max-w-xl mx-auto lg:mx-0">
               Everything in the universe is in a constant state of vibration, including every cell in your body. When we are healthy, we vibrate at a harmonious frequency. While sound healing is gaining popularity in modern wellness, its roots are ancient and span across the globe. It is not a &quot;new&quot; invention, but a re-discovery of timeless wisdom.
             </p>
 
-            <div className="space-y-2.5 pt-1">
+            <div className="space-y-2.5 pt-1 text-left">
               {/* Vedic Roots */}
               <div className="p-3.5 rounded-2xl bg-gradient-to-r from-[#f8fbfe] to-[#f4fcf7] border-l-4 border-l-[#22C55E] border-t border-r border-b border-[#e2edf6] hover:border-[#1718DF]/40 transition-all shadow-sm">
                 <h4 className="text-base font-bold text-[#1718DF] font-sans mb-0.5 flex items-center gap-2">
@@ -104,7 +80,7 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
             </div>
 
             {onLearnMore && (
-              <div className="pt-1.5">
+              <div className="pt-1.5 flex justify-center lg:justify-start">
                 <button
                   onClick={onLearnMore}
                   className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#1718DF] hover:bg-[#6882FF] text-white transition-all text-xs uppercase tracking-wider font-bold shadow-md active:scale-95 font-sans"
@@ -116,9 +92,33 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
             )}
           </div>
 
-          {/* Right Column: Secondary Photo & Rotating Lotus Stamp (Subtly Shrunk) */}
-          <div className="lg:col-span-3 flex flex-col items-center justify-center gap-4">
-            <div className="w-40 sm:w-44 h-52 sm:h-56 rounded-full overflow-hidden border-2 border-[#d6e2ee] shadow-lg bg-[#f1f6fb] relative group">
+          {/* Left Column: Arched Window Photo */}
+          <div className="order-2 lg:order-1 lg:col-span-3 flex justify-center">
+            <div className="relative group">
+              <div className="w-[200px] sm:w-[250px] h-[280px] sm:h-[360px] rounded-t-full rounded-b-3xl overflow-hidden border-2 border-[#d6e2ee] shadow-lg relative bg-[#f1f6fb]">
+                <div
+                  className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{
+                    backgroundImage: `url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop')`,
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0E1338]/60 via-transparent to-transparent opacity-70" />
+                
+                <div className="absolute bottom-3 left-3 right-3 p-2 rounded-xl bg-white/95 border border-[#86EFAC]/70 text-center shadow-md">
+                  <span className="text-[10px] uppercase tracking-widest text-[#1718DF] font-bold block font-sans">
+                    Himalayan Sound Healer
+                  </span>
+                  <span className="text-[11px] text-[#0E1338] font-sans font-semibold">
+                    Rishikesh Himalayan Foothills
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Secondary Photo & Rotating Lotus Stamp */}
+          <div className="order-3 lg:order-3 lg:col-span-3 flex flex-col items-center justify-center gap-4">
+            <div className="hidden md:block w-40 sm:w-44 h-52 sm:h-56 rounded-full overflow-hidden border-2 border-[#d6e2ee] shadow-lg bg-[#f1f6fb] relative group">
               <div
                 className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                 style={{
@@ -127,8 +127,8 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
               />
             </div>
 
-            {/* Circular Rotating Stamp Badge (Hardware-accelerated texture rotation) */}
-            <div className="relative w-32 h-32 sm:w-36 sm:h-36 flex items-center justify-center">
+            {/* Circular Rotating Stamp Badge */}
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 flex items-center justify-center mt-2 sm:mt-0">
               <div className="w-full h-full animate-spin-slow pointer-events-none">
                 <svg className="w-full h-full" viewBox="0 0 160 160">
                   <defs>
@@ -146,7 +146,7 @@ export const WhatIsSoundHealing: React.FC<WhatIsSoundHealingProps> = ({ onLearnM
               </div>
 
               {/* Center Official Shvaas Logo in Spinning Seal */}
-              <div className="absolute w-16 h-16 sm:w-18 sm:h-18 rounded-full overflow-hidden shadow-xl border-2 border-[#6882FF] bg-[#1718DF] flex items-center justify-center">
+              <div className="absolute w-14 h-14 sm:w-18 sm:h-18 rounded-full overflow-hidden shadow-xl border-2 border-[#6882FF] bg-[#1718DF] flex items-center justify-center">
                 <img
                   src="/images/shvaas-logo.png"
                   alt="Shvaas Kriya Sacred Emblem"
